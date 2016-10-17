@@ -1,0 +1,90 @@
+section .doctor{
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem 0;
+}
+section .doctor:not(:first-child){
+    border-top: 1px solid #CCC;
+}
+section .doctor .head_portrait{
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    margin: 0 1rem;
+    background-image: url("../img/30@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .doctor .doctor_info{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: .2rem;
+}
+section .doctor .doctor_info span{
+    font-size: 1.4rem;
+    color: #555;
+}
+section .doctor .doctor_info p{
+    margin-top: 1rem;
+}
+section .doctor .doctor_info p span{
+    border-radius: 1.2rem;
+    padding: .2rem 1rem;
+    border: 1px solid #CCC;
+}
+section .doctor .doctor_info p span:nth-of-type(2){
+    margin: 0 .7rem;
+}
+section .doctor .doctor_info .doctor_name{
+    font-size: 1.6rem;
+    color: #222;
+}
+section .doctor .doctor_info h4{
+    margin-top: .8rem;
+    font-size: 1.5rem;
+    color: #555;
+}
+section .doctor .advisory{
+    float: right;
+    width: 3rem;
+    text-align: center;
+    height: 100%;
+    margin-top: 1.8rem;
+}
+section .doctor .advisory img{
+    width: .7rem;
+}
+footer{
+    padding-top: 1.5rem;
+}
+.switch_box{
+    border-bottom: 0;
+}
+
+.bottom{
+    position: fixed;
+    display: -webkit-box;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: .7rem 0 .6rem 0;
+    border-top: 1px solid #ccc;
+    z-index: 9999;
+}
+.bottom div{
+    /*width: 33.3%;*/
+    text-align: center;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+}
+.bottom div img{
+    width: 4rem;
+}
+html,body{
+    height: 100%;
+}
+footer{
+    padding-bottom: 6.5rem;
+}

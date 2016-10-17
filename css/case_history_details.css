@@ -1,0 +1,61 @@
+html,body{
+    height: 100%;
+}
+section{
+    padding: 1.5rem 1rem 1.5rem 5.1rem;
+    background-color: #fff;
+    font-size: 1.5rem;
+}
+section .head_portrait{
+    float: left;
+    margin-left: -4.1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-image: url("../img/30@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section div p{
+    color: #56BC8A;
+    margin-bottom: .3rem;
+    word-break: break-all;
+}
+section div:not(:last-of-type){
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1.2rem;
+}
+section div p:last-of-type{
+    margin-bottom: 1.2rem;
+}
+section div span{
+    color: #888;
+}
+section div:nth-of-type(2) p:nth-of-type(1){
+    margin: .8rem 0 1.4rem 0;
+    font-weight: bold;
+    color: #222;
+}
+section div:last-of-type p:last-of-type{
+    color: #222;
+    font-size: 1.4rem;
+}
+section div:last-of-type div{
+    margin-bottom: 1.3rem;
+    font-size: 0;
+    width: 26rem;
+}
+section div:last-of-type div img{
+    width: 8rem;
+    height: 8rem;
+}
+section .noImg{
+    color: #222;
+}
+figure{
+    width: 8rem;
+    height: 8rem;
+    overflow: hidden;
+    display: inline-block;
+    margin: .6rem .6rem 0 0;
+}

@@ -1,0 +1,30 @@
+.department{
+    display: flex;
+    background-color: #fff;
+}
+.department:not(:first-child){
+    border-top: 1px solid #CCC;
+}
+.department .info{
+    width: 100%;
+    padding-left: 1.5rem;
+}
+.department .info p{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #222;
+}
+.department .info p:nth-of-type(2){
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #888;
+}
+.department .goToPage{
+    width: 10%;
+    text-align: center;
+}
+.department .goToPage img{
+    width: .9rem;
+    height: 1.7rem;
+    margin-top: 2rem;
+}

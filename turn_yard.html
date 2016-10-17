@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>转院求助</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/turn_yard.css">
+</head>
+<body>
+    <div class="turnyard">
+        <header>
+            <p class="back">
+                <img src="img/back.png" alt="">
+            </p>
+            <div class="title">
+                转院求助
+            </div>
+        </header>
+        <section>
+            <div class="header hide">
+                <button><img src="img/office.jpg" alt=""><br><span>按科室找医生</span></button><button><img src="img/add.jpg" alt=""><br><span>按医院找医生</span></button>
+            </div>
+            <nav>
+                <ul>
+                    <li class="case_science">医生说</li>
+                    <li class="turn_yard selected">转院求助</li>
+                </ul>
+            </nav>
+            <div class="issue_btn">
+                <button><img src="img/pen.png" alt=""><span>发布转院求助</span></button>
+            </div>
+            <div class="change">
+                <p>我发布的</p>
+            </div>
+            <!--<div class="list">-->
+                <!--<div class="list_left">-->
+                    <!--<p class="head_portrait"></p>-->
+                <!--</div>-->
+                <!--<div class="list_right">-->
+                    <!--<p class="title">-->
+                        <!--<span>蒋佳良</span>-->
+                        <!--<span>基层医生</span>-->
+                    <!--</p>-->
+                    <!--<p class="address">-->
+                        <!--<span>-->
+                            <!--妇产科-->
+                        <!--</span>-->
+                        <!--<span>-->
+                            <!--四川／攀枝花／米易县-->
+                        <!--</span>-->
+                    <!--</p>-->
+                    <!--<p class="text">-->
+                        <!--女，28岁。2016年元月6日钢板手术，两个月，医生让下床，三个月复查钢板断裂，医生打石膏固定一个月，四月复查钢板断裂。 治疗情况-->
+                    <!--</p>-->
+                    <!--<p class="other">-->
+                        <!--<span>9小时前</span>-->
+                        <!--<span>3人看过</span>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <p class="list_loading">
+                <img src="img/loading.gif" alt=""><br>
+                <span>正在加载</span>
+            </p>
+            <p class="unMoreData hide">你还没有发布过转院求助</p>
+        </section>
+        <div>
+            <div class="bottom">
+                <div>
+                    <img src="img/xx1@2x.png" alt="">
+                </div>
+                <div>
+                    <img src="img/fx@2x.png" alt="">
+                </div>
+                <div>
+                    <img src="img/wd1@2x.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="issue_box hide">
+        <header>
+            <p class="back">
+                <img src="img/back.png" alt="">
+            </p>
+            <div class="title">
+                转院求助
+            </div>
+        </header>
+        <section>
+            <div class="elect">
+                <span class="sex sex_yes">男</span>
+                <span class="sex">女</span>
+            <span class="age">
+                <span>18岁</span><span class="down">&#xe601;</span>
+                <select name=""></select>
+            </span>
+            <span class="department">
+                <span>选择科室</span><span class="down">&#xe601;</span>
+                <select name=""></select>
+            </span>
+            </div>
+            <div class="address">
+                <input type="text" placeholder="患者所在地">
+            </div>
+            <div class="content">
+                <textarea maxlength="300" placeholder="哪儿不舒服(必填,不少于20字)"></textarea>
+                <textarea maxlength="300" placeholder="患病多久了(必填)"></textarea>
+                <textarea maxlength="300" placeholder="做过什么治疗"></textarea>
+                <textarea maxlength="300" placeholder="做过什么检查"></textarea>
+                <div class="question_btm">
+                    <span>匿名发布</span>
+                    <p class="cryptonym">
+                        <span></span>
+                    </p>
+                </div>
+            </div>
+            <div class="pics">
+                <p>检查报告照片</p>
+                <img src="img/30@2x.png" alt="">
+                <span>&#xe604;</span>
+            </div>
+            <button class="issue">发布</button>
+        </section>
+    </div>
+    <div class="popup hide">
+        <div class="login_popup">
+            <img src="img/logo_img.png" alt="">
+            <p>使用该功能需要登录</p>
+            <button>登录</button>
+            <button>注册</button>
+            <span>&#xe607;</span>
+        </div>
+    </div>
+    <div class="consult_loading hide">
+        <img src="img/loading.gif" alt="">
+        <p>正在发布</p>
+    </div>
+    <div class="present_box hide">
+        <div class="present">
+            <img src="img/chenggong_@2x.png" alt="">
+            <h4>提交成功</h4>
+            <p>我们正在匹配合适的医院</p>
+            <p>会尽快安排你与院方对接</p>
+            <button>知道了</button>
+        </div>
+    </div>
+    <script src="lib/zepto.min.js"></script>
+    <script src="lib/common.js"></script>
+    <script src="js/turn_yard.js"></script>
+</body>
+</html>

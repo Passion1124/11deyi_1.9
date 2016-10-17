@@ -1,0 +1,726 @@
+.doctor,.user,.hospital,.institution{
+    padding: 2rem 0 2.5rem 0;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #CCC;
+}
+.head_portrait{
+    width: 8.1rem;
+    height: 8.1rem;
+    border-radius: 50%;
+    margin: 0 auto 1.2rem auto;
+    background-image: url("../img/80@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.doctor p,.user p,.hospital p,.institution p{
+    font-size: 1.4rem;
+    color: #888;
+}
+.doctor p:nth-of-type(1),.user p:nth-of-type(1),.hospital p:nth-of-type(1),.institution p:nth-of-type(1){
+    font-size: 1.9rem;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 1.9rem;
+}
+.doctor p span ,.hospital p span{
+    padding: .5rem 1.2rem .5rem 1.2rem;
+    border: 1px solid #AAA;
+    border-radius: 1.3rem;
+    color: #555;
+}
+.doctor p span:nth-of-type(1),.hospital p span:nth-of-type(1){
+    margin-right: .8rem;
+}
+.doctor .address,.hospital .address{
+    margin: 1.4rem 0 1.5rem 0;
+}
+.attention{
+    width: 8.6rem;
+    height: 3.1rem;
+    background-color: #fff;
+    border: 1px solid #CA572A;
+    color: #CA572A;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: .5rem;
+}
+.attention + p{
+    font-size: 1.3rem;
+    margin-bottom: 2.2rem;
+}
+.attention + p + p{
+    padding: 0 2.6rem;
+    color: #555;
+    text-align: left;
+}
+.cut_box{
+    text-align: center;
+    background-color: #fff;
+}
+.advisory{
+    padding: 2.4rem 0;
+}
+.advisory p{
+    color: #CA572A;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+.advisory button{
+    width: 10.1rem;
+    height: 4.1rem;
+    background-color: #CA572A;
+    border: 1px solid #CA572A;
+    font-size: 1.6rem;
+    color:#FFF;
+    border-radius: 8px;
+}
+.cut_box .cut{
+    display: flex;
+    border-bottom: 1px solid #CCC;
+}
+.cut_box .cut p{
+    width: 100%;
+    padding: 1.1rem 0;
+    font-size: 1.5rem;
+    color: #555;
+    position: relative;
+}
+/* .cut_box .cut .sure{
+    color: #CA572A;
+    border-bottom: 3px solid #CA572A;
+} */
+.case_list{
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 1.9rem;
+    margin-bottom: 1.45rem;
+}
+.case_list .top p:nth-child(1){
+    display: inline-block;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 1.8rem;
+    margin: 1rem;
+    background-image: url("../img/30@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.case_list .top p:not(:first-child){
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.4rem;
+    margin: 1.9rem 0 0 .95rem;
+}
+.case_list .top p:nth-of-type(2){
+    margin-left: -4px;
+    color: #444;
+    font-weight:bold;
+}
+.case_list .top p:nth-of-type(3){
+    color: #CA572A;
+}
+.case_list .audio_box .audio{
+    display: inline-block;
+    width: 15.1rem;
+    height: 4rem;
+    margin: 1.5rem .5rem 1.5rem 1rem;
+    background-image: url("../img/audio@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.case_list .audio_box .audio img{
+    margin: 1rem 0 0 2rem;
+    width: 15%;
+}
+.case_list .audio_box .audio span{
+    position: relative;
+    top: -.6rem;
+    left: .6rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.case_list .audio_box p{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2.9rem;
+    font-size: 1.5rem;
+    color: #CCC;
+}
+.case_list .video{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 21.2rem;
+    overflow: hidden;
+    text-align: justify;
+}
+.case_list .video img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6rem;
+    height: 6rem;
+    margin: -3rem 0 0 -3rem;
+}
+video{
+    width: 100%;
+    height: 21.2rem;
+    background: #333;
+    margin: 0;
+}
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+.case_list .text{
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    color: #444;
+}
+.case_list .text p:nth-of-type(1){
+    color: #222;
+    font-weight:bold;
+    margin-top: 1.45rem;
+    margin-bottom: 1.45rem;
+}
+.case_list .text p:nth-of-type(2){
+    overflow : hidden;
+    text-overflow: ellipsis;
+    /*display: -webkit-box;*/
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin: 1.45rem 0;
+    line-height: 2rem;
+}
+.case_list .text p:nth-of-type(3){
+    margin: 1.35rem 0 1.5rem 0;
+    color: #CA572A;
+}
+.case_list .onlyImage{
+    width: 14rem;
+    height: 14rem;
+    overflow: hidden;
+}
+figure{
+    margin: 0;
+    overflow: hidden;
+}
+.case_list .moreImage{
+    padding-left: 1rem;
+}
+.case_list .moreImage figure{
+    width: 8rem;
+    height: 8rem;
+    display: inline-block;
+    margin-right: .5rem;
+}
+.case_list .moreImage a{
+    width: 8rem;
+    height: 8rem;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: .5rem;
+}
+.case_list .moreImage a img{
+    width: 100%;
+    min-height: 8rem;
+}
+.case_list .onlyImage img{
+    max-width: 14rem;
+    min-height: 14rem;
+    margin-left: 1rem;
+}
+.case_list .obstetrics{
+    font-size: 1.4rem;
+    color: #888;
+    margin: 1.4rem 0 1.4rem .95rem;
+}
+.case_list .heat{
+    margin: 1.45rem 0 0 .95rem;
+    font-size: 1.4rem;
+    color: #888;
+}
+.list_loading{
+    width: 100%;
+    padding: 3rem 0;
+    background-color: #fff;
+    text-align: center;
+}
+.list_loading img{
+    width: 8rem;
+}
+.list_loading p{
+    font-size: 1.5rem;
+    color: #555;
+}
+/*----------------------------------------doctor_twoBox-------------------------------------------------*/
+.content_list{
+    padding: 1.5rem 1rem;
+    background-color: #fff;
+    margin-bottom: 1.5rem;
+}
+.content_list .doctor{
+    margin-top: 1.4rem;
+    padding: 0;
+    text-align: start;
+    border: 0;
+}
+.content_list .user,.content_list .doctor .doctor_answer{
+    padding: 0 0 0 4.2rem;
+    text-align: start;
+    border: 0;
+    overflow: hidden;
+}
+.content_list .user .user_left,.content_list .doctor .doctor_answer .doctor_answer_left{
+    position: relative;
+    float: left;
+    margin-left: -5.7rem;
+}
+.content_list .user .head_portrait,.content_list .doctor .doctor_answer .head_portrait{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    background-image: url("../img/30@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 1.2rem;
+    margin-left: 1.5rem;
+}
+.content_list .user .ask,.content_list .doctor .answer{
+    position: absolute;
+    top: 0;
+    right: .6rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: .8rem;
+    background-image: url("../img/ask.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content_list .doctor .answer{
+    background-image: url("../img/answer.png");
+}
+.content_list .user .text{
+    font-size: 1.5rem;
+    color: #222;
+    font-weight: normal;
+    margin: 0;
+}
+.content_list .doctor .doctor_info{
+    font-size: 1.3rem;
+    color: #888;
+    margin-bottom: 1.1rem;
+}
+.content_list .video{
+    position: relative;
+    display: inline-block;
+    width: 15rem;
+    height: 8.5rem;
+    border-radius: 5px;
+    background-image: url("../img/80@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content_list .video:after{
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: -.8rem;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: .8rem solid transparent;
+    border-bottom: .8rem solid transparent;
+    border-right: .8rem solid rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+.content_list .video div{
+    width: 100%;
+    height: 8.5rem;
+    line-height: 8.5rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.content_list .video div img{
+    position: relative;
+    top: .8rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 .7rem 0 1rem;
+}
+.content_list .video div span{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.content_list .audio{
+    display: inline-block;
+    width: 16.1rem;
+    height: 4.3rem;
+    background-image: url("../img/audio@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 1rem 0 -.5rem;
+}
+.content_list .audio img{
+    margin: 1rem 0 0 2rem;
+    width: 15%;
+}
+.content_list .audio span{
+    position: relative;
+    top: -.7rem;
+    left: .4rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.content_list .doctor_answer_right p{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.5rem;
+    color: #CCC;
+    font-weight: normal;
+    margin: 1.5rem 0 0 0;
+}
+.content_list .doctor_answer_right p span{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    color: #CCC;
+}
+.content_list .doctor_answer_right .look{
+    float: right;
+    margin-top: 3.2rem;
+    font-size: 1.5rem;
+    color: #CA572A;
+}
+.content_list .doctor_answer_right .ado{
+    margin-top: 1.4rem;
+}
+
+/*------------------------------------doctor_list-------------------------------------------*/
+.doctor_list{
+    padding: 1.5rem 1.3rem 1.5rem 1.8rem;
+    font-size: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #CCC;
+}
+.doctor_list .head_portrait{
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    margin: 0 1.1rem 0 0;
+}
+.doctor_list .doctor_info{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: .3rem;
+    font-size: 1.4rem;
+    color: #555;
+}
+.doctor_list .doctor_info .doctor_name{
+    font-size: 1.6rem;
+    color: #222;
+}
+.doctor_list .doctor_info p{
+    margin-top: .8rem;
+}
+.doctor_list .doctor_info p span{
+    padding: .3rem 1.1rem;
+    border: 1px solid #CCC;
+    border-radius: 1.1rem;
+}
+.doctor_list .doctor_info p span:nth-of-type(1){
+    margin-right: .7rem;
+}
+.doctor_list .advisory{
+    float: right;
+    width: .8rem;
+    height: 1.7rem;
+    padding: 0;
+    margin-top: 1.7rem;
+}
+.unVideo{
+    text-align: center;
+    font-size: 1.4rem;
+    color: #888;
+    background-color: #fff;
+    padding-bottom: 7rem;
+}
+.unVideo img{
+    width: 7rem;
+    height: 7rem;
+    margin: 7rem 0 2.2rem 0;
+}
+.noMoreData{
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #222;
+}
+
+/*------------------------------------------咨询--------------------------------------------*/
+.ask_doctor{
+    padding: 1.5rem;
+    background-color: #fff;
+}
+.ask_doctor .head_portrait{
+    display: inline-block;
+    width: 5.1rem;
+    height: 5.1rem;
+    margin: 0 1rem 0 0;
+}
+.ask_doctor .info{
+    display: inline-block;
+    vertical-align: top;
+}
+.ask_doctor .info p{
+    font-size: 1.4rem;
+    color: #555;
+}
+.ask_doctor .info p:nth-of-type(1){
+    font-size: 1.6rem;
+    color: #222;
+    margin: .3rem 0 .9rem 0;
+}
+.ask_doctor .info p span{
+    padding: .4rem 1.2rem .4rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 1.2rem;
+}
+.hint{
+    margin: 1.5rem 1.5rem 0 1.5rem;
+    background-color: #FFDFB0;
+    color: #8D523B;
+    font-size: 1.4rem;
+    padding: 1.1rem 0 1.1rem 1.2rem;
+    border-radius: 4px;
+}
+.question{
+    padding: 1.5rem;
+}
+.Top{
+    width: 100%;
+    height: 4.4rem;
+    line-height: 4.7rem;
+    font-size: 1.7rem;
+    background-color: #fff;
+    border-bottom: 1px solid #CCC;
+    text-align: center;
+}
+.Top .back{
+    position: relative;
+    z-index: 2;
+    width: 4.4rem;
+    height: 100%;
+    overflow: hidden;
+}
+.Top .back img{
+    width: 75%;
+}
+.Top .title{
+    width: 100%;
+    height: 100%;
+    color: #222;
+    margin-top: -4.4rem;
+}
+.question_info{
+    display: flex;
+    margin-bottom: 1rem;
+}
+.question .question_info p{
+    display: flex;
+    width: 10.1rem;
+    height: 4.1rem;
+    line-height: 4.1rem;
+    text-align: center;
+    border: 1px solid #CA572A;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.question .question_info p span{
+    width: 50%;
+    background-color: #fff;
+    font-size: 1.4rem;
+    color: #CA572A;
+}
+.question .question_info p .sex{
+    background-color: #CA572A;
+    color: #fff;
+}
+.question .question_info .age,.question .question_info .dep{
+    position: relative;
+    width: 7.6rem;
+    height: 4.1rem;
+    line-height: 4.1rem;
+    background-color: #fff;
+    border: 1px solid #CCC;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    margin: 0 1rem;
+    text-align: center;
+    color: #888;
+}
+.question .question_info .age select,.question .question_info .dep select{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 4;
+}
+.down{
+    font-family: 'iconfont';
+    font-size: 1.8rem;
+    float: right;
+    margin-right: 1.1rem;
+}
+.question .question_info .dep{
+    width: 40%;
+    background-color: #fff;
+    margin: 0;
+}
+.question .address{
+    display: flex;
+    margin-bottom: 1rem;
+}
+.question .address input{
+    padding-left: 1rem;
+    width: 100%;
+    height: 4.1rem;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    color: #888;
+}
+.question .question_content{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.question .question_content textarea{
+    width: 94%;
+    height: 6rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #888;
+    border-bottom: 1px solid #ccc;
+    margin-top: -2px;
+}
+.question .question_content textarea:last-of-type{
+    border: 0;
+}
+.question .question_content textarea:first-of-type{
+    height: 9rem;
+}
+.question .question_pics{
+    font-size: 0;
+}
+.question .question_pics p{
+    font-size: 1.4rem;
+    color: #888;
+    margin: 1.6rem 0 .6rem 0;
+}
+.question .question_pics img{
+    width: 5rem;
+    height: 5rem;
+    margin-right: .5rem;
+}
+.question .question_pics span{
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-family: 'iconfont';
+    font-size: 4rem;
+    color: #CCC;
+    font-weight: bold;
+    background-color: #E3E3E3;
+    vertical-align: top;
+    overflow: hidden;
+}
+.question .question_pics span input[type="file"]{
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    top: -5.3rem;
+    left: 0;
+    opacity: 0;
+}
+.question .pose{
+    width: 100%;
+    height: 5rem;
+    margin-top: 1rem;
+    background-color: #CA572A;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.8rem;
+}
+/*-----------------加载更多按钮啊-----------------------------------------------------*/
+.content_bottom{
+    width: 100%;
+    text-align: center;
+    padding: 0 0 1.5rem 0;
+}
+.content_bottom button{
+    width: 18rem;
+    height: 5rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #555;
+}
+.content_bottom button img{
+    width: 3rem;
+    margin-top: .2rem;
+}
+
+/*-------------------------------------*/
+.cut_box .cut .sure .bom{
+    padding-bottom: 1rem;
+    color: #CA572A;
+    margin: 0 auto;
+    border-bottom: .3rem solid #CA572A;
+}
+/*--------------未关注公众号界面-------------*/
+.twocode{
+    width:14.5rem;
+    margin: 0 auto .2rem;
+}
+.code_info{
+    width:20.6rem;
+    height:4.4rem;
+    overflow: hidden;
+    font-size:1.4rem;
+    border-radius:4px;
+    box-sizing:border-box;
+    border: 1px solid #cccccc;
+    color:#888;
+    margin: 0 auto 2.4rem;
+}
+.point{
+    width:2.8rem;
+    margin: 0.8rem 0.8rem 1.2rem .8rem;
+    float:left ;
+}
+.code_info + p {
+    padding: 0 2.6rem;
+    color: #555;
+    text-align: left;
+}
+.point_info{
+    padding: 0.6rem 0 0.4rem .2rem;
+    width:15.6rem;
+    line-height: 1.6rem;
+    text-align: left;
+    box-sizing:border-box;
+    float:left ;
+    word-break:break-all;
+}
+.addtop{
+    padding-top: 1.4rem;
+}

@@ -1,0 +1,217 @@
+body{
+    background-color: #fff;
+}
+section .doctor_info{
+    width: 100%;
+    text-align: center;
+    padding: 1.55rem 0 1.6rem 0;
+    border-bottom: 1px solid #CCC;
+}
+section .doctor_info .head_portrait{
+    width: 7.9rem;
+    height: 7.9rem;
+    margin: 0 auto 1.05rem auto;
+    border-radius: 3.95rem;
+    background-image: url("../img/30@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .doctor_info .doctor_name{
+    font-size: 1.8rem;
+    text-align: center;
+    color: #222;
+    margin-bottom: 1.4rem;
+}
+section .doctor_info span{
+    font-size: 1.4rem;
+    color: #555;
+    padding: .35rem 1rem;
+    border: 1px solid #666;
+    border-radius: 1rem;
+    margin-right: .4rem;
+}
+section .doctor_info .doctor_address{
+    font-size: 1.4rem;
+    color: #222;
+    margin: 1.1rem auto 0 auto;
+}
+section .doctor_content{
+    width: 100%;
+    text-align: right;
+}
+section .doctor_content p{
+    padding: 1.45rem 1.5rem 1.7rem 1.5rem;
+    font-size: 1.4rem;
+    color: #222;
+    text-align: left;
+}
+section .doctor_content span{
+    font-size: 1.5rem;
+    color: #888;
+}
+section .doctor_content button{
+    width: 6.6rem;
+    height: 3.1rem;
+    color: #fff;
+    background-color: #CA572A;
+    border: 0;
+    font-size: 1.5rem;
+    margin: 0 1.5rem 1.45rem .9rem;
+}
+section .questions{
+    width: 100%;
+}
+section .questions .end{
+    font-size: 1.4rem;
+    color: #888;
+    padding: 1rem 1.5rem;
+}
+section .questions .questions_content{
+    margin: 0 1.5rem;
+    background-color: #F2F2F2;
+}
+section .questions .questions_content .people_sex{
+    display: inline-block;
+    width: 5rem;
+    height: 3rem;
+    line-height: 3rem;
+    border: 1px solid #CA572A;
+    color: #CA572A;
+    font-size: 1.4rem;
+    text-align: center;
+}
+section .questions .questions_content .people_sex:nth-of-type(1){
+    border-radius: 5px 0 0 5px;
+    margin: 1.05rem 0 .95rem 1.05rem;
+}
+section .questions .questions_content .people_sex:nth-of-type(2){
+    border-radius: 0 5px 5px 0;
+    margin: 1.05rem 0 .95rem 0;
+}
+section .questions .questions_content .people_age{
+    position: relative;
+    margin-left: 3.55rem;
+    font-size: 1.4rem;
+    color: #888;
+}
+section .questions .questions_content .people_age select{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 4.2rem;
+    opacity: 0;
+}
+section .questions .questions_content .people_age .down{
+    font-family: 'iconfont';
+    font-size: 1.6rem;
+}
+section .questions .questions_content .questions_text{
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+}
+section .questions .questions_content .questions_text textarea{
+    width: 100%;
+    font-size: 1.5rem;
+    color: #888;
+    resize: none;
+    border: 1px solid #CCC;
+    border-radius: 3px 3px 0 0;
+}
+section .questions .questions_content .questions_text .questions_btm{
+    width: 100%;
+    margin-top: -3px;
+    border: 1px solid #CCC;
+    border-top: 0;
+    border-radius: 0 0 3px 3px;
+    margin-bottom: .5rem;
+    background-color: #fff;
+}
+section .questions .questions_content .questions_text .questions_btm span:nth-of-type(1){
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #555;
+    padding: 1.4rem .75rem 1.4rem .95rem;
+}
+section .questions .questions_content .questions_text .questions_btm p{
+    position: relative;
+    top: .75rem;
+    display: inline-block;
+    width: 5.45rem;
+    height: 3.1rem;
+    background-color: #CA572A;
+    border-radius: 1.55rem;
+    text-align: right;
+}
+section .questions .questions_content .questions_text .questions_btm .left{
+    text-align: left;
+    background-color: #8c8c8c;
+}
+section .questions .questions_content .questions_text .questions_btm p span{
+    display: inline-block;
+    width: 2.9rem;
+    height: 2.9rem;
+    margin: .1rem .1rem 0 .1rem;
+    border-radius: 1.45rem;
+    padding: 0 !important;
+    background-color: #fff;
+    transition: all .3s linear;
+}
+section .questions .questions_content .questions_text .questions_btm span:not(:nth-of-type(1)){
+    float: right;
+    font-size: 1.4rem;
+    color: #888;
+}
+section .questions .questions_content .questions_text .questions_btm .maxLength{
+    padding: 1.4rem .95rem 1.4rem 0;
+}
+section .questions .questions_content .questions_text .questions_btm .initLength{
+    padding: 1.4rem 0;
+}
+section .questions .questions_content .questions_text .upload_image{
+    width: 100%;
+    margin-bottom: 1.75rem;
+}
+section .questions .questions_content .questions_text .upload_image .image_show{
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    background-image: url("../img/30@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: .45rem;
+}
+section .questions .questions_content .questions_text .upload_image .image_add{
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    font-family: 'iconfont';
+    vertical-align: top;
+    font-size: 4rem;
+    color: #CCC;
+    font-weight:bold;
+    background-color: #E3E3E3;
+}
+section .questions .questions_content .questions_text .money{
+    text-align: center;
+    font-size: 1.6rem;
+    color: #C24720;
+}
+section .questions .questions_content .questions_text button{
+    display: block;
+    width: 12rem;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.65rem;
+    color: #FFF;
+    background-color: #CA572A;
+    border: 0;
+    border-radius: 3px;
+    margin: .9rem auto;
+}
+.yes{
+    background-color: #CA572A;
+    color: #fff !important;
+}

@@ -1,0 +1,128 @@
+.problem{
+    padding: 1rem 1rem 0 5rem;
+    background-color: #fff;
+    margin-bottom: 1.5rem;
+    /*border-bottom: 1px solid #CCC;*/
+}
+.head_portrait{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    background-image: url("../img/30@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.problem .head_portrait{
+    float: left;
+    margin-left: -4rem;
+}
+.problem .text{
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+.problem .imgBox figure{
+    display: inline-block;
+    margin: 1rem 1rem 0 0;
+    width: 8rem;
+    height: 8rem;
+    overflow: hidden;
+}
+.problem .imgBox img{
+    width: 8rem;
+    min-height: 8rem;
+}
+.problem .footer{
+    padding: 1.4rem 0;
+    color: #888;
+}
+.problem .footer span:nth-of-type(1){
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+}
+.problem .footer span:nth-of-type(2){
+    font-size: 1.4rem;
+}
+.answer{
+    background-color: #fff;
+    margin-bottom: 1.5rem;
+}
+.answer .top{
+    padding: 1rem;
+    font-size: 0;
+}
+.answer .top .head_portrait{
+    display: inline-block;
+}
+.answer .top span{
+    display: inline-block;
+    font-size: 1.4rem;
+    vertical-align: top;
+}
+.answer .top .name{
+    color: #555;
+    margin: .7rem .8rem 0 1rem;
+    font-weight: bold;
+}
+.answer .top .attention{
+    color: #CA572A;
+    margin: .8rem .8rem 0 1rem;
+}
+.video,video{
+    width: 100%;
+    height: 21.2rem;
+    text-align: center;
+}
+/*.audio{*/
+    /*width: 15.1rem;*/
+    /*height: 4rem;*/
+    /*margin: .9rem 0 0 1rem;*/
+    /*background-image: url("../img/audio@2x.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+/*}*/
+/*.audio img{*/
+    /*margin: 1rem 0 0 2rem;*/
+    /*width: 15%;*/
+/*}*/
+/*.audio .time{*/
+    /*float: right;*/
+    /*font-size: 1.5rem;*/
+    /*color: #fff;*/
+    /*margin: 1.4rem 1rem 1.4rem 0;*/
+/*}*/
+.audio_box{
+    margin: .9rem 0 0 1rem;
+}
+.audio{
+    display: inline-block;
+    width: 16.1rem;
+    height: 4.3rem;
+    background-image: url("../img/audio@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 1rem 0 -.5rem;
+}
+.audio img{
+    margin: 1rem 0 0 2rem;
+    width: 15%;
+}
+.audio span{
+    position: relative;
+    top: -.7rem;
+    left: .4rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.audio_box p{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: #CCC;
+}
+.heat{
+    padding: 2rem 0 1.8rem 1rem;
+    font-size: 1.4rem;
+    color: #888;
+}

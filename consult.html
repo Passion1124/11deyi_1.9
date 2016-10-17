@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>病情咨询</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/consult.css">
+</head>
+<body>
+    <header>
+        <p class="back">
+            <img src="img/back.png" alt="">
+        </p>
+        <div class="title">
+            病情咨询
+        </div>
+    </header>
+    <div class="loading">
+        <img src="img/loading.gif" alt="">
+        <p>正在加载</p>
+    </div>
+    <div class="consult_loading hide">
+        <img src="img/loading.gif" alt="">
+        <p>正在发布</p>
+    </div>
+    <section class="hide">
+        <div class="elect">
+            <span class="sex sex_yes">男</span>
+            <span class="sex">女</span>
+            <span class="age">
+                <span>18岁</span><span class="down">&#xe601;</span>
+                <select name=""></select>
+            </span>
+            <span class="department">
+                <span>选择科室</span><span class="down">&#xe601;</span>
+                <select name=""></select>
+            </span>
+        </div>
+        <div class="content">
+            <textarea maxlength="300" placeholder="请详细描述病情，待医生作答后，查看答案时才需要支付费用。"></textarea>
+            <div class="question_btm">
+                <span>匿名提问</span>
+                <p class="cryptonym">
+                    <span></span>
+                </p>
+                <p>
+                    <span class="initLength">0</span>
+                    <span>/300</span>
+                </p>
+            </div>
+        </div>
+        <div class="price">
+            <span>我愿意为答案出价</span>
+            <input type="tel" placeholder="0-10">
+            <span> 元</span>
+        </div>
+        <div class="remind">
+            <div class="star">*</div>
+            <p class="text">提问时无需付费，待医生作答后，查看答案时再付费。若有多个医生回答，每个答案单独付费。</p>
+        </div>
+        <button class="issue">发布</button>
+    </section>
+    <div class="present_box hide">
+        <div class="present">
+            <img src="img/chenggong_@2x.png" alt="">
+            <h4>提交成功</h4>
+            <p>待医生回答问题后</p>
+            <p>我们将用短信通知你查看答案</p>
+            <button>知道了</button>
+        </div>
+    </div>
+<script src="lib/zepto.min.js"></script>
+<script src="lib/common.js"></script>
+<script src="js/consult.js"></script>
+</body>
+</html>

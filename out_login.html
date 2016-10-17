@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>退出登陆</title>
+    <link rel="stylesheet" href="./css/public.css">
+</head>
+<style>
+    button{
+        display: block;
+        width: 90%;
+        margin: 2rem auto 0 auto;
+        height: 4rem;
+        border-radius: 4px;
+        background-color: #fff;
+        border: 1px solid #CA572A;
+        font-size: 1.5rem;
+        color: #CA572A;
+    }
+</style>
+<body>
+    <button>退出登陆</button>
+    <script src="lib/zepto.min.js"></script>
+    <script src="lib/common.js"></script>
+    <script>
+        $("button").on("click", function () {
+            localStorage.clear();
+            location.href = "index.html"+location.search;
+        })
+    </script>
+</body>
+</html>

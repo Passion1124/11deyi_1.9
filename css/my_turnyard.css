@@ -1,0 +1,85 @@
+ .list{
+    padding: 1rem 1rem 1.5rem 5rem;
+    background-color: #fff;
+    margin-bottom: 1.5rem;
+}
+ .list .list_left{
+    float: left;
+    margin-left: -4rem;
+}
+ .list .list_left .head_portrait{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    background-image: url("../img/30@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ .list .list_right .title{
+    padding: .8rem 0 2rem 0;
+}
+ .list .list_right .title span{
+    font-size: 1.5rem;
+    color: #888;
+}
+ .list .list_right .title span:nth-of-type(1){
+    margin-right: .7rem;
+    font-weight: bold;
+    color: #222;
+}
+ .list .list_right .address{
+    margin-bottom: .9rem;
+}
+ .list .list_right .address span:nth-of-type(1){
+    display: inline-block;
+    padding: 0 .8rem;
+    height: 2.1rem;
+    line-height: 2rem;
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: #56BC8A;
+    border-radius: 3px;
+    margin-right: 1rem;
+}
+ .list .list_right .address span:nth-of-type(2){
+    color: #56BC8A;
+    font-size: 1.4rem;
+}
+ .list .list_right .text{
+    font-size: 1.6rem;
+    color: #888;
+    line-height: 2.1rem;
+    margin-bottom: 1.8rem;
+}
+ .list .list_right .other{
+    font-size: 1.5rem;
+    color: #222;
+    overflow: hidden;
+}
+ .list .list_right .other span:nth-of-type(2){
+    float: right;
+}
+ .bottom{
+     position: fixed;
+     display: flex;
+     bottom: 0;
+     background-color: #fff;
+     width: 100%;
+     padding: .7rem 0 .6rem 0;
+     border-top: 1px solid #ccc;
+     z-index: 9999;
+ }
+ .bottom div{
+     width: 33.3%;
+     text-align: center;
+ }
+ .bottom div img{
+     width: 4rem;
+ }
+ html,body{
+     height: 100%;
+ }
+ footer{
+     padding-bottom: 6.5rem;
+ }

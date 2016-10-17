@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>我的病历</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/add_case.css">
+</head>
+<body>
+    <div class="my_case hide">
+        <header>
+            <p class="back">
+                <img src="img/back.png" alt="">
+            </p>
+            <div class="title">
+                我的病历
+            </div>
+        </header>
+        <section>
+            <!--<div class="not_case hide">-->
+                <!--<img src="img/my_case.png" alt="">-->
+                <!--<p>为了让医生更了解你的病情</p>-->
+                <!--<p>请填写最近就诊的病历信息</p>-->
+                <!--<button>新建病历</button>-->
+            <!--</div>-->
+            <!--<div class="new_case">-->
+                <!--<button>新建病历</button>-->
+            <!--</div>-->
+            <!--<div class="case_list ">-->
+                <!--<p>蒋佳良</p>-->
+                <!--<p>就诊时间：2016/06/22</p>-->
+                <!--<p>出虚汗，血脂高，嘴唇发紫，膝盖上下楼疼，感觉自己像老人，养了两年鸡，睡眠特别不规律，有时候一晚上睡两三个小时，老是被吵asd1111111111111111111111...</p>-->
+            <!--</div>-->
+            <!--<div class="case_list">-->
+                <!--<p>蒋佳良</p>-->
+                <!--<p>就诊时间：2016/06/22</p>-->
+                <!--<p>出虚汗，血脂高，嘴唇发紫，膝盖上下楼疼，感觉自己像老人，养了两年鸡，睡眠特别不规律，有时候一晚上睡两三个小时，老是被吵asd1111111111111111111111...</p>-->
+            <!--</div>-->
+            <!--<div class="case_list">-->
+                <!--<p>蒋佳良</p>-->
+                <!--<p>就诊时间：2016/06/22</p>-->
+                <!--<p>出虚汗，血脂高，嘴唇发紫，膝盖上下楼疼，感觉自己像老人，养了两年鸡，睡眠特别不规律，有时候一晚上睡两三个小时，老是被吵asd1111111111111111111111...</p>-->
+            <!--</div>-->
+        </section>
+        <div>
+            <div class="send hide">
+                <div class="send_box">
+                    <div class="info">
+                        <p>发送给:</p>
+                        <div>
+                            <p class="head_portrait"></p>
+                            <p>范主任</p>
+                        </div>
+                        <p>[病历]蒋佳良 就诊时间：2015/05/12</p>
+                    </div>
+                    <div class="send_btm">
+                        <p>取消</p>
+                        <p>发送</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loading_box">
+        <div class="loading">
+            <img src="img/loading.gif" alt="">
+            <p>拼命加载中</p>
+        </div>
+    </div>
+    <div class="consult_loading hide">
+        <img src="img/loading.gif" alt="">
+        <p>正在提交</p>
+    </div>
+    <div class="add_case hide">
+        <header>
+            <p class="back">
+                <img src="img/back.png" alt="">
+            </p>
+            <div class="title">
+                添加我的病历
+            </div>
+        </header>
+        <section>
+            <p class="patient_name">
+                <input type="text" placeholder="姓名">
+            </p>
+            <div class="patient_info">
+                <p>
+                    <span class="sex">男</span>
+                    <span>女</span>
+                </p>
+                <p>
+                    <span>18岁</span>
+                    <span class="down"><img src="img/down.png" alt=""></span>
+                    <select name=""></select>
+                </p>
+            </div>
+            <p class="patient_tel">
+                <input type="tel" placeholder="联系电话(必填)" maxlength="11">
+            </p>
+            <!--<p class="patient_clinic">-->
+                <!--<input type="date">-->
+                <!--<input type="text" placeholder="就诊时间(必填)">-->
+                <!--<span class="down">&#xe601;</span>-->
+            <!--</p>-->
+            <div class="patient_more">
+                <div>
+                    <input type="date" id="in_time">
+                    <textarea placeholder="就诊时间(必填)"></textarea>
+                    <span class="down"><img src="img/down.png" alt=""></span>
+                </div>
+                <textarea placeholder="就诊卡ID/编号" maxlength="100"></textarea>
+                <div>
+                    <input type="date" id="find_time">
+                    <textarea placeholder="首发症状时间(必填)"></textarea>
+                    <span class="down"><img src="img/down.png" alt=""></span>
+                </div>
+                <textarea placeholder="患病疼痛部位（必填）" maxlength="300"></textarea>
+                <textarea placeholder="诊断结果" maxlength="300"></textarea>
+                <textarea placeholder="做过什么治疗" maxlength="300"></textarea>
+            </div>
+            <div class="patient_pics">
+                <p>请上传本次就诊的CT或X光片，以及相关检查报告。</p>
+                <!--<img src="img/30@2x.png" alt="">-->
+                <span id="up-btn">
+                    <span id="up-info">&#xe604;</span>
+                    <input type="file">
+                </span>
+            </div>
+            <button class="finish">完成</button>
+        </section>
+    </div>
+    <script src="lib/zepto.min.js"></script>
+    <script src="lib/upfile.js"></script>
+    <script src="lib/common.js"></script>
+    <script src="js/add_case.js"></script>
+</body>
+</html>

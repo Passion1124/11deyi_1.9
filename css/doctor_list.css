@@ -1,0 +1,71 @@
+section .doctor{
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem 0;
+}
+section .doctor:not(:first-child){
+    border-top: 1px solid #CCC;
+}
+section .doctor .head_portrait{
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    margin: 0 1rem;
+    background-image: url("../img/30@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .doctor .doctor_info{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: .2rem;
+}
+section .doctor .doctor_info span{
+    font-size: 1.4rem;
+    color: #555;
+}
+section .doctor .doctor_info span:not(:first-child){
+    border-radius: 1.2rem;
+    padding: .2rem 1rem;
+    border: 1px solid #CCC;
+}
+section .doctor .doctor_info span:nth-of-type(2){
+    margin: 0 .7rem;
+}
+section .doctor .doctor_info .doctor_name{
+    font-size: 1.6rem;
+    color: #222;
+}
+section .doctor .doctor_info h4{
+    margin-top: .8rem;
+    font-size: 1.5rem;
+    color: #555;
+}
+section .doctor .advisory{
+    float: right;
+    width: 3rem;
+    text-align: center;
+    height: 100%;
+    margin-top: 1.8rem;
+}
+section .doctor .advisory img{
+    width: .7rem;
+}
+/*@media screen and (max-width: 410px){*/
+    /*html, body {*/
+        /*font-size: 6px;*/
+    /*}*/
+/*}*/
+
+footer{
+    margin-top: 1.5rem;
+}
+
+.noMoreData{
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #222;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>转院求助详情</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/photoswipe.css">
+    <link rel="stylesheet" href="./css/default-skin/default-skin.css">
+    <link rel="stylesheet" href="./css/transfer_details.css">
+</head>
+<body>
+    <header class="hide">
+        <p class="back">
+            <img src="img/back.png" alt="">
+        </p>
+        <div class="title">
+            转院求助详情
+        </div>
+    </header>
+    <section>
+        <div class="details">
+            <div class="head_portrait"></div>
+            <div class="details_content">
+                <p>
+                    <span>蒋佳良</span>
+                    <span>基层医生</span>
+                </p>
+                <p>
+                    <span>妇产科</span>
+                    <span>四川省／攀枝花／米易县</span>
+                </p>
+                <p>
+                    <span class="hint">病症描述：</span>
+                    <span>女，28岁。2016年元月6日钢板手术，两个月，医生让下床，三个月复查钢板断裂，医生打石膏固定一个月，四月复查钢板断裂。</span>
+                </p>
+                <p>
+                    <span class="hint">患病时长：</span>
+                    <span>一个月</span>
+                </p>
+                <p>
+                    <span class="hint">治疗情况：</span>
+                    <span>做过一次石膏固定。</span>
+                </p>
+                <p>
+                    <span class="hint">检查情况：</span>
+                    <span>ct检查</span>
+                </p>
+                <div class="img_box"></div>
+                <p class="time_heat">
+                    <span>2016/06/12</span>
+                    <span>有3人看过</span>
+                </p>
+                <div class="accept">
+                    <button>我愿意接受患者</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="consult_loading hide">
+        <img src="img/loading.gif" alt="">
+        <p>正在提交</p>
+    </div>
+    <div class="loading_box">
+        <div class="loading">
+            <img src="img/loading.gif" alt="">
+            <p>拼命加载中</p>
+        </div>
+    </div>
+    <div class="present_box hide">
+        <div class="present">
+            <img src="img/chenggong_@2x.png" alt="">
+            <h4>提交成功</h4>
+            <p>人工客服会协助双方进一步</p>
+            <p>沟通病情和治疗方案</p>
+            <button>好的</button>
+        </div>
+    </div>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Background of PhotoSwipe.
+             It's a separate element, as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+            <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+            <div class="pswp__container">
+                <!-- don't modify these 3 pswp__item elements, data is added later on -->
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/zepto.min.js"></script>
+    <script src="lib/photoswipe.min.js"></script>
+    <script src="lib/photoswipe-ui-default.min.js"></script>
+    <script src="lib/common.js"></script>
+    <script src="js/transfer_details.js"></script>
+</body>
+</html>

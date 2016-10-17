@@ -1,0 +1,330 @@
+.turnyard .issue_btn{
+    text-align: center;
+    background-color: #fff;
+}
+.turnyard .issue_btn button{
+    width: 14.8rem;
+    height: 3.6rem;
+    margin: 1.6rem 0;
+    color: #CA572A;
+    font-size: 1.4rem;
+    background-color: #fff;
+    border: 1px solid #CA572A;
+    border-radius: 5px;
+}
+.turnyard .issue_btn button img{
+    width: 1.8rem;
+    margin-right: .7rem;
+}
+.turnyard .issue_btn button span{
+    position: relative;
+    top: -.3rem;
+}
+.turnyard .change{
+    background-color: #fff;
+    border-bottom: 1px solid #CCC;
+}
+.turnyard .change p{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1.3rem;
+    color: #555;
+}
+.turnyard .list_loading{
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #fff;
+    font-size: 1.6rem;
+    color: #222;
+}
+.turnyard .list_loading img{
+    width: 8rem;
+}
+.turnyard .list{
+    padding: 1rem 1rem 1.5rem 5rem;
+    background-color: #fff;
+    margin-bottom: 1.5rem;
+}
+.turnyard .list .list_left{
+    float: left;
+    margin-left: -4rem;
+}
+.turnyard .list .list_left .head_portrait{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    background-image: url("../img/30@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.turnyard .list .list_right .title{
+    padding: .8rem 0 2rem 0;
+}
+.turnyard .list .list_right .title span{
+    font-size: 1.5rem;
+    color: #888;
+}
+.turnyard .list .list_right .title span:nth-of-type(1){
+    margin-right: .7rem;
+    font-weight: bold;
+    color: #222;
+}
+.turnyard .list .list_right .address{
+    margin-bottom: .9rem;
+}
+.turnyard .list .list_right .address span:nth-of-type(1){
+    display: inline-block;
+    padding: 0 .8rem;
+    height: 2.1rem;
+    line-height: 2rem;
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: #56BC8A;
+    border-radius: 3px;
+    margin-right: 1rem;
+}
+.turnyard .list .list_right .address span:nth-of-type(2){
+    color: #56BC8A;
+    font-size: 1.4rem;
+}
+.turnyard .list .list_right .text{
+    font-size: 1.6rem;
+    color: #888;
+    line-height: 2.1rem;
+}
+.turnyard .list .list_right .check{
+    font-size: 1.5rem;
+    color: #CA572A;
+    margin: .9rem 0 2rem 0;
+}
+.turnyard .list .list_right .other{
+    font-size: 1.5rem;
+    color: #222;
+    overflow: hidden;
+}
+.turnyard .list .list_right .other span:nth-of-type(2){
+    float: right;
+}
+.turnyard section{
+    padding-bottom: 5rem;
+}
+.bottom{
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: .7rem 0 .6rem 0;
+    border-top: 1px solid #ccc;
+}
+.bottom div{
+    width: 33.3%;
+    text-align: center;
+}
+.bottom div img{
+    width: 4rem;
+}
+body,html{
+    height: 100%;
+}
+footer{
+    padding-bottom: 6.5rem;
+}
+/*-------------------------------------------issue_box----------------------------------------------*/
+
+.issue_box section{
+    padding: 1.5rem;
+}
+.issue_box .elect{
+    font-size: 0;
+    margin-bottom: 1rem;
+}
+.issue_box .elect select{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4.1rem;
+    border-radius: 5px;
+    opacity: 0;
+}
+.issue_box .elect .sex{
+    display: inline-block;
+    width: 5.1rem;
+    height: 4.1rem;
+    line-height: 4.1rem;
+    text-align: center;
+    background-color: #fff;
+    color: #CA572A;
+    font-size: 1.4rem;
+    border: 1px solid #CA572A;
+}
+.issue_box .elect .sex:nth-of-type(1){
+    border-radius: 5px 0 0 5px;
+}
+.issue_box .elect .sex:nth-of-type(2){
+    border-radius: 0 5px 5px 0;
+}
+.issue_box .elect .sex_yes{
+    background-color: #CA572A;
+    color: #fff;
+}
+.issue_box .elect .age,.issue_box .elect .department{
+    position: relative;
+    display: inline-block;
+    height: 4.1rem;
+    line-height: 4.1rem;
+    font-size: 1.4rem;
+    color: #888;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    background-color: #fff;
+    vertical-align: top;
+}
+.issue_box .elect .age{
+    width: 7.6rem;
+    margin-left: 1.5rem;
+}
+.issue_box .elect .age span:nth-of-type(1),.issue_box .elect .department span:nth-of-type(1){
+    margin: 0 0 0 .8rem;
+}
+.issue_box .elect .age select{
+    width: 7.6rem;
+}
+.issue_box .elect .department{
+    width: 12.6rem;
+    float: right;
+}
+.issue_box .down{
+    font-family: 'iconfont';
+    font-size: 1.8rem;
+    float: right;
+    margin-right: 1.1rem;
+}
+.issue_box .elect .department select{
+    width: 12.6rem;
+}
+.issue_box .address{
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.issue_box .address input{
+    width: 96%;
+    height: 4.1rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    color: #888;
+}
+.issue_box .content{
+    /*height: 23.1rem;*/
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.issue_box .content textarea{
+    width: 94%;
+    height: 9rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #888;
+    resize: none;
+    border-bottom: 1px solid #CCC;
+}
+.issue_box .content textarea:not(:first-child){
+    height: 6rem;
+    margin-top: -2px;
+}
+.issue_box .content .question_btm{
+    font-size: 0;
+    background-color: #fff;
+    margin-top: -2px;
+}
+.issue_box .content .question_btm span{
+    display: inline-block;
+    font-size: 1.4rem;
+}
+.issue_box .content .question_btm>span{
+    color: #555;
+    padding: 1.4rem .8rem 1.4rem 1.1rem;
+}
+.issue_box .content .question_btm p{
+    display: inline-block;
+    vertical-align: top;
+}
+.issue_box .content .question_btm p:nth-of-type(1){
+    width: 5.5rem;
+    height: 3.1rem;
+    background-color: #CA572A;
+    margin-top: .5rem;
+    border-radius: 1.5rem;
+    text-align: right;
+}
+.issue_box .content .question_btm p:nth-of-type(1) span{
+    width: 2.9rem;
+    height: 2.9rem;
+    background-color: #fff;
+    border-radius: 1.45rem;
+    margin: 1px;
+}
+.issue_box .content .question_btm p.cryptonym{
+    text-align: left;
+    background-color: gray;
+}
+input::-webkit-input-placeholder{
+    color: #888;
+}
+.issue_box .issue{
+    width: 100%;
+    height: 5rem;
+    margin-top: 1rem;
+    background-color: #CA572A;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.8rem;
+}
+.issue_box .pics{
+    margin-top: 1rem;
+}
+.issue_box .pics p{
+    font-size: 1.4rem;
+    color: #888;
+}
+.issue_box .pics img{
+    width: 5rem;
+    height: 5rem;
+    margin-top: 1rem;
+}
+.issue_box .pics span{
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    vertical-align: top;
+    font-family: 'iconfont';
+    font-size: 4rem;
+    color: #CCC;
+    font-weight:bold;
+    background-color: #E3E3E3;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 447px){
+    .issue_box .content textarea,.issue_box .describe textarea{
+        width: 96%;
+    }
+}
+@media screen and (min-width: 782px){
+    .issue_box .content textarea,.issue_box .describe textarea{
+        width: 98%;
+    }
+}
+@media screen and (max-width: 320px){
+    .issue_box .elect .department,.issue_box .elect .department select{
+        width: 9rem;
+    }
+}

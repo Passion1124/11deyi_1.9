@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>问题详情</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="./css/photoswipe.css">
+    <link rel="stylesheet" href="./css/default-skin/default-skin.css">
+    <link rel="stylesheet" href="css/problem_details.css">
+</head>
+<body>
+    <header>
+        <p class="back">
+            <img src="img/back.png" alt="">
+        </p>
+        <div class="title">
+            <!--28条回答-->
+        </div>
+    </header>
+    <section>
+        <div class="problem hide">
+            <div class="head_portrait"></div>
+            <p class="text"></p>
+            <div class="imgBox"></div>
+            <p class="footer">
+                <span></span>
+                <span></span>
+            </p>
+        </div>
+        <!--<div class="answer">-->
+            <!--<div class="top">-->
+                <!--<div class="head_portrait"></div>-->
+                <!--<span class="name">鲍秀兰</span>-->
+                <!--<span class="attention">关注</span>-->
+            <!--</div>-->
+            <!--<div class="video">-->
+                <!--<video src="" poster="img/30@3x.png" webkit-playsinline></video>-->
+            <!--</div>-->
+            <!--<p class="heat">热度 3291</p>-->
+        <!--</div>-->
+        <!--<div class="answer">-->
+            <!--<div class="top">-->
+                <!--<div class="head_portrait"></div>-->
+                <!--<span class="name">戚团结</span>-->
+                <!--<span class="attention">关注</span>-->
+            <!--</div>-->
+            <!--<div class="audio">-->
+                <!--<audio src=""></audio>-->
+                <!--<img src="img/play03@2x.png" alt="">-->
+                <!--<span class="time">58’’</span>-->
+            <!--</div>-->
+            <!--<p class="heat">热度 3291</p>-->
+        <!--</div>-->
+    </section>
+    <div class="section_load">
+        <img src="img/loading.gif" alt="">
+        <p>正在加载</p>
+    </div>
+    <div class="consult_loading hide">
+        <img src="img/loading.gif" alt="">
+        <p>正在关注</p>
+    </div>
+    <div class="popup hide">
+        <div class="login_popup">
+            <img src="img/logo_img.png" alt="">
+            <p>使用该功能需要登录</p>
+            <button>登录</button>
+            <button>注册</button>
+            <span>&#xe607;</span>
+        </div>
+    </div>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Background of PhotoSwipe.
+             It's a separate element, as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+            <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+            <div class="pswp__container">
+                <!-- don't modify these 3 pswp__item elements, data is added later on -->
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="lib/zepto.min.js"></script>
+<script src="lib/photoswipe.min.js"></script>
+<script src="lib/photoswipe-ui-default.min.js"></script>
+<script src="lib/common.js"></script>
+<script src="js/problem_details.js"></script>
+</body>
+</html>
