@@ -36,13 +36,13 @@ $("section").on("click",".fullText",function(){
     }
 })
 $(".bottom div:nth-of-type(1)").on("click", function () {
-    location.href = "http://www.11deyi.com/Api/Weixin/profile?type=ASK";
+    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?type=ASK";
 });
 $(".bottom div:nth-of-type(2)").on("click", function () {
-    location.href = "http://www.11deyi.com/Api/Weixin/profile?type=DS";
+    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?type=DS";
 });
 $(".bottom div:nth-of-type(3)").on("click", function () {
-    location.href = "http://www.11deyi.com/Api/Weixin/profile?type=MD";
+    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?type=MD";
 });
 //$(window).on("scroll", function () {
 //    // console.log($("body").height())
@@ -126,8 +126,6 @@ $("section").on("click",".audio", function () {
     }
 });
 function getData(callback){
-
-    //var token = "NzVmNmFkMTYtZmQ0MC0xMWU1LWE4Y2UtYWE1MTk0ZjUwZTY2LDE4MDMwNDk4MzMwLDMzYTBiY2FjLWM5ZjQtNDBkYy1hNjRjLWY3NDIzM2UyMGE4YSw4aVQ0ZjVQQUd0Z3pKUkhVeVN0dTN3TGxyWmtIY3o1dg==";
     $.ajax({
         url:ebase+"/api/Admin/Video/QueryVideoListForHomeByUserId",
         type:"POST",

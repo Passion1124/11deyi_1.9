@@ -1,6 +1,7 @@
 $(function(){
     var id = getUrlParam("id");
-    getDetails(id);
+    var token = getUrlParam("token");
+    getDetails(id,token);
 });
 $("header .back").on("click", function () {
     history.back();
@@ -9,8 +10,7 @@ $(".present_box button").on("click", function () {
     $(".present_box").addClass("hide");
     $("html,body").removeClass("ovfHiden");
 })
-function getDetails(id){
-    getLoginUserToken();
+function getDetails(id,token){
     var postData = {
         "appToken": token,
         "para":{
@@ -20,7 +20,7 @@ function getDetails(id){
             "id": id
         }
     };
-    console.log(token);
+    //console.log(token);
     $.ajax({
         "url": ebase+ "/api/Question/QueryByIdV2",
         "type":"POST",

@@ -1,5 +1,8 @@
 var user = {};
 $(function () {
+    if (!official){
+        WebIM.config.appkey = 'cd11deyi#yydytest';
+    }
     if (isAndroid){
         $(".chat .footer .add span").css("line-height","2.8rem");
     }
@@ -31,61 +34,131 @@ $(function () {
             hx();
             createList();
         });
+        if(!!getLocalStroagelogin().token){
+            HideShare();
+        }
         $("html,body").css("height","auto")
     }
 });
+function  HideShare(){
+    var paraData={"appToken":getLocalStroagelogin().token,
+        "para":{
+            "device_type":"PC",
+            "device_id":" ",
+            "api_version":"1.0.0.0",
+            "url":location.href
+        }};
+    $.ajax({
+        url: ebase+"/api/Sign/GetJsTicket",
+        type:"POST",
+        data:paraData,
+        dataType:"json",
+        success:function(data){
+            var Data = data.Data;
+            if (data.Code === "0000"){
+                WxLicense(Data.appId,Data.timestamp,Data.nonceStr,Data.ticket);
+            }
+        },
+        error: function (xhr ,errorType ,error) {
+            //alert("数据错误！请刷新页面！")
+            console.log(xhr)
+            console.log(errorType)
+            console.log(error)
+        }
+    });
+}
+//授权
+function WxLicense(aId,times,nonce,ticket){
+    wx.config({
+        debug: false,
+        appId: aId,
+        timestamp: times,
+        nonceStr: nonce,
+        signature: ticket,
+        jsApiList:[
+            'checkJsApi',
+            'hideMenuItems',
+            'hideAllNonBaseMenuItem',
+            'hideOptionMenu'
+            ]
+    });
+
+    wx.ready(function () {
+        wx.hideMenuItems({
+            menuList: [
+                'menuItem:share:timeline',
+                'menuItem:share:qq',
+                'menuItem:share:weiboApp',
+                'menuItem:share:QZone',
+                'menuItem:share:facebook',
+                'menuItem:favorite'
+            ], // 要隐藏的菜单项，只能隐藏“传播类”和“保护类”按钮，所有menu项见附录3
+            success: function () {
+                console.log('已隐藏“阅读模式”，“分享到朋友圈”，“复制链接”等按钮');
+            }
+        });
+        wx.hideOptionMenu();
+        wx.hideAllNonBaseMenuItem();
+    });
+}
+
 $(window).on("resize", function () {
     resizeSectionHeight();
 });
 $(".message .top div:nth-of-type(1),.message .bottom div:nth-of-type(3)").on("click", function () {
-    location.href = "http://www.11deyi.com/Api/Weixin/profile?type=MD";
+    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?type=MD";
 });
 $(".message .top div:nth-of-type(2)").on("click", function () {
     location.href = "department_list.html"
 });
 $(".message .bottom div:nth-of-type(2)").on("click", function () {
-    location.href = "http://www.11deyi.com/Api/Weixin/profile?type=DS";
+    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?type=DS";
 });
 $(".chat section").on("click",".other", function () {
     var qid = $(this).attr("qid");
-    location.href = "disease_details.html?id="+qid;
+    var token = getLocalStroagelogin().token;
+    location.href = "disease_details.html?id="+qid+"&token="+token;
 });
 function getUserData(){
     user = {};
     var uiid = getUiid(localStorage.hxuser);
     //console.log(uiid);
     for (var i = 0; i < uiid.length; i++){
-        var chat = getChatId(uiid[i]);
-        //console.log(uiid[i])
-        for (var j = 0; j < chat.length; j++){
-            var message = getMessage(chat[j]);
-            if (message.ext){
-                if (message.ext.show_ext){
-                    if (message.ext.show_ext !== "Y"){
+        var info = getChatUserInfo(uiid[i]);
+        if (info){
+            user[uiid[i]] = {name:info.name,docid:info.docid,url:info.url,unread:localStorage[uiid[i]+"_unread"]};
+        }else {
+            var chat = getChatId(uiid[i]);
+            for (var j = 0; j < chat.length; j++){
+                var message = getMessage(chat[j]);
+                if (message.ext){
+                    if (message.ext.show_ext){
+                        if (message.ext.show_ext !== "Y"){
+                            user[uiid[i]] = {name:message.ext.extra_user_name,docid:message.ext.extra_user_app_id,url:message.ext.extra_user_avater,unread:localStorage[message.from+"_unread"]};
+                            break;
+                        }
+                    }else {
                         user[uiid[i]] = {name:message.ext.extra_user_name,docid:message.ext.extra_user_app_id,url:message.ext.extra_user_avater,unread:localStorage[message.from+"_unread"]};
                         break;
                     }
-                }else {
-                    user[uiid[i]] = {name:message.ext.extra_user_name,docid:message.ext.extra_user_app_id,url:message.ext.extra_user_avater,unread:localStorage[message.from+"_unread"]};
+                }
+                else {
+                    //console.log(message.to)
+                    var userInfo = getChatUserInfo(message.to);
+                    //console.log(info)
+                    var name = undefined;
+                    var url = "http://www.11deyi.com/img/30.png";
+                    var docid = "";
+                    if (userInfo){
+                        name = userInfo.name;
+                        url = userInfo.url;
+                        docid = userInfo.docid;
+                    }
+                    //console.log(name);
+                    //console.log(url);
+                    user[uiid[i]] = {name:name,url:url,unread:localStorage[message.to+"_unread"],docid:docid};
                     break;
                 }
-            }
-            else {
-                //console.log(message.to)
-                var info = getChatUserInfo(message.to);
-                //console.log(info)
-                var name = undefined;
-                var url = "http://www.11deyi.com/img/30.png";
-                var docid = "";
-                if (info){
-                    name = info.name;
-                    url = info.url;
-                    docid = info.docid;
-                }
-                //console.log(name);
-                //console.log(url);
-                user[uiid[i]] = {name:name,url:url,unread:localStorage[message.to+"_unread"],docid:docid};
-                break;
             }
         }
     }
@@ -206,7 +279,7 @@ function chatShow(){
                         $(".chat .left .audio").eq(audioLength).find("audio").attr("src",audioUrl);
                         audioLength++;
                     });
-                    var ele = "<div class='head_portrait'></div><div class='content audio' audio='"+audioUrl+"'><audio src='"+audioUrl+"'></audio><img src='img/chatyy.png' alt=''></div><span>"+message.length+"’’</span>"
+                    var ele ="<div class='head_portrait'></div><div class='content audio"+(message.isRead===false?" isRead":"")+"' audio='"+audioUrl+"'><audio src='"+audioUrl+"'></audio><img src='img/chatyy.png' alt=''></div><span>"+message.length+"’’</span><span class='dot'></span>"
                 }
             }
             var html = "<div class='left'>"+ele+"</div>"
@@ -249,7 +322,7 @@ function chatShow(){
                     },200)
                 });
             }
-            var html = "<div class='right'>"+ele+"</div>"
+            var html = "<div class='right'>"+ele+"</div>";
 
             $(".chat section").append(html);
         }
@@ -260,7 +333,11 @@ function chatShow(){
     if (user[getRouterParam("id")].url){
         leftUrl = user[getRouterParam("id")].url;
     }
-    $(".left .head_portrait").css("background-image","url('"+leftUrl+"')");
+    var docid = undefined;
+    if (user[getRouterParam("id")].docid){
+        docid = user[getRouterParam("id")].docid;
+    }
+    $(".left .head_portrait").css("background-image","url('"+leftUrl+"')").attr("docid",docid);
     if ($(".chat section img").length != 0){
         $(".chat section img").load(function(){
             goBottom();
@@ -274,6 +351,7 @@ $(window).bind('hashchange', function() {
     if (hashId){
         $(".chat").removeClass("hide");
         $(".message").addClass("hide");
+        $("head title").text(user[getRouterParam("id")].name);
         $("html,body").css("height","100%")
     }else {
         createList();
@@ -302,14 +380,23 @@ $(".chat .btm p:nth-of-type(1)").on("click", function () {
     }
     location.href = "add_case.html?userid="+getLocalStroagelogin().userid +"&hxid="+getRouterParam("id")+"&docid="+docid;
 });
-
+$(".chat section").on("click",".left .head_portrait", function () {
+    var docid = $(this).attr("docid");
+    location.href = 'http://www.11deyi.com/Api/Weixin/profile?id='+docid+'&type=SHARE';
+})
 $(".chat section").on("click",".audio", function () {
     var self = this;
+    var idx=$(this).parent().index();
+    var chat = getChatId(getRouterParam("id"));
+    var c=JSON.parse(localStorage.getItem(chat[idx]));
+    c.isRead=true;
+    localStorage.setItem(chat[idx],JSON.stringify(c));
     var audioSrc = $(this).attr("audio");
     var onplay=$(".chat section .audio_play");
+    $(this).removeClass('isRead');
     if (onplay.length !== 0 && !$(this).hasClass("audio_play")){
         onplay.find("audio").get(0).pause();
-        onplay.find("img").attr("src","img/chatyy.png")
+        onplay.find("img").attr("src","img/chatyy.png");
         onplay.removeClass("audio_play");
     }
     $(this).toggleClass("audio_play");
@@ -382,11 +469,15 @@ function leftTop(){
 
 $(".footer button").on("click", function () {
     var text = $(".footer .text").html();
+    text = text.replace(/&nbsp;/g,"");
     //console.log(text);
-    if(text){
+    if(text && text !== " "){
+        text = $(".footer .text").html().replace(/&nbsp;/g," ");
         sendText(text);
+        $(".footer .text").text("");
+    }else {
+        alert("不能发送空白消息");
     }
-    $(".footer .text").text("");
     if (isAndroid){
         resizeSectionHeight();
     }
@@ -433,6 +524,7 @@ $(".message .message_list").on("click",".list", function () {
     $("head title").text(title);
     $(".chat header .title").text(title);
     chatShow();
+    HideShare();
 });
 $(".chat header .back").on("click", function () {
     history.back();
@@ -480,15 +572,14 @@ function hx(){
             createMessageId(message.id,newMessage);
             createChatId(message.from,message.id);
             createMeId(message.to,message.from);
+            updateChatUserInfo(message);
             getUserData();
-            //console.log(message.from)
-            //console.log(getRouterParam("id"))
             if (message.from === getRouterParam("id")){
                 if (message.ext.show_ext !== "Y"){
                     if (message.ext.ext_bl_sheet){
                         var html = "<div class='left'>" +
                             "<div class='head_portrait'></div>" +
-                            "<div class='content'>" +
+                            "<div class='content write'>" +
                             "<div class='write_case'>" +
                             "<div class='bg_img'></div>" +
                             "<p>请填写病例</p>" +
@@ -549,6 +640,7 @@ function hx(){
             createMessageId(message.id,newMessage);
             createChatId(message.from,message.id);
             createMeId(message.to,message.from);
+            updateChatUserInfo(message);
             getUserData();
             if (message.from === getRouterParam("id")){
                 var length = $(".chat section img").length;
@@ -598,16 +690,19 @@ function hx(){
                 //音频下载成功
                 console.log(options);
                 blobObj.setBlob(response, function (data) {
-                       newMessage.url = data;
-                       createMessageId(message.id,newMessage);
-                       createChatId(message.from,message.id);
-                       createMeId(message.to,message.from);
-                       getUserData();
+                    newMessage.url = data;
+                    newMessage.isRead=false;
+                    createMessageId(message.id,newMessage);
+                    createChatId(message.from,message.id);
+                    createMeId(message.to,message.from);
+                    updateChatUserInfo(message);
+                    getUserData();
+                    createList();
                 });
                 var audioUrl = URL.createObjectURL(response);
                 //console.log(audioUrl);
                 if (message.from === getRouterParam("id")){
-                    var html = "<div class='left'><div class='head_portrait'></div><div class='content audio' audio='"+audioUrl+"'><audio src='"+audioUrl+"'></audio><img src='img/chatyy.png' alt=''></div><span>"+message.length+"’’</span></div>";
+                    var html = "<div class='left'><div class='head_portrait'></div><div class='content audio isRead' audio='"+audioUrl+"'><audio src='"+audioUrl+"'></audio><img src='img/chatyy.png' alt=''></div><span>"+message.length+"’’</span><span class='dot'></span></div>";
                     $(".chat section").append(html);
                     var leftUrl = "http://www.11deyi.com/img/30.png";
                     if (user[getRouterParam("id")].url){
@@ -747,6 +842,12 @@ function sendText(text,send){
     conn.send(msg.body);
 }
 function sendImage(){
+    var length = $(".chat section img").length + 1;
+    $(".chat section").append("<div class='right'><div class='Pics my-simple-gallery' itemscope itemtype='http://schema.org/ImageGallery'>"+
+        "<div class='head_portrait' style='background-image:url("+getLocalStroagelogin().faceimg+") '></div><div class='content imgBox'><figure itemscope itemtype='1'>" +
+        "<a id='minimg"+0+length+"' href='' itemprop='contentUrl' data-size='1080x1920'><img src='./img/loading.gif' alt='此图片已过期' itemprop='thumbnail' alt='Image description' /></a>"+
+        "<figcaption itemprop='caption description'>1</figcaption></figure></div></div>");
+    rightTop();
     var id = conn.getUniqueId();
     var msg = new WebIM.message('img', id);
     var input = document.getElementById('pictureInput');//选择图片的input
@@ -773,11 +874,11 @@ function sendImage(){
             },
             //图片消息发送成功
             success: function ( id, serverMsgId ) {
-                var length = $(".chat section img").length + 1;
                 var imgwh = "1080x1920";
-                var content = "<div class='head_portrait'></div><div class='content imgBox'><figure itemscope itemtype='1'><a id='minimg"+0+length+"' href='"+updataImg+"' itemprop='contentUrl' data-size='"+imgwh+"'><img src='"+updataImg+"' alt='此图片已过期' itemprop='thumbnail' alt='Image description' /></a><figcaption itemprop='caption description'>1</figcaption></figure></div>"
-                var ele = '<div class="Pics my-simple-gallery" itemscope itemtype="http://schema.org/ImageGallery">'+content+'</div>'
+                //var content = "<div class='head_portrait'></div><div class='content imgBox'><figure itemscope itemtype='1'><a id='minimg"+0+length+"' href='"+updataImg+"' itemprop='contentUrl' data-size='"+imgwh+"'><img src='"+updataImg+"' alt='此图片已过期' itemprop='thumbnail' alt='Image description' /></a><figcaption itemprop='caption description'>1</figcaption></figure></div>"
+                //var ele = '<div class="Pics my-simple-gallery" itemscope itemtype="http://schema.org/ImageGallery">'+content+'</div>'
                 var url = updataImg;
+                $(".chat section img").last().attr('src',updataImg).parent().attr('href',updataImg);
                 var k2= "0"+length;
                 getImageWidth(url,k2,function(w,h,x){
                     setTimeout(function () {
@@ -786,8 +887,8 @@ function sendImage(){
                     },200)
                 });
                 console.log("成功");
-                var html = "<div class='right'>"+ele+"</div>";
-                $(".chat section").append(html);
+                //var html = "<div class='right'>"+ele+"</div>";
+                //$(".chat section").append(html);
                 $(".chat section .right").each(function (item,index) {
                     $(this).find(".head_portrait").css("background-image","url('"+getLocalStroagelogin().faceimg+"')");
                 });

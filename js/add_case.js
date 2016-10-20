@@ -209,7 +209,7 @@ $(".my_case section").on("click"," .case_list",function(){
         $('body,html').height('100%').css('overflow','hidden');
         $(".send").removeClass("hide");
         $(".send .send_box .info>p:last-of-type").text("[病历]"+caseData[$(this).index() - 1].UserName+" 就诊时间："+caseData[$(this).index() - 1].VisitingTime)
-        createChatSend(caseData[$(this).index() - 1],true,getUrlParam("hxid"))
+        createChatSend(caseData[$(this).index() - 1],false,getUrlParam("hxid"))
     }else {
         location.href = "disease_details.html?id="+caseData[$(this).index() - 1].QuestionID;
     }
@@ -217,11 +217,10 @@ $(".my_case section").on("click"," .case_list",function(){
 $(".my_case .send .send_btm p:nth-of-type(1)").on("click", function () {
     $(".send").addClass("hide");
     $('body,html').height('auto').css('overflow','auto');
-    var send = getChatSend();
-    send.state = false;
-    localStorage.send = JSON.stringify(send);
+    updateChatSend(false);
 })
 $(".my_case .send .send_btm p:nth-of-type(2)").on("click", function () {
+    updateChatSend(true);
     location.href = "chat.html#id="+getUrlParam("hxid");
 })
 /*---------------------------------------------------新建病历-----------------------------------------------------*/
@@ -258,6 +257,26 @@ function createCase(sex,age,questionpics,doctorid,addr,cureinfo,checkinfo,visiti
             //alert("成功")
             $(".add_case section .finish").removeAttr("disabled");
             if(data.Code === "0000"){
+                var caseData = {
+                    Age:age,
+                    CardNumber: cardnumber,
+                    CheckInfo: checkinfo,
+                    CreateTime: data.Data.CreateTime,
+                    CureInfo: cureinfo,
+                    Description: data.Data.Description,
+                    FirstVisitingTime: firstvisitingtime,
+                    Name: getLocalStroagelogin().name,
+                    PatientAddr: addr,
+                    Phone: phone,
+                    PicUrls: questionpics,
+                    QuestionID: data.Data.QuestionID,
+                    Sex: sex,
+                    Title: "",
+                    UserID: getLocalStroagelogin().userid,
+                    UserName: username,
+                    VisitingTime: visitingtime
+                };
+                createChatSend(caseData,true,getUrlParam("hxid"));
                 $(".consult_loading img").addClass("result").attr("src","img/success@2x.png");
                 $(".consult_loading p").text("提交成功");
                 if (getUrlParam("hxid")){

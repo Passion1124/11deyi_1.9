@@ -39,7 +39,8 @@ function WxLicense(aId,times,nonce,ticket){
         timestamp: times,
         nonceStr: nonce,
         signature: ticket,
-        jsApiList:['checkJsApi',
+        jsApiList:[
+            'checkJsApi',
             'hideMenuItems',
             'showMenuItems',
             'hideAllNonBaseMenuItem',
@@ -50,6 +51,8 @@ function WxLicense(aId,times,nonce,ticket){
             'onMenuShareQZone']
     });
     wx.ready(function () {
+        wx.showAllNonBaseMenuItem();
+        wx.showMenuItems();
         // 朋友圈
         wx.onMenuShareTimeline({
             title: dataForWeixin.title, // 分享标题
@@ -104,7 +107,6 @@ function WxLicense(aId,times,nonce,ticket){
             }
         });
     });
-
 }
 
 /*$("header .back").on("click", function () {
@@ -391,7 +393,6 @@ function queryUserById(userid){
     };
     $.ajax({
         "url": ebase + "/api/User/QueryUserById",
-        //"url": "http://120.76.156.87:610/api/User/QueryUserById",
         "type":"POST",
         "data":postData,
         "dataType":"json",
@@ -402,7 +403,7 @@ function queryUserById(userid){
                 dataForWeixin.title=data.Data.HospitalName+','+data.Data.DepartOneName+","+data.Data.JobName+data.Data.Name+"的健康知识博客";
                 dataForWeixin.desc='擅长领域:'+data.Data.GoodAt+"等疾病。";
                 dataForWeixin.imgUrl=data.Data.FaceImgUrl;//||location.href+'/img/80@2x.png'
-                dataForWeixin.link='http://www.11deyi.com/Api/Weixin/profile?id='+data.Data.UserID+'&type=SHARE';
+                dataForWeixin.link='http://www.11deyi.com/'+Api+'/Weixin/profile?id='+data.Data.UserID+'&type=SHARE';
                 $("head title").text(data.Data.Name)
                 if (!$(".loading_box").hasClass("hide")){
                     $(".loading_box").addClass("hide");
@@ -429,7 +430,7 @@ function queryUserById(userid){
                         "url":location.href
                     }};
                 $.ajax({
-                    url:"http://120.76.156.87:610/api/Sign/GetJsTicket",
+                    url: ebase+"/api/Sign/GetJsTicket",
                     type:"POST",
                     data:paraData,
                     dataType:"json",
@@ -489,7 +490,7 @@ function doctorInfo(data){
             }
         };
         $.ajax({
-            url:'http://120.76.156.87:610/api/User/GenerateQrByUid',
+            url: ebase+'/api/User/GenerateQrByUid',
             data:postData,
             type:"post",
             dataType:"json",
