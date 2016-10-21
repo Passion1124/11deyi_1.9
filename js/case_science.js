@@ -2,7 +2,7 @@ $(function(){
     if (getUrlParam("userid") && getUrlParam("token")){
         updateLogin();
     }
-    getUser(function(){
+    getUser(getUrlParam("userid"),getUrlParam("token"),function(){
         getData();
     });
     if (isWx){

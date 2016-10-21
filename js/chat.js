@@ -1,5 +1,8 @@
 var user = {};
 $(function () {
+    if(!!getLocalStroagelogin().token){
+        HideShare();
+    }
     if (!official){
         WebIM.config.appkey = 'cd11deyi#yydytest';
     }
@@ -14,8 +17,26 @@ $(function () {
     if (getRouterParam("id")){
         $(".chat").removeClass("hide");
         resizeSectionHeight();
-        hx();
-        chatShow();
+        if (getRouterParam("userid")){
+            if (getRouterParam("userid") !== getLocalStroagelogin().userid){
+                getUser(getRouterParam("userid"),getRouterParam("token"), function () {
+                    hx();
+                    chatShow();
+                })
+            }else {
+                hx();
+                chatShow();
+            }
+        }else {
+            hx();
+            chatShow();
+        }
+        if (getRouterParam("userid") && getRouterParam("token")){
+            var Login = getLocalStroagelogin();
+            Login.token = getRouterParam("token");
+            Login.userid = getRouterParam("userid");
+            localStorage.login = JSON.stringify(Login);
+        }
         var chatUser = user[getRouterParam('id')];
         if (chatUser){
             $(".chat header .title").text(chatUser.name);
@@ -26,7 +47,7 @@ $(function () {
         if (getUrlParam("userid") && getUrlParam("token")){
             updateLogin();
         }
-        getUser(function(){
+        getUser(getUrlParam("userid"),getUrlParam("token"),function(){
             uiid = getUiid(localStorage.hxuser);
             if (uiid && uiid !==  "undefined"){
                 getUserData();
@@ -34,9 +55,6 @@ $(function () {
             hx();
             createList();
         });
-        if(!!getLocalStroagelogin().token){
-            HideShare();
-        }
         $("html,body").css("height","auto")
     }
 });
@@ -225,7 +243,7 @@ function chatShow(){
         //console.log(i)
         var message = getMessage(chat[i]);
         //console.log(message);
-        if (message.from === getRouterParam("id")){
+        if (message.from === getRouterParam("id") && message.to === localStorage.hxuser){
             if (!message.url){
                 if (message.ext.show_ext === "Y"){
                     var msg = message.ext.ext_bl.msg.split(/\n/);
@@ -250,7 +268,7 @@ function chatShow(){
                             "<div class='content write'>" +
                             "<div class='write_case'>" +
                             "<div class='bg_img'></div>" +
-                            "<p>请填写病例</p>" +
+                            "<p>请填写病历</p>" +
                             "<p>只有通过完整病历信息了解你的病情后，才能通过微信更准确的回复你。</p></div>" +
                             "<div class='write_btm' docid='"+message.ext.extra_user_app_id+"'><p>填写新病历</p><p>选择已有病历</p></div></div>";
                     }else {
@@ -284,7 +302,7 @@ function chatShow(){
             }
             var html = "<div class='left'>"+ele+"</div>"
             $(".chat section").append(html);
-        }else {
+        }else if(message.from === localStorage.hxuser && message.to === getRouterParam("id")){
             if (!message.url){
                 if (message.ext){
                     if (message.ext.show_ext === "Y"){
@@ -574,7 +592,7 @@ function hx(){
             createMeId(message.to,message.from);
             updateChatUserInfo(message);
             getUserData();
-            if (message.from === getRouterParam("id")){
+            if (message.from === getRouterParam("id") && message.to === localStorage.hxuser){
                 if (message.ext.show_ext !== "Y"){
                     if (message.ext.ext_bl_sheet){
                         var html = "<div class='left'>" +
@@ -582,7 +600,7 @@ function hx(){
                             "<div class='content write'>" +
                             "<div class='write_case'>" +
                             "<div class='bg_img'></div>" +
-                            "<p>请填写病例</p>" +
+                            "<p>请填写病历</p>" +
                             "<p>只有通过完整病历信息了解你的病情后，才能通过微信更准确的回复你。</p></div>" +
                             "<div class='write_btm' docid='"+message.ext.extra_user_app_id+"'><p>填写新病历</p><p>选择已有病历</p></div></div>" +
                             "</div>"
@@ -627,6 +645,7 @@ function hx(){
             }
             getUserData();
             createList();
+            $("head title").text(user[getRouterParam("id")].name);
         },    //收到文本消息
         onEmojiMessage: function ( message ) {},   //收到表情消息
         onPictureMessage: function ( message ) {
@@ -642,7 +661,7 @@ function hx(){
             createMeId(message.to,message.from);
             updateChatUserInfo(message);
             getUserData();
-            if (message.from === getRouterParam("id")){
+            if (message.from === getRouterParam("id") && message.to === localStorage.hxuser){
                 var length = $(".chat section img").length;
                 var imgwh = "1080x1920";
                 var updataImg = message.url;
@@ -674,6 +693,7 @@ function hx(){
             }
             getUserData();
             createList();
+            $("head title").text(user[getRouterParam("id")].name);
         }, //收到图片消息
         onCmdMessage: function ( message ) {},     //收到命令消息
         onAudioMessage: function ( message ) {
@@ -701,7 +721,7 @@ function hx(){
                 });
                 var audioUrl = URL.createObjectURL(response);
                 //console.log(audioUrl);
-                if (message.from === getRouterParam("id")){
+                if (message.from === getRouterParam("id") && message.to === localStorage.hxuser){
                     var html = "<div class='left'><div class='head_portrait'></div><div class='content audio isRead' audio='"+audioUrl+"'><audio src='"+audioUrl+"'></audio><img src='img/chatyy.png' alt=''></div><span>"+message.length+"’’</span><span class='dot'></span></div>";
                     $(".chat section").append(html);
                     var leftUrl = "http://www.11deyi.com/img/30.png";
@@ -715,6 +735,7 @@ function hx(){
                 }
                 getUserData();
                 createList();
+                $("head title").text(user[getRouterParam("id")].name);
             };
             options.onFileDownloadError = function () {
                 //音频下载失败
@@ -824,6 +845,7 @@ function sendText(text,send){
             createMeId(localStorage.hxuser,getRouterParam('id'));
             getUserData();
             createList();
+            $("head title").text(user[getRouterParam("id")].name);
         }//消息发送成功回调
     });
     var newText = text.replace(/<div>/g,"\n").replace(/<br>/g," ");
@@ -850,8 +872,6 @@ function sendImage(){
     rightTop();
     var id = conn.getUniqueId();
     var msg = new WebIM.message('img', id);
-    var input = document.getElementById('pictureInput');//选择图片的input
-    var file = WebIM.utils.getFileUrl(input);
     var updataImg = "";
     var allowType = {
         "jpg": true,
@@ -859,6 +879,8 @@ function sendImage(){
         "png": true,
         "bmp": false
     };
+    var input = document.getElementById('pictureInput');//选择图片的input
+    var file = WebIM.utils.getFileUrl(input);console.log(file);
     if ( file.filetype.toLowerCase() in allowType ) {
         msg.set({
             apiUrl: WebIM.config.apiURL,
@@ -907,6 +929,7 @@ function sendImage(){
                 createMeId(localStorage.hxuser,getRouterParam('id'));
                 getUserData();
                 createList();
+                $("head title").text(user[getRouterParam("id")].name);
             },
             flashUpload:WebIM.flashUpload
         })
@@ -915,4 +938,6 @@ function sendImage(){
     msg.body.ext.extra_user_name = getLocalStroagelogin().name;
     msg.body.ext.extra_user_avater = getLocalStroagelogin().faceimg;
     conn.send(msg.body)
+
+
 }

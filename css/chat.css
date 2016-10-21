@@ -369,8 +369,7 @@ figcaption{
     width: 1rem;
     height: 1rem;
     position: relative;
-    top: -2.2rem;
-    right: -15.5rem;
+    left: 1rem;
     display: none;
     background:#ce272d;
     border-radius: 50%;
@@ -378,7 +377,7 @@ figcaption{
     -webkit-transform: scale(0.8);
 }
 .left .isRead +span+span.dot{
-   display: block;
+   display: inline-block;
 }
 @media screen and (max-width: 320px){
     .chat .footer .text{

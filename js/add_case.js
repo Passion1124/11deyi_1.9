@@ -12,7 +12,7 @@ $(function () {
         var docid = getUrlParam("docid")
         if (token && userid){
             updateLogin();
-            getUser(function () {
+            getUser(getUrlParam("userid"),getUrlParam("token"),function () {
                 console.log("成功修改用户信息");
             });
             if (docid){
@@ -124,6 +124,7 @@ $(".patient_pics span input[type='file']").on("change",function(event){
     //var fileName = event.target.files[0].name;
     if ($(".patient_pics img").length < 9){
         var file = event.target.files[0];
+        $("<img src='img/loading.gif' alt='loading...' class='load'>").insertBefore("#up-btn");
         getUploadAli(file);
     }else {
         setTimeout(function(){
@@ -162,8 +163,6 @@ function getUploadAli(file){
         "data":postData,
         "dataType":"json",
         success: function (data) {
-            console.log(data);
-            console.log(file);
             //console.log(data.Data)
             if (data.Code === "0000"){
                 uploadJSSDK({
@@ -176,23 +175,17 @@ function getUploadAli(file){
                     callback: function (percent, result) {
                         console.log(result);
                         if (percent === 100 && result){
-                            var html = "<img src='"+result.url+"'>";
-                            $(html).insertBefore("#up-btn");
+                            $("#up-btn").prev().attr("src",result.url);
                             myPics.push(result.url);
                         }else {
                             alert("上传失败");
+                            $("#up-btn").prev().remove();
                         }
                         //percent（上传百分比）：-1失败；0-100上传的百分比；100即完成上传
                         //result(服务端返回的responseText，json格式)
                     }
                 })
             }
-        },
-        beforeSend: function () {
-            $("#up-info").html(" <img src='img/loading.gif' alt='loading...' class='load'>");
-        },
-        complete:function(){
-            $("#up-info").html("&#xe604;");
         },
         error: function (xhr ,errorType ,error){
             //alert("错误");
@@ -253,7 +246,8 @@ function createCase(sex,age,questionpics,doctorid,addr,cureinfo,checkinfo,visiti
         type:"POST",
         dataType:"json",
         success: function (data) {
-            console.log(data)
+            console.log(data);
+            console.log(pics);
             //alert("成功")
             $(".add_case section .finish").removeAttr("disabled");
             if(data.Code === "0000"){

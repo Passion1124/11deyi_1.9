@@ -18,7 +18,7 @@ $(function(){
     info.userid=getUrlParam('userid');
     info.doctorid=getUrlParam('doctorid');
     info.token=getUrlParam('token');
-    getUser(function (data) {
+    getUser(getUrlParam('userid'),getUrlParam('token'),function (data) {
         if (localStorage.hxuser){
             hasHxid = true;
         }

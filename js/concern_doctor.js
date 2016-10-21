@@ -10,7 +10,7 @@ $(function () {
     if (getUrlParam("userid") && getUrlParam("token")){
         updateLogin();
     }
-    getUser(function(){
+    getUser(getUrlParam("userid"),getUrlParam("token"),function(){
         console.log("用户信息加载成功");
     });
     getConcernDoctor();
