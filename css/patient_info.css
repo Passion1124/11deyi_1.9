@@ -1,0 +1,196 @@
+html,body{
+    height:100%;
+}
+.input_long,
+.input_short,
+.input_sm {
+    height: 4.2rem;
+    line-height: 4.2rem;
+    border: 1px solid #ccc;
+    padding-left: 1rem;
+    vertical-align: top;
+    border-radius: 4px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+.input_short:nth-last-child(1) {
+    margin-left: 2%;
+}
+
+.input_short select,
+.input_sm select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+}
+
+.input_long {
+    display: flex;
+    width: 96%;
+    line-height: 1.6rem;
+}
+
+.input_short {
+    display: inline-block;
+    width: 44.5%;
+}
+
+.input_sm {
+    display: inline-block;
+    width: 28%;
+}
+
+#area>.input_sm:nth-child(2),
+#area>.input_sm:nth-child(3) {
+    margin-left: 1%;
+}
+
+.down {
+    float: right;
+    margin-right: .5rem;
+}
+
+.down img {
+    width: 60%;
+}
+
+#edit_info {
+    padding:.5rem 1.5rem;
+    font-size: 1.4rem;
+    color: #888;
+}
+
+#edit_info p {
+    border: 1px solid #ccc;
+    vertical-align: top;
+    border-radius: 4px;
+}
+
+#edit_info>div {
+    margin: 1rem 0;
+}
+
+#edit_info .sex_choose {
+    display: inline-block;
+    width: 30%;
+    height: 4.2rem;
+    line-height: 4.2rem;
+    vertical-align: top;
+    border-radius: 4px;
+    border: 1px solid #CA572A;
+    margin-left: 2%;
+    font-size: 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.sex_choose .sex {
+    background-color: #CA572A;
+    color: #fff;
+}
+
+.sex_choose span {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    color: #CA572A;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.is_default {
+    display: inline-block;
+    font-size: 1.4rem;
+    width: 5rem;
+    height: 2.8rem;
+    border-radius: 2rem 2rem 2rem 2rem;
+    background-color: #ccc;
+    padding: .2rem;
+    transition: 0.4s ease-in 0.2s;
+    -webkit-transition: 0.4s ease-in 0.2s;
+}
+#sub {
+    margin: 1rem 0 5rem;
+    border-radius: 4px;
+    background-color: #CA572A;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.check_default{
+    background-color:#CA572A;
+}
+
+.is_default span {
+    display: block;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.4s ease-out;
+    -webkit-transition: 0.4s ease-out;
+}
+.check_default span{
+    margin-left:2.2rem;
+}
+
+.mid_span {
+    position: relative;
+    top: -1rem;
+    margin-right: .5rem;
+}
+
+p#tell_info{
+    font-size:1.4rem;
+    color:#8D523B;
+    height:4.1rem;
+    padding:1.2rem 1.6rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color:#ffdfb0;
+    border:none;
+    position: relative;
+    vertical-align: top;
+}
+
+#tell_info>img{
+    width:1.4rem;
+    top:1.3rem;
+    position: absolute;
+}
+
+#tell_info>span{
+    display: inline-block;
+    margin-left: 1.8rem;
+}
+
+@media screen and (max-width: 320px) {
+    .input_short {
+        width: 44%;
+    }
+    .input_long {
+        width: 95.5%;
+    }
+    .input_sm {
+        width: 27%
+    }
+    #edit_info .sex_choose {
+        width: 30%;
+    }
+    .birth {
+        width: 64.5%;
+    }
+}

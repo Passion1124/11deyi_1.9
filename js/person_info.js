@@ -1,7 +1,6 @@
 var userType = "";
 var oneIndex = 1;
 var twoIndex = 1;
-var myPics = [];
 var info={};
 var dataForWeixin = {     //分享的内容
     title: '',
@@ -9,30 +8,22 @@ var dataForWeixin = {     //分享的内容
     imgUrl: '',
     link: ''
 };
-var hasHxid = false;
-if (localStorage.hxuser){
-    hasHxid = true;
-}
 $(function(){
-  //  info=getParamShape();    console.log(info);
     info.userid=getUrlParam('userid');
     info.doctorid=getUrlParam('doctorid');
     info.token=getUrlParam('token');
-    getUser(getUrlParam('userid'),getUrlParam('token'),function (data) {
-        if (localStorage.hxuser){
-            hasHxid = true;
+    if (info.userid != getLocalStroagelogin().userid){
+        if (getUrlParam("userid") && getUrlParam("token")){
+            updateLogin();
         }
-    });
+        getUser(getUrlParam('userid'),getUrlParam('token'),function (data) {});
+    }
     queryUserById(info.doctorid);
     initSelectDataOnly();console.log('ready');
-    //var url=location.href;
-    //var stateObj = { url: 'http://www.11deyi.com/Api/Weixin/profile?id='+info.doctorid+'&type=SHARE'};
-    //history.pushState(stateObj,'http://www.11deyi.com/Api/Weixin/profile?id='+info.doctorid+'&type=SHARE','http://www.11deyi.com/Api/Weixin/profile?id='+info.doctorid+'&type=SHARE');
 });
 
 //授权
 function WxLicense(aId,times,nonce,ticket){
-    console.log(dataForWeixin);
     wx.config({
         debug: false,
         appId: aId,
@@ -41,18 +32,13 @@ function WxLicense(aId,times,nonce,ticket){
         signature: ticket,
         jsApiList:[
             'checkJsApi',
-            'hideMenuItems',
             'showMenuItems',
-            'hideAllNonBaseMenuItem',
-            'showAllNonBaseMenuItem',
             'onMenuShareTimeline',
             'onMenuShareAppMessage',
             'onMenuShareQQ',
             'onMenuShareQZone']
     });
     wx.ready(function () {
-        wx.showAllNonBaseMenuItem();
-        wx.showMenuItems();
         // 朋友圈
         wx.onMenuShareTimeline({
             title: dataForWeixin.title, // 分享标题
@@ -106,12 +92,10 @@ function WxLicense(aId,times,nonce,ticket){
                 // 用户取消分享后执行的回调函数
             }
         });
+        //wx.showAllNonBaseMenuItem();
+        //wx.showMenuItems();
     });
 }
-
-/*$("header .back").on("click", function () {
-    history.back();
-});*/
 $(".question_info p:nth-of-type(1) span").on("click", function () {
     $(".question_info p:nth-of-type(1) span").each(function(index,item){
         $(this).removeClass("sex");
@@ -161,19 +145,8 @@ $("section").on("click",".user button,.doctor button,.hospital button,.instituti
         verdictLogin(userid, name, type);
     }
 });
-//$(".present_box button").on("click", function () {
-//    $(".present_box").addClass("hide");
-//    $(".Top,.question,.ask_doctor,.hint").addClass("hide");
-//    $("header,.doctor,.user,.institution,.hospital,.cut_box,.content").removeClass("hide");
-//    $("head title").text($(".doctor p:nth-of-type(1)").text());
-//    $("html,body").removeClass("ovfHiden");
-//});
 $("section").on("click",".cut_box .advisory button", function () {
-  if (hasHxid){
-      location.href = "chat.html#id="+$(".doctor").attr("hxid");
-  }else {
-      alert("正在获取会话数据，请耐心等待");
-  }
+    location.href = "chat.html#id="+$(".doctor").attr("userid") + "&chatid="+chatId(getUrlParam("userid"),getUrlParam("doctorid"));
 });
 $("section .Top .back").on("click", function () {
     $(".Top,.question,.ask_doctor,.hint").addClass("hide");
@@ -263,122 +236,6 @@ $("section").on("click",".content_list .doctor .doctor_answer_left", function ()
     var userid = $(this).parent().parent().attr("userid");
     goToHomePage(userid);
 });
-$(".question .pose").on("click", function () {
-    var sexText = $(".question .question_info .sex").text();
-    if (sexText === "男"){
-        var sex = "M"
-    }else {
-        var sex = "W"
-    }
-    var age = $(".question_info .age span:nth-of-type(1)").text();
-    var depName = $(".doctor p:nth-of-type(2) span:nth-of-type(1)").text();
-    var depId = $(".doctor p:nth-of-type(2) span:nth-of-type(1)").attr("depid");
-    var isanonymous = "N";
-    var pics = "";
-    if (myPics.length > 0){
-        for (var i = 0; i < myPics.length; i++){
-            pics += ","+myPics[i]
-        }
-    }
-    var pricevalue = 0;
-    var doctorid = $(".doctor").attr("userid");
-    var title = $(".question_content textarea:nth-of-type(1)").val();
-    var patienttimelong = $(".question_content textarea:nth-of-type(2)").val();
-    var cureinfo = $(".question_content textarea:nth-of-type(3)").val();
-    var checkinfo = $(".question_content textarea:nth-of-type(4)").val();
-    var addr = $(".question .address input").val();
-    if (!title || title.length <= 20){
-        alert("哪儿不舒服需要超过20个字");
-    }else if (!addr){
-        alert("请填写地址");
-    }else if (!patienttimelong){
-        alert("需要告诉我们您患病多久了");
-    }
-    if (title.length >= 20 && addr && patienttimelong){
-        $(".consult_loading").removeClass("hide");
-        $(".consult_loading img").removeClass("result");
-        var Type = "consult";
-        var data = {title:title,sex:sex,age:age,depid:depId,depname:depName,questionpics:pics,isanonymous:isanonymous,pricevalue:pricevalue,doctorid:doctorid,addr:addr,patienttimelong:patienttimelong,cureinfo:cureinfo,checkinfo:checkinfo};
-        getToken(function(){
-            issue_consult(title,sex,age,depId,depName,pics,isanonymous,pricevalue,doctorid,addr,patienttimelong,cureinfo,checkinfo);
-        }, data, Type)
-    }
-});
-$(".question .question_pics span input[type='file']").on("change",function(event){
-    //var fileName = event.target.files[0].name;
-    console.log();
-    if ($(".question_pics img").length < 9){
-        var file = event.target.files[0];
-        getUploadAli(file);
-    }else {
-        alert("上传的图片不能超过9张")
-    }
-});
-function uuid() {
-    var s = [];
-    var hexDigits = "0123456789abcdef";
-    for (var i = 0; i < 36; i++) {
-        s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
-    }
-    s[14] = "4";  // bits 12-15 of the time_hi_and_version field to 0010
-    s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);  // bits 6-7 of the clock_seq_hi_and_reserved to 01
-    s[8] = s[13] = s[18] = s[23] = "-";
-
-    var uuid = s.join("");
-    return uuid;
-}
-//获取阿里百川上传鉴权
-function getUploadAli(file){
-    var fileName = uuid();
-    var postData = {
-        "appToken":info.token,
-        "para":{
-            "device_type":"PC",
-            "device_id":"",
-            "api_version":"1.0.0.0",
-            "name":fileName
-        }
-    };
-    $.ajax({
-        "url": ebase + "/api/Sign/GetUploadSignWithAlibbForImg",
-        "type":"POST",
-        "data":postData,
-        "dataType":"json",
-        success: function (data) {
-            console.log(data);
-            console.log(file);
-            //console.log(data.Data)
-            if (data.Code === "0000"){
-                uploadJSSDK({
-                    file: file,   //文件，必填,html5 file类型，不需要读数据流
-                    name:fileName,
-                    token: 'UPLOAD_AK_TOP ' + data.Data,  //鉴权token，必填
-                    dir: 'patient_img',  //目录，选填，默认根目录''
-                    retries: 0,  //重试次数，选填，默认0不重试
-                    maxSize: 0,  //上传大小限制，选填，默认0没有限制
-                    callback: function (percent, result) {
-                        console.log(result);
-                        if (percent === 100 && result){
-                            var html = "<img src='"+result.url+"'>";
-                            $(html).insertBefore(".question_pics span");
-                            myPics.push(result.url);
-                        }else {
-                            alert("上传失败");
-                        }
-                        //percent（上传百分比）：-1失败；0-100上传的百分比；100即完成上传
-                        //result(服务端返回的responseText，json格式)
-                    }
-                })
-            }
-        },
-        error: function (xhr ,errorType ,error){
-            //alert("错误");
-            console.log(xhr);
-            console.log(errorType);
-            console.log(error)
-        }
-    })
-}
 //获取指定用户信息
 function queryUserById(userid){
     getLoginUserToken();
@@ -399,12 +256,15 @@ function queryUserById(userid){
         success:function(data){
             console.log(data);
             if (data.Code === "0000"){
+                if (!isAndroid){
+                    updateTitle(data.Data.Name);
+                }
                 userType = data.Data.Type;
                 dataForWeixin.title=data.Data.HospitalName+','+data.Data.DepartOneName+","+data.Data.JobName+data.Data.Name+"的健康知识博客";
                 dataForWeixin.desc='擅长领域:'+data.Data.GoodAt+"等疾病。";
                 dataForWeixin.imgUrl=data.Data.FaceImgUrl;//||location.href+'/img/80@2x.png'
-                dataForWeixin.link='http://www.11deyi.com/'+Api+'/Weixin/profile?id='+data.Data.UserID+'&type=SHARE';
-                $("head title").text(data.Data.Name)
+                dataForWeixin.link= nav+'GetCode?id='+data.Data.UserID+'&type=SHARE';
+                //$("head title").text(data.Data.Name)
                 if (!$(".loading_box").hasClass("hide")){
                     $(".loading_box").addClass("hide");
                 }
@@ -420,24 +280,25 @@ function queryUserById(userid){
                 }else if (userType === "O"){
                     institutionInfo(data.Data);
                 }
-                var Data = data.Data;
-                createChatUserInfo(Data.Name,Data.FaceImgUrl,Data.HxUserId,Data.UserID);
-                var paraData={"appToken":info.token,
-                    "para":{
-                        "device_type":"PC",
-                        "device_id":" ",
-                        "api_version":"1.0.0.0",
-                        "url":location.href
-                    }};
+                var newData = data.Data;
+                createChatDoctorInfo(newData.UserID,newData.Name,newData.FaceImgUrl);
+                createDoctorOrUserInfo(newData.UserID,newData.Name,newData.FaceImgUrl);
+                var url=location.href.split('#')[0];
+                var postData = {
+                    "appToken": getLocalStroagelogin().token,
+                    "para": {
+                        "url": url
+                    }
+                };
                 $.ajax({
-                    url: ebase+"/api/Sign/GetJsTicket",
+                    url: nav + "GetJsSign",
                     type:"POST",
-                    data:paraData,
+                    data:postData,
                     dataType:"json",
                     success:function(data){
-                        var Data = data.Data;
-                        if (data.Code === "0000"){
-                            WxLicense(Data.appId,Data.timestamp,Data.nonceStr,Data.ticket);
+                        if (data.code =='0000'){
+                            var Data = data.data;
+                            WxLicense(Data.appId,Data.timestamp,Data.nonceStr,Data.signature);
                         }
                     },
                     error: function (xhr ,errorType ,error) {
@@ -457,6 +318,7 @@ function queryUserById(userid){
         }
     })
 }
+//不同角色信息查询
 function userInfo(data){
     var html = "<div class='user' userid='"+data.UserID+"' type='"+data.Type+"'>" +
         "<div class='head_portrait'></div>" +
@@ -467,7 +329,7 @@ function userInfo(data){
         "</div>";
     html += "<div class='cut_box hide'>" +
         "<div class='advisory'>" +
-        "<button>私信</button>" +
+        "<button>发消息</button>" +
         "</div></div>";
     $("section").append(html);
     if (data.FaceImgUrl){
@@ -479,24 +341,17 @@ function userInfo(data){
 }
 function doctorInfo(data){
     if(data.IsFocusWx=='N'){
-        getLoginUserToken();
-        var postData = {
-            "appToken":token,
-            "para":{
-                "device_type":"PC",
-                "device_id":"",
-                "api_version":"1.0.0.0",
-                "uid":data.UserID
-            }
-        };
         $.ajax({
-            url: ebase+'/api/User/GenerateQrByUid',
-            data:postData,
-            type:"post",
+            url: nav+'/GetQrPath?type=0&id='+data.UserID,
+            type:"get",
             dataType:"json",
-            // jsonp:'callback',
             success: function (json) {
-                intoHtml(data,json.Data);
+                if(json.code=='0000'){
+                    intoHtml(data,json.data);
+                }
+                else{
+                    alert('二维码请求错误，请刷新页面重试！');
+                }
             },
             error: function (xhr ,errorType ,error) {
                 //alert("错误");
@@ -505,60 +360,9 @@ function doctorInfo(data){
                 console.log(error);
             }
         });
-    }else{
+    }
+    else{
       intoHtml(data,'Y');
-    }
-}
-//根据用户关注情况生成页面
-function intoHtml(data,code){
-    var html = "<div class='doctor' userid='"+data.UserID+"' hxid='"+data.HxUserId+"' type='"+data.Type+"'>" +
-        "<div class='head_portrait'></div>" +
-        "<p>"+data.Name+"</p>" +
-        "<p><span class='doctor_dep' depid='"+data.DepartmentID+"'>"+data.DepartmentName+"</span><span>"+data.JobName+"</span></p>"+
-        "<p class='address'>"+data.Province+"/"+data.City+"/"+data.HospitalName+"</p>"
-    if(code!='Y'){
-         html +="<p>"+data.FansNum+"人关注</p>" +
-            "<img class='twocode' src='"+code+"'/><div class='code_info'><img class='point' src='./img/point-83@2x.png'/>" +
-            "<span class='point_info'>长按识别二维码关注我，随时问医生！</span></div><p>擅长领域："+data.GoodAt+"</p></div>";
-
-        html += "<div class='cut_box addtop'>" +
-            //"<div class='advisory'>" +
-            "<p class='hide'>"+data.PriceValue+" ￥</p>" +
-            //"<button>私信</button>" +
-            //"</div>" +
-            "<div class='cut'>" +
-            "<p class='sure'><span class='bom'>医生说</span></p>" +
-            //"<p>问答</p>" +
-            "</div>" +
-            "</div>";
-        html += "<div class='content'><div class='oneBox'></div><div class='twoBox'></div></div>";
-    }
-   else{
-        html+= "<button class='attention'>关注</button>"+
-            "<p>"+data.FansNum+"人关注</p>" + "<p>擅长领域："+data.GoodAt+"</p></div>";
-
-        html += "<div class='cut_box'>" +
-            "<div class='advisory'>" +
-            "<p class='hide'>"+data.PriceValue+" ￥</p>" +
-            "<button>私信</button>" +
-            "</div>" +
-            "<div class='cut'>" +
-            "<p class='sure'><span class='bom'>医生说</span></p>" +
-                //"<p>问答</p>" +
-            "</div>" +
-            "</div>";
-        html += "<div class='content'><div class='oneBox'></div><div class='twoBox'></div></div>";
-    }
-    $("section").append(html);
-    if (data.FaceImgUrl){
-        $("section .doctor .head_portrait").css("background-image","url('"+data.FaceImgUrl+"')");
-    }
-    (data.IsFocus !== "N")&&$('section .doctor button').text("已关注");
-    var sure = $("section .cut_box .cut .sure").text();
-    if (sure === "医生说"){
-        queryUserCenterKpByUserId(data.UserID);
-    }else {
-        queryUserCenterHistoryByUserId(data.UserID);
     }
 }
 function hospitalInfo(data){
@@ -572,7 +376,7 @@ function hospitalInfo(data){
         "<p>医院介绍："+data.Description+"</p></div>";
     html += "<div class='cut_box'>" +
         "<div class='advisory hide'>" +
-        "<button>私信</button>" +
+        "<button>发消息</button>" +
         "</div>" +
         "<div class='cut'>" +
         "<p class='sure'>医院动态</p>" +
@@ -603,7 +407,7 @@ function institutionInfo(data){
         "<p>机构介绍："+data.Description+"</p></div>";
     html += "<div class='cut_box'>" +
         "<div class='advisory hide'>" +
-        "<button>私信</button>" +
+        "<button>发消息</button>" +
         "</div>" +
         "<div class='cut'>" +
         "<p class='sure'>健康说</p>" +
@@ -620,6 +424,58 @@ function institutionInfo(data){
     }
     var sure = $("section .cut_box .cut .sure").text();
     if (sure === "健康说"){
+        queryUserCenterKpByUserId(data.UserID);
+    }else {
+        queryUserCenterHistoryByUserId(data.UserID);
+    }
+}
+//根据用户关注情况生成页面
+function intoHtml(data,code){
+    var html = "<div class='doctor' userid='"+data.UserID+"' hxid='"+data.HxUserId+"' type='"+data.Type+"'>" +
+        "<div class='head_portrait'></div>" +
+        "<p>"+data.Name+"</p>" +"<p><span class='doctor_dep"+((!!data.DepartmentName||data.DepartmentName=='undefined')?'':' hide')+"' depid='"+data.DepartmentID+
+        "'>"+data.DepartmentName+"</span><span"+((!!data.DepartmentName||data.DepartmentName=='undefined')?"":" class='hide'")+">"+data.JobName+"</span></p>"+
+        "<p class='address'>"+(!!data.Province?data.Province+'/':'')+''+(!!data.HospitalName?data.HospitalName:'')+"</p>"
+    if(code!='Y'){
+        html +="<p>"+data.FansNum+"人关注</p>" +
+            "<img class='twocode' src='"+code+"'/><div class='code_info'><img class='point' src='./img/point-83@2x.png'/>" +
+            "<span class='point_info'>长按识别二维码关注我，随时问医生！</span></div><p>擅长领域："+((!!!data.GoodAt||data.GoodAt=='undefined')?'暂未填写':data.GoodAt)+"</p></div>";
+
+        html += "<div class='cut_box addtop'>" +
+                //"<div class='advisory'>" +
+            "<p class='hide'>"+data.PriceValue+" ￥</p>" +
+                //"<button>发消息</button>" +
+                //"</div>" +
+            "<div class='cut'>" +
+            "<p class='sure'><span class='bom'>医生说</span></p>" +
+                //"<p>问答</p>" +
+            "</div>" +
+            "</div>";
+        html += "<div class='content'><div class='oneBox'></div><div class='twoBox'></div></div>";
+    }
+    else{
+        html+= "<button class='attention'>关注</button>"+
+            "<p>"+data.FansNum+"人关注</p>" + "<p>擅长领域："+data.GoodAt+"</p></div>";
+
+        html += "<div class='cut_box'>" +
+            "<div class='advisory'>" +
+            "<p class='hide'>"+data.PriceValue+" ￥</p>" +
+            "<button>发消息</button>" +
+            "</div>" +
+            "<div class='cut'>" +
+            "<p class='sure'><span class='bom'>医生说</span></p>" +
+                //"<p>问答</p>" +
+            "</div>" +
+            "</div>";
+        html += "<div class='content'><div class='oneBox'></div><div class='twoBox'></div></div>";
+    }
+    $("section").append(html);
+    if (data.FaceImgUrl){
+        $("section .doctor .head_portrait").css("background-image","url('"+data.FaceImgUrl+"')");
+    }
+    (data.IsFocus !== "N")&&$('section .doctor button').text("已关注");
+    var sure = $("section .cut_box .cut .sure").text();
+    if (sure === "医生说"){
         queryUserCenterKpByUserId(data.UserID);
     }else {
         queryUserCenterHistoryByUserId(data.UserID);
@@ -724,15 +580,6 @@ function queryUserCenterKpByUserId(userid,callback){
                             ele += "</div>";
                         }
                         ele += "<div class='heat'><span>"+Data[i].HotValue+"</span> 条热度</div></div>";
-                        //if (oneIndex === 1){
-                        //    $(".content .oneBox").append(ele);
-                        //    if ( i+1 === pagesize){
-                        //        var html = "<div class='content_bottom'><button><img class='hide' src='img/loading.gif' alt=''><span>点击加载更多</span></button></div>";
-                        //        $(".content .oneBox").append(html);
-                        //    }
-                        //}else {
-                        //    $(".content .oneBox .content_bottom").insertBefore(ele);
-                        //}
                         $(".content .oneBox").append(ele);
                         if (Data[i].AuthorFaceImgUrl){
                             $(".content .oneBox .case_list:nth-of-type("+parseInt((oneIndex-1)*pagesize+(i+1))+") .top p:nth-child(1)").css("background_image","url('"+Data[i].AuthorFaceImgUrl+"')");
@@ -833,15 +680,6 @@ function queryUserCenterHistoryByUserId(userid,callback){
                         }
                         ele += "</div>";
                         $(".content .twoBox").append(ele);
-                        //if (twoIndex === 1){
-                        //    $(".content .twoBox").append(ele);
-                        //    if ( i+1 === pagesize){
-                        //        var html = "<div class='content_bottom'><button><img class='hide' src='img/loading.gif' alt=''><span>点击加载更多</span></button></div>";
-                        //        $(".content .twoBox").append(html);
-                        //    }
-                        //}else {
-                        //    $(".content .twoBox .content_bottom").insertBefore(ele);
-                        //}
                         if (Data[i].AuthorImgUrl && Data[i].IsAnonymous === "N"){
                             $(".content .twoBox .content_list:nth-of-type("+parseInt((twoIndex-1)*pagesize+(i+1))+") .user .user_left .head_portrait").css("background-image","url('"+Data[i].AuthorImgUrl+"')")
                         }

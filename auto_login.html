@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>正在登陆</title>
+    <link rel="stylesheet" href="css/public.css">
+</head>
+<style>
+    body{
+        background-color: #fff;
+    }
+    body>h2{
+        text-align: center;
+        padding: 20rem 0;
+        font-size: 1.8rem;
+    }
+</style>
+<body>
+    <h2>正在登陆中...............</h2>
+    <script src="lib/zepto.min.js"></script>
+    <script src="lib/common.js"></script>
+    <script>
+        var userid = getUrlParam("userid");
+        var token = getUrlParam("token");
+    </script>
+</body>
+</html>

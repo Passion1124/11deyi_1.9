@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="my_case hide">
+        <img src="" id="test" alt="">
         <header>
             <p class="back">
                 <img src="img/back.png" alt="">
@@ -20,30 +21,6 @@
             </div>
         </header>
         <section>
-            <!--<div class="not_case hide">-->
-                <!--<img src="img/my_case.png" alt="">-->
-                <!--<p>为了让医生更了解你的病情</p>-->
-                <!--<p>请填写最近就诊的病历信息</p>-->
-                <!--<button>新建病历</button>-->
-            <!--</div>-->
-            <!--<div class="new_case">-->
-                <!--<button>新建病历</button>-->
-            <!--</div>-->
-            <!--<div class="case_list ">-->
-                <!--<p>蒋佳良</p>-->
-                <!--<p>就诊时间：2016/06/22</p>-->
-                <!--<p>出虚汗，血脂高，嘴唇发紫，膝盖上下楼疼，感觉自己像老人，养了两年鸡，睡眠特别不规律，有时候一晚上睡两三个小时，老是被吵asd1111111111111111111111...</p>-->
-            <!--</div>-->
-            <!--<div class="case_list">-->
-                <!--<p>蒋佳良</p>-->
-                <!--<p>就诊时间：2016/06/22</p>-->
-                <!--<p>出虚汗，血脂高，嘴唇发紫，膝盖上下楼疼，感觉自己像老人，养了两年鸡，睡眠特别不规律，有时候一晚上睡两三个小时，老是被吵asd1111111111111111111111...</p>-->
-            <!--</div>-->
-            <!--<div class="case_list">-->
-                <!--<p>蒋佳良</p>-->
-                <!--<p>就诊时间：2016/06/22</p>-->
-                <!--<p>出虚汗，血脂高，嘴唇发紫，膝盖上下楼疼，感觉自己像老人，养了两年鸡，睡眠特别不规律，有时候一晚上睡两三个小时，老是被吵asd1111111111111111111111...</p>-->
-            <!--</div>-->
         </section>
         <div>
             <div class="send hide">
@@ -66,12 +43,24 @@
     </div>
     <div class="loading_box">
         <div class="loading">
-            <img src="img/loading.gif" alt="">
+            <div class='loadPress'>
+                <div class='rect1'></div>
+                <div class='rect2'></div>
+                <div class='rect3'></div>
+                <div class='rect4'></div>
+                <div class='rect5'></div>
+            </div>
             <p>拼命加载中</p>
         </div>
     </div>
     <div class="consult_loading hide">
-        <img src="img/loading.gif" alt="">
+        <div class='loadPress'>
+            <div class='rect1'></div>
+            <div class='rect2'></div>
+            <div class='rect3'></div>
+            <div class='rect4'></div>
+            <div class='rect5'></div>
+        </div>
         <p>正在提交</p>
     </div>
     <div class="add_case hide">
@@ -137,5 +126,6 @@
     <script src="lib/upfile.js"></script>
     <script src="lib/common.js"></script>
     <script src="js/add_case.js"></script>
+    <script src="js/jic.js"></script>
 </body>
 </html>

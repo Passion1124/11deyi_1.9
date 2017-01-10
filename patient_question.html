@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>患者问卷详情</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/patient_question.css">
+</head>
+<body>
+<div class="bug"></div>
+<section>
+    <div class="info">
+        <div class="top">
+            <div class="head_portrait"></div>
+            <div>
+                <p>--</p>
+                <p>填表时间：--</p>
+            </div>
+        </div>
+        <div class="content">
+            <p class="green">患者资料</p>
+            <p>患者姓名：<span>--</span></p>
+            <p>电话：<a>--</a></p>
+            <p>年龄：<span>--</span></p>
+            <p>性别：<span>--</span></p>
+        </div>
+    </div>
+    <div class="num_one">
+    </div>
+    <div class="postil hide">
+        <p>备注</p>
+        <div class="postil_detail">
+            <div class="diagnose_postil">
+                <p>诊断分析：<span></span></p>
+            </div>
+            <div class="cure_postil">
+                <p>治疗情况：<span></span></p>
+            </div>
+            <div class="img_postil">
+                <p>检查报告：</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="loading_box">
+    <div class="loading">
+        <div class='loadPress'>
+            <div class='rect1'></div>
+            <div class='rect2'></div>
+            <div class='rect3'></div>
+            <div class='rect4'></div>
+            <div class='rect5'></div>
+        </div>
+        <p>拼命加载中</p>
+    </div>
+</div>
+<div class="img_show hide">
+    <img src="" alt="">
+</div>
+<script src="lib/zepto.min.js"></script>
+<script>
+    setTimeout(function(){
+        $(".loading_box").addClass("hide");
+    },5000)
+</script>
+<script src="js/patient_quetion_file.js"></script>
+<script src="js/patient_question.js"></script>
+</body>
+</html>

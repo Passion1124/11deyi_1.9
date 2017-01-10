@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>填写问卷</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/question.css">
+</head>
+<body>
+<img src="" alt="" id="test" class="hide">
+<img src="img/loading.gif" alt="" class="hide">
+<div class="loading_box">
+    <div class="loading">
+        <div class='loadPress'>
+            <div class='rect1'></div>
+            <div class='rect2'></div>
+            <div class='rect3'></div>
+            <div class='rect4'></div>
+            <div class='rect5'></div>
+        </div>
+        <p>拼命加载中</p>
+    </div>
+</div>
+<div class="consult_loading hide">
+    <div class='loadPress'>
+        <div class='rect1'></div>
+        <div class='rect2'></div>
+        <div class='rect3'></div>
+        <div class='rect4'></div>
+        <div class='rect5'></div>
+    </div>
+    <p>正在提交</p>
+</div>
+<div id="box" class="hide">
+    <p id="tell_info">
+        <img src="./img/patient.png" alt="">
+        <span>为方便跟踪病情少跑医院，请填写本次就诊的基本情况。医生看到问卷后会进一步分析病情并进行随访。</span>
+    </p>
+    <p class="header-info" id="ptinfo">
+        <span class="title">
+            <img src="./img/z-312-c@2x.png" alt="">
+            <spsn id="patient"></spsn>
+        </span>
+        <a href="javascript:void(0)" class="change"><span>修改</span><b class="go"></b></a>
+    </p>
+    <section class="patient_question contain_question">
+        <input type="button" value="填写完成" class="sub" id="sub">
+    </section>
+</div>
+<div class="present_box hide">
+    <div class="present">
+        <img src="img/er@2x.png" alt="">
+        <h4>提示</h4>
+        <p></p>
+        <button></button>
+    </div>
+</div>
+<script src="lib/zepto.min.js"></script>
+<script src="js/fastclick.js"></script>
+<script>
+    if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+            FastClick.attach(document.body);
+        }, false);
+    }
+</script>
+<script src="lib/upfile.js"></script>
+<script src="lib/common.js"></script>
+<script src="js/minImgOnIOS.js"></script>
+<script src="js/exif.js"></script>
+<script src="js/question.js"></script>
+</body>
+</html>

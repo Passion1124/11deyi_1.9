@@ -1,5 +1,7 @@
 section{
     width: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
 }
 section .case_list{
     width: 100%;
@@ -149,8 +151,8 @@ video{
     width: 100%;
     height: 21.2rem;
     background: #333;
-    margin: 0px;
-    top: 0px;
+    margin: 0;
+    top: 0;
 }
 audio, canvas, progress, video {
     display: inline-block;
@@ -232,6 +234,8 @@ section .case_list .heat{
 }
 .list_loading{
     width: 100%;
+    position: absolute;
+    top:0;
     padding: 3rem 0;
     background-color: #fff;
     text-align: center;
@@ -244,7 +248,7 @@ section .case_list .heat{
     color: #555;
 }
 .bottom{
-    position: fixed;
+    /*position: fixed;*/
     display: -webkit-box;
     bottom: 0;
     background-color: #fff;
@@ -266,5 +270,5 @@ body,html{
     height: 100%;
 }
 footer{
-    padding-bottom: 6.5rem;
+    padding-bottom: 1.45rem;
 }

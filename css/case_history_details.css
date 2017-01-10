@@ -1,61 +1,123 @@
 html,body{
     height: 100%;
+    background-color: #fff;
 }
 section{
-    padding: 1.5rem 1rem 1.5rem 5.1rem;
     background-color: #fff;
     font-size: 1.5rem;
+    padding-bottom: 3rem;
+}
+section>div{
+    margin: 0 1.5rem;
+}
+section>div:not(:last-of-type){
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 1.2rem;
 }
 section .head_portrait{
-    float: left;
-    margin-left: -4.1rem;
-    width: 3rem;
-    height: 3rem;
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     background-image: url("../img/30@2x.png");
     background-repeat: no-repeat;
     background-size: cover;
+    margin-right: 1rem;
+}
+section>div:nth-of-type(1){
+    height: 6rem;
+	padding-top: 1.5rem;
+    font-size: 0;
+    margin-bottom: 1.7rem;
+}
+section>div:nth-of-type(1) div:nth-of-type(2){
+    display: inline-block;
+    vertical-align: top;
+    margin-top: .3rem;
+}
+section>div:nth-of-type(1) div:nth-of-type(2) p:nth-of-type(1){
+    color: #222;
+    font-size: 1.6rem;
+    margin: .5rem 0 .3rem 0;
+    font-weight: bold;
+}
+section>div:nth-of-type(1) div:nth-of-type(2) p:nth-of-type(2){
+    color: #555;
+    font-size: 1.4rem;
+}
+section>div:nth-of-type(2) p:last-of-type a{
+    color: #56BC8A;
 }
 section div p{
-    color: #56BC8A;
-    margin-bottom: .3rem;
+    color: #222;
+    margin-bottom: .4rem;
     word-break: break-all;
-}
-section div:not(:last-of-type){
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 1.2rem;
 }
 section div p:last-of-type{
     margin-bottom: 1.2rem;
 }
-section div span{
-    color: #888;
+section>div:last-of-type p:nth-of-type(1){
+    margin-bottom: .7rem;
 }
-section div:nth-of-type(2) p:nth-of-type(1){
-    margin: .8rem 0 1.4rem 0;
-    font-weight: bold;
-    color: #222;
+section>div:last-of-type .img_postil>div{
+    /*width: 26.7rem;*/
+    /*width: 100%;*/
 }
-section div:last-of-type p:last-of-type{
-    color: #222;
-    font-size: 1.4rem;
-}
-section div:last-of-type div{
-    margin-bottom: 1.3rem;
-    font-size: 0;
-    width: 26rem;
-}
-section div:last-of-type div img{
+section>div:last-of-type .img_postil>div img{
     width: 8rem;
-    height: 8rem;
+    min-height: 8rem;
+}
+section div span{
+    color: #555;
+}
+section>div:last-of-type .img_box{
+    width: 26.7rem;
+}
+.fontSize{
+    font-size: 0;
+}
+section>div:last-of-type .img_box img{
+    width: 8rem;
+    min-height: 8rem;
+}
+section .count>p:last-of-type{
+    margin-bottom: .5rem;
+}
+section .count .diagnosis_postil p,section .count .cure_postil p{
+    padding: .7rem 1rem;
+    border: 1px solid #CA572A;
+    border-radius: 4px;
+    color: #CA572A;
+    font-size: 1.4rem;
+    word-break: break-all;
+}
+section .count .diagnosis_postil p{
+    margin: .5rem 0 .7rem 0;
+}
+section .count .cure_postil p{
+    margin-bottom: .8rem;
+}
+section .count .cure_postil p:last-of-type{
+    margin-bottom: 1.5rem;
+}
+section .img_postil>div{
+    margin-bottom: 1rem;
+    border: 1px solid #CA572A;
+    border-radius: 4px;
+    padding: 0 1rem;
+}
+section .img_postil>div p{
+    color: #CA572A;
+    font-size: 1.4rem;
+    margin: .7rem 0;
 }
 section .noImg{
-    color: #222;
+    color: #555;
 }
 figure{
     width: 8rem;
     height: 8rem;
     overflow: hidden;
     display: inline-block;
-    margin: .6rem .6rem 0 0;
+    margin: 0 .9rem .9rem 0;
 }

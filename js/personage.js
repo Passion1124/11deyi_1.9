@@ -1,10 +1,8 @@
 var userType = "";
 var oneIndex = 1;
 var twoIndex = 1;
-var myPics = [];
 $(function(){
     var userid = getUrlParam("userid");
-    console.log(userid);
     queryUserById(userid);
     initSelectDataOnly();
 });
@@ -187,122 +185,6 @@ $("section").on("click",".content_list .doctor .doctor_answer_left", function ()
     var userid = $(this).parent().parent().attr("userid");
     goToHomePage(userid);
 });
-$(".question .pose").on("click", function () {
-    var sexText = $(".question .question_info .sex").text();
-    if (sexText === "男"){
-        var sex = "M"
-    }else {
-        var sex = "W"
-    }
-    var age = $(".question_info .age span:nth-of-type(1)").text();
-    var depName = $(".doctor p:nth-of-type(2) span:nth-of-type(1)").text();
-    var depId = $(".doctor p:nth-of-type(2) span:nth-of-type(1)").attr("depid");
-    var isanonymous = "N";
-    var pics = "";
-    if (myPics.length > 0){
-        for (var i = 0; i < myPics.length; i++){
-            pics += ","+myPics[i]
-        }
-    }
-    var pricevalue = 0;
-    var doctorid = $(".doctor").attr("userid");
-    var title = $(".question_content textarea:nth-of-type(1)").val();
-    var patienttimelong = $(".question_content textarea:nth-of-type(2)").val();
-    var cureinfo = $(".question_content textarea:nth-of-type(3)").val();
-    var checkinfo = $(".question_content textarea:nth-of-type(4)").val();
-    var addr = $(".question .address input").val();
-    if (!title || title.length <= 20){
-        alert("哪儿不舒服需要超过20个字");
-    }else if (!addr){
-        alert("请填写地址");
-    }else if (!patienttimelong){
-        alert("需要告诉我们您患病多久了");
-    }
-    if (title.length >= 20 && addr && patienttimelong){
-        $(".consult_loading").removeClass("hide");
-        $(".consult_loading img").removeClass("result");
-        var Type = "consult";
-        var data = {title:title,sex:sex,age:age,depid:depId,depname:depName,questionpics:pics,isanonymous:isanonymous,pricevalue:pricevalue,doctorid:doctorid,addr:addr,patienttimelong:patienttimelong,cureinfo:cureinfo,checkinfo:checkinfo};
-        getToken(function(){
-            issue_consult(title,sex,age,depId,depName,pics,isanonymous,pricevalue,doctorid,addr,patienttimelong,cureinfo,checkinfo);
-        }, data, Type)
-    }
-});
-$(".question .question_pics span input[type='file']").on("change",function(event){
-    //var fileName = event.target.files[0].name;
-    console.log();
-    if ($(".question_pics img").length < 9){
-        var file = event.target.files[0];
-        getUploadAli(file);
-    }else {
-        alert("上传的图片不能超过9张")
-    }
-});
-function uuid() {
-    var s = [];
-    var hexDigits = "0123456789abcdef";
-    for (var i = 0; i < 36; i++) {
-        s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
-    }
-    s[14] = "4";  // bits 12-15 of the time_hi_and_version field to 0010
-    s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);  // bits 6-7 of the clock_seq_hi_and_reserved to 01
-    s[8] = s[13] = s[18] = s[23] = "-";
-
-    var uuid = s.join("");
-    return uuid;
-}
-//获取阿里百川上传鉴权
-function getUploadAli(file){
-    var fileName = uuid();
-    var postData = {
-        "appToken":token,
-        "para":{
-            "device_type":"PC",
-            "device_id":"",
-            "api_version":"1.0.0.0",
-            "name":fileName
-        }
-    };
-    $.ajax({
-        "url": ebase + "/api/Sign/GetUploadSignWithAlibbForImg",
-        "type":"POST",
-        "data":postData,
-        "dataType":"json",
-        success: function (data) {
-            console.log(data);
-            console.log(file);
-            //console.log(data.Data)
-            if (data.Code === "0000"){
-                uploadJSSDK({
-                    file: file,   //文件，必填,html5 file类型，不需要读数据流
-                    name:fileName,
-                    token: 'UPLOAD_AK_TOP ' + data.Data,  //鉴权token，必填
-                    dir: 'patient_img',  //目录，选填，默认根目录''
-                    retries: 0,  //重试次数，选填，默认0不重试
-                    maxSize: 0,  //上传大小限制，选填，默认0没有限制
-                    callback: function (percent, result) {
-                        console.log(result);
-                        if (percent === 100 && result){
-                            var html = "<img src='"+result.url+"'>";
-                            $(html).insertBefore(".question_pics span");
-                            myPics.push(result.url);
-                        }else {
-                            alert("上传失败");
-                        }
-                        //percent（上传百分比）：-1失败；0-100上传的百分比；100即完成上传
-                        //result(服务端返回的responseText，json格式)
-                    }
-                })
-            }
-        },
-        error: function (xhr ,errorType ,error){
-            //alert("错误");
-            console.log(xhr);
-            console.log(errorType);
-            console.log(error)
-        }
-    })
-}
 //获取指定用户信息
 function queryUserById(userid){
     getLoginUserToken();
@@ -362,7 +244,7 @@ function userInfo(data){
         "</div>";
     html += "<div class='cut_box hide'>" +
         "<div class='advisory'>" +
-        "<button>私信</button>" +
+        "<button>发消息</button>" +
         "</div></div>";
     $("section").append(html);
     if (data.FaceImgUrl){
@@ -384,7 +266,7 @@ function doctorInfo(data){
     html += "<div class='cut_box'>" +
         "<div class='advisory'>" +
         "<p class='hide'>"+data.PriceValue+" ￥</p>" +
-        "<button>私信</button>" +
+        "<button>发消息</button>" +
         "</div>" +
         "<div class='cut'>" +
         //"<p class='sure'>医生说</p>" +
@@ -418,7 +300,7 @@ function hospitalInfo(data){
         "<p>医院介绍："+data.Description+"</p></div>";
     html += "<div class='cut_box'>" +
         "<div class='advisory hide'>" +
-        "<button>私信</button>" +
+        "<button>发消息</button>" +
         "</div>" +
         "<div class='cut'>" +
         "<p class='sure'>医院动态</p>" +
@@ -449,7 +331,7 @@ function institutionInfo(data){
         "<p>机构介绍："+data.Description+"</p></div>";
     html += "<div class='cut_box'>" +
         "<div class='advisory hide'>" +
-        "<button>私信</button>" +
+        "<button>发消息</button>" +
         "</div>" +
         "<div class='cut'>" +
         "<p class='sure'>健康说</p>" +
@@ -736,7 +618,6 @@ function createFocus(focusedid,focusename,type){
             "type": type
         }
     };
-    console.log(postData);
     $.ajax({
         "url": ebase+"/api/Common/CreateFocus",
         "type":"POST",

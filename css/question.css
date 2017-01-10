@@ -1,0 +1,422 @@
+html,body{
+    height:100%;
+}
+
+.contain_question {
+    background: #f4f5f7;
+}
+
+p#tell_info{
+    font-size:1.4rem;
+    color:#8D523B;
+    box-sizing: border-box;
+    padding:1rem 1.5rem .8rem;
+    overflow: hidden;
+    background-color:#ffdfb0;
+    border:none;
+    position: relative;
+    vertical-align: top;
+    margin-bottom: 1.5rem;
+}
+
+#tell_info>img{
+    width:1.4rem;
+    top:1.4rem;
+    position: absolute;
+}
+
+#tell_info>span{
+    display: inline-block;
+    margin-left: 1.8rem;
+}
+
+#patient{
+    color:#000;
+    font-weight: 500;
+    margin-left: 2.2rem;
+}
+
+.patient_question{
+    padding: 0 1.5rem;
+    font-size: 1.6rem;
+}
+
+.header-info {
+    height: 4.1rem;
+    font-size: 1.6rem;
+    vertical-align: top;
+    line-height: 4.1rem;
+    padding:0 1rem;
+    border:1px solid #ccc;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    box-sizing: border-box;
+    border-radius:4px;
+    margin: 0rem 1.5rem 1.2rem;
+    background: #fff;
+}
+
+.header-info span {
+    color: #CA572A;
+    display: inline-block;
+}
+
+.go {
+    padding: .4rem;
+    background: url(../img/j-92@2x.png) no-repeat right;
+    background-size: contain;
+}
+
+.title {
+    font-weight: 600;
+    position: relative;
+}
+
+.title img{
+    width:1.7rem;
+    position: absolute;
+    top:1.2rem;
+}
+
+.t_left {
+    display: inline-block;
+    width: 48%;
+}
+
+.change {
+    float: right;
+}
+
+.change>span:nth-child(1) {
+    padding-right: .8rem;
+}
+
+.question {
+    margin-bottom: 1.7rem;
+}
+
+.input_short {
+    height: 4.2rem;
+    line-height: 4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+    margin-top: .4rem;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+.input_line{
+    margin-top: .4rem;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    overflow: hidden;
+    box-shadow: none;
+}
+.t_left:nth-last-child(1) {
+    margin-left: 2%;
+}
+
+.birth {
+    border-radius: 4px;
+    display: block;
+    width:100%;
+    height:100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+.birth>.date-span {
+    height: 1.9rem;
+    line-height: 1.9rem;
+    padding: 1.1rem 1rem;
+    border-radius: 0;
+    width: 98%;
+}
+
+.birth>.birth_time {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    padding-left: 0;
+    z-index: 11;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+.dateimg {
+    position: absolute;
+    top: .4rem;
+    right: -1rem;
+    z-index: 2;
+}
+
+.dateimg>img {
+    width: 50%;
+}
+
+.input_container {
+    border-radius: 4px;
+    margin-top: .4rem;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+.area{
+    margin: .4rem 0 1px;
+    width: 100%;
+    vertical-align: middle;
+    line-height: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: .8rem 1.2rem 1.3rem;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+.file_container {
+    margin-top: .2rem;
+}
+
+.tb_input {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.5rem;
+    color: #555;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.tb_input tbody tr td {
+    text-align: left;
+    position: relative;
+    width: 50%;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.tb_input tbody tr td:nth-child(1) {
+    border-right: 1px solid #ccc;
+}
+
+.tb_input tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.tb_input tbody tr:last-of-type {
+    border-bottom: none;
+}
+
+.tb_input tbody tr td label {
+    margin: 1.1rem 1rem 1rem;
+    width: 100%;
+    display: block;
+}
+
+.tb_input tbody tr td b {
+    border: 1px solid #ccc;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    overflow: hidden;
+    border-radius: 4px;
+    position: absolute;
+}
+
+.tb_input tbody tr td b img {
+    width: 100%;
+    opacity: 0;
+}
+
+.tb_input tbody tr td span {
+    display: block;
+    margin-left: 2.3rem;
+}
+
+.tb_input tbody tr td input[type='checkbox'] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top:0;
+    left:0;
+}
+
+.tb_input tbody tr td input[type='checkbox']:checked+b,
+.tb_input tbody tr td input[type='checkbox']:checked+b img {
+    background-color: #CA572A;
+    border-color: transparent;
+    opacity: 1;
+}
+
+.tb_input tbody tr td h2 {
+    margin: 1rem 1rem 0;
+}
+.tb_input .date-span{
+    margin-left: 0;
+}
+input[type='checkbox'],
+input[type='radio'],
+input[type='date'],
+.sub {
+    cursor: pointer;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    text-indent: -999em
+}
+#modal{
+    background: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 0;
+}
+.another_desc {
+    margin: .4rem 1rem 1.2rem;
+    width: 94%;
+    height: 4rem;
+    vertical-align: top;
+    line-height: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none
+}
+
+.tb_input tbody tr td label i {
+    background: #fff;
+    border: 1px solid #ccc;
+    display: inline-block;
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.tb_input tbody tr td label i img {
+    width: 1.8rem;
+    margin-left: -.1rem;
+    opacity: 0;
+}
+
+.tb_input tbody tr td label input[type='radio']:checked+i,
+.tb_input tbody tr td label input[type='radio']:checked+i img {
+    border-color: transparent;
+    opacity: 1;
+}
+
+.tb_input tbody tr td label input[type='radio'] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top:0;
+    left:0;
+}
+.tb_input tbody tr td h1{
+    margin-top: 1rem;
+}
+.sub {
+    margin: .3rem 0 5rem;
+    border-radius: 4px;
+    background-color: #CA572A;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+    -webkit-appearance: none;
+}
+
+.upfile {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    line-height: 8rem;
+    text-align: center;
+    font-family: 'iconfont';
+    font-size: 4rem;
+    color: #CCC;
+    font-weight: bold;
+    background-color: #ccc;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+    margin-top: .5rem;
+}
+
+.upfile input[type='file'] {
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    top: -10.5rem;
+    left: 0;
+    opacity: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.file_container img{
+    width:7.8rem;
+    height:8rem;
+    margin-right: .5rem;
+}
+.file_container .upimg:nth-of-type(4) img,.file_container .upimg:nth-of-type(8) img{
+    margin-right: 0;
+}
+.file_container .upimg:nth-of-type(4) b,.file_container .upimg:nth-of-type(8) b{
+    right: -.3rem;
+}
+.upimg{
+    display: inline-block;
+    position: relative;
+    margin-top:.5rem;
+}
+.upimg b{
+    padding: 1rem;
+    position: absolute;
+    right: .1rem;
+    top: -.5rem;
+    background: url('../img/z-327@2x.png') no-repeat center center;
+    -webkit-background-size:cover;
+    background-size:cover ;
+}
+.upimg>div.loadDiv{
+    position: absolute;
+    width: 7.8rem;
+    height: 8rem;
+    background-color: rgba(85, 85, 85, 0.35)
+}
+.upimg>div.loadDiv img{
+    width: 2rem;
+    height: 2rem;
+    margin: 3rem;
+}
+.up b{
+    padding:0;
+}
+
+#up-info img{
+    width: 4rem;
+    height: auto;
+    margin:2rem .5rem;
+}

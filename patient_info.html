@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>患者基本信息</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/patient_info.css">
+</head>
+<body>
+<div class="consult_loading hide">
+    <div class='loadPress'>
+        <div class='rect1'></div>
+        <div class='rect2'></div>
+        <div class='rect3'></div>
+        <div class='rect4'></div>
+        <div class='rect5'></div>
+    </div>
+    <p>正在提交</p>
+</div>
+<section id="content">
+<p id="tell_info">
+    <img src="./img/patient.png" alt="">
+    <span>为方便医生查阅，请补充患者信息。</span>
+</p>
+<div id="edit_info">
+    <div>
+        <input type='text' class='input_long' id="username" maxlength="11" placeholder='请填写姓名'>
+    </div>
+    <div>
+        <input type='tel' class='input_long' id="phone" maxlength="11" placeholder='电话号码'>
+    </div>
+    <div>
+        <p class="input_short">
+            <span>年龄</span>
+            <span class="down"><img src="img/down.png" alt=""></span>
+            <select name="age" id="age"></select>
+        </p>
+        <p class='sex_choose'>
+            <span class="sex" value="M">男</span>
+            <span class="" value="W">女</span>
+        </p>
+    </div>
+
+    <!--<div>-->
+        <!--<span class='mid_span'>设为默认</span>-->
+        <!--<div class='is_default'>-->
+            <!--<span></span>-->
+        <!--</div>-->
+    <!--</div>-->
+    <input type="button" value="保存" class="sub" id="sub">
+</div>
+</section>
+<script src="lib/zepto.min.js"></script>
+<script src="lib/common.js"></script>
+<script src="js/patient_info.js"></script>
+</body>
+</html>

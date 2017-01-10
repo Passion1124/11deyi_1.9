@@ -13,7 +13,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="C:\NumberOne\yydy\web\old_gen" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -21,25 +21,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="chat.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/chat.js">
+      <file leaf-file-name="chat.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77837837">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            <state vertical-scroll-proportion="-13.5">
+              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
               <folding>
-                <marker date="1477040217684" expanded="true" signature="7691:7725" placeholder="..." />
-                <marker date="1477040217684" expanded="true" signature="36258:36315" placeholder="..." />
+                <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#p#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="disease_details.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/disease_details.js">
+      <file leaf-file-name="concern_doctor.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/concern_doctor.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-              <folding />
+              <caret line="104" column="3" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
+              <folding>
+                <element signature="e#14#329#0" expanded="false" />
+                <element signature="n#!!block;n#getConcernDoctor#0" expanded="false" />
+                <element signature="e#3063#3360#0" expanded="false" />
+                <element signature="e#3402#3425#0" expanded="false" />
+                <element signature="e#3475#3545#0" expanded="false" />
+                <element signature="e#3604#3653#0" expanded="false" />
+                <element signature="e#3712#3760#0" expanded="false" />
+                <element signature="e#3819#3867#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/question.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.63243246">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+              <folding>
+                <marker date="1483706019731" expanded="true" signature="28854:31445" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,30 +71,22 @@
       <file leaf-file-name="case_science.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/case_science.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6">
-              <caret line="4" column="55" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="person_info.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/person_info.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8333335">
-              <caret line="20" column="12" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_case.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/add_case.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8333335">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
-                <element signature="e#9478#10252#0" expanded="false" />
+                <element signature="e#791#993#0" expanded="false" />
+                <element signature="e#1042#1421#0" expanded="false" />
+                <element signature="e#1587#1635#0" expanded="false" />
+                <element signature="e#1694#1742#0" expanded="false" />
+                <element signature="e#1848#1927#0" expanded="false" />
+                <element signature="e#1989#2052#0" expanded="false" />
+                <element signature="e#2098#2386#0" expanded="false" />
+                <element signature="e#2431#2655#0" expanded="false" />
+                <element signature="e#2704#4802#0" expanded="false" />
+                <element signature="n#!!block;n#getData#0" expanded="false" />
+                <element signature="n#!!block;n#getWx#0" expanded="false" />
+                <element signature="n#!!block;n#getLicense#0" expanded="false" />
+                <element signature="n#!!block;n#createFocus#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -80,18 +96,130 @@
         <entry file="file://$PROJECT_DIR$/lib/common.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
+              <caret line="93" column="21" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="21" />
+              <folding>
+                <element signature="n#!!block;n#win#0" expanded="false" />
+                <marker date="1484031596673" expanded="true" signature="18767:18780" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="concern_doctor.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/concern_doctor.js">
+      <file leaf-file-name="case_science.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/case_science.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-30.75">
+              <caret line="114" column="6" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="6" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="patient_question.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/patient_question.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-              <folding />
+              <caret line="258" column="18" selection-start-line="258" selection-start-column="18" selection-end-line="258" selection-end-column="18" />
+              <folding>
+                <marker date="1484032149295" expanded="true" signature="1804:4576" placeholder="{...}" />
+                <marker date="1484032149295" expanded="true" signature="11422:11435" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/chat.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1087" column="0" selection-start-line="1087" selection-start-column="0" selection-end-line="1087" selection-end-column="0" />
+              <folding>
+                <element signature="e#65#31212#0" expanded="false" />
+                <element signature="e#116#3952#0" expanded="false" />
+                <element signature="e#4003#5605#0" expanded="false" />
+                <element signature="e#5666#8759#0" expanded="false" />
+                <element signature="e#8820#9514#0" expanded="false" />
+                <element signature="e#9576#10493#0" expanded="false" />
+                <element signature="e#10529#11443#0" expanded="false" />
+                <element signature="e#11508#22145#0" expanded="false" />
+                <element signature="e#11760#11808#0" expanded="false" />
+                <element signature="e#11855#12433#0" expanded="false" />
+                <element signature="e#12479#12832#0" expanded="false" />
+                <element signature="e#12879#13502#0" expanded="false" />
+                <element signature="e#13578#13609#0" expanded="false" />
+                <element signature="e#14223#14401#0" expanded="false" />
+                <element signature="e#14446#15965#0" expanded="false" />
+                <element signature="e#22207#23169#0" expanded="false" />
+                <element signature="e#23205#31210#0" expanded="false" />
+                <element signature="e#31240#51855#0" expanded="false" />
+                <element signature="e#51872#54962#0" expanded="false" />
+                <element signature="n#!!block;n#connectFun#0" expanded="false" />
+                <element signature="n#!!block;n#setLocalData#0" expanded="false" />
+                <element signature="n#!!block;n#setLocalChatArr#0" expanded="false" />
+                <element signature="n#!!block;n#register#0" expanded="false" />
+                <element signature="n#!!block;n#hideShare#0" expanded="false" />
+                <element signature="n#!!block;n#wxLicense#0" expanded="false" />
+                <element signature="n#!!block;n#setShare#0" expanded="false" />
+                <element signature="e#63013#63043#0" expanded="false" />
+                <element signature="e#63102#63628#0" expanded="false" />
+                <element signature="e#63681#63853#0" expanded="false" />
+                <element signature="e#63908#64394#0" expanded="false" />
+                <element signature="e#64860#65284#0" expanded="false" />
+                <element signature="e#65327#65395#0" expanded="false" />
+                <element signature="e#65959#66007#0" expanded="false" />
+                <element signature="e#66072#66118#0" expanded="false" />
+                <element signature="e#66186#66234#0" expanded="false" />
+                <element signature="e#66302#66351#0" expanded="false" />
+                <element signature="e#66408#66566#0" expanded="false" />
+                <element signature="e#66611#67377#0" expanded="false" />
+                <element signature="e#67434#68727#0" expanded="false" />
+                <element signature="e#68796#69731#0" expanded="false" />
+                <element signature="e#69785#71195#0" expanded="false" />
+                <element signature="e#71269#71363#0" expanded="false" />
+                <element signature="e#71415#71502#0" expanded="false" />
+                <element signature="e#71553#71785#0" expanded="false" />
+                <element signature="e#71837#72207#0" expanded="false" />
+                <element signature="e#72272#72865#0" expanded="false" />
+                <element signature="e#72917#72973#0" expanded="false" />
+                <element signature="e#73039#73553#0" expanded="false" />
+                <element signature="e#73619#73883#0" expanded="false" />
+                <element signature="e#73950#74188#0" expanded="false" />
+                <element signature="n#!!block;n#goBottom#0" expanded="false" />
+                <element signature="n#!!block;n#resizeSectionHeight#0" expanded="false" />
+                <element signature="n#!!block;n#rightTop#0" expanded="false" />
+                <element signature="n#!!block;n#leftTop#0" expanded="false" />
+                <element signature="n#!!block;n#getImgData#0" expanded="false" />
+                <element signature="n#!!block;n#getUpName#0" expanded="false" />
+                <element signature="n#!!block;n#getUploadAli#0" expanded="false" />
+                <element signature="n#!!block;n#upAli#0" expanded="false" />
+                <element signature="n#!!block;n#uploadImg#0" expanded="false" />
+                <element signature="n#!!block;n#getALi#0" expanded="false" />
+                <element signature="n#!!block;n#sendCase#0" expanded="false" />
+                <element signature="n#!!block;n#getChatIntervalTime#0" expanded="false" />
+                <element signature="n#!!block;n#getTimeInt#0" expanded="false" />
+                <element signature="n#!!block;n#getDoc#0" expanded="false" />
+                <marker date="1484033395945" expanded="true" signature="2784:2822" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="17095:17141" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="17424:17470" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="18096:18142" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="18574:18620" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="19309:19355" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="21187:21233" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="21611:21646" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="26854:26900" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="27151:27197" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="27759:27805" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="28213:28259" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="28868:28914" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="30482:30528" placeholder="..." />
+                <marker date="1484033395945" expanded="true" signature="30874:30909" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,37 +230,71 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/personage.css" />
-        <option value="$PROJECT_DIR$/css/concern_doctor.css" />
-        <option value="$PROJECT_DIR$/chat.html" />
-        <option value="$PROJECT_DIR$/css/case_science.css" />
-        <option value="$PROJECT_DIR$/concern_doctor.html" />
-        <option value="$PROJECT_DIR$/my_turnyard.html" />
-        <option value="$PROJECT_DIR$/turn_yard.html" />
-        <option value="$PROJECT_DIR$/case_science.html" />
         <option value="$PROJECT_DIR$/lib/webim.config.js" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/testBtn.html" />
         <option value="$PROJECT_DIR$/css/add_case.css" />
-        <option value="$PROJECT_DIR$/add_case.html" />
-        <option value="$PROJECT_DIR$/disease_details.html" />
         <option value="$PROJECT_DIR$/css/case_history_details.css" />
-        <option value="$PROJECT_DIR$/css/chat.css" />
-        <option value="$PROJECT_DIR$/js/disease_details.js" />
-        <option value="$PROJECT_DIR$/js/case_science.js" />
-        <option value="$PROJECT_DIR$/js/person_info.js" />
-        <option value="$PROJECT_DIR$/js/concern_doctor.js" />
+        <option value="$PROJECT_DIR$/disease_details.html" />
+        <option value="$PROJECT_DIR$/lib/upfile.js" />
+        <option value="$PROJECT_DIR$/add_case.html" />
+        <option value="$PROJECT_DIR$/js/jic.js" />
         <option value="$PROJECT_DIR$/js/add_case.js" />
-        <option value="$PROJECT_DIR$/js/chat.js" />
+        <option value="$PROJECT_DIR$/123.html" />
+        <option value="$PROJECT_DIR$/js/disease_details.js" />
+        <option value="$PROJECT_DIR$/patient_list.html" />
+        <option value="$PROJECT_DIR$/css/question.css" />
+        <option value="$PROJECT_DIR$/css/patient_list.css" />
+        <option value="$PROJECT_DIR$/js/case_details.js" />
+        <option value="$PROJECT_DIR$/css/case_science.css" />
+        <option value="$PROJECT_DIR$/css/repository_detail.css" />
+        <option value="$PROJECT_DIR$/js/repository_detail.js" />
+        <option value="$PROJECT_DIR$/concern_doctor.html" />
+        <option value="$PROJECT_DIR$/person_info.html" />
+        <option value="$PROJECT_DIR$/css/public.css" />
+        <option value="$PROJECT_DIR$/auto_login.html" />
+        <option value="$PROJECT_DIR$/js/patient_list.js" />
+        <option value="$PROJECT_DIR$/css/repository_details.css" />
+        <option value="$PROJECT_DIR$/patient_info.html" />
+        <option value="$PROJECT_DIR$/js/two_could.js" />
+        <option value="$PROJECT_DIR$/css/concern_doctor.css" />
+        <option value="$USER_HOME$/Desktop/patient_quetion_file.js" />
+        <option value="$USER_HOME$/Desktop/patient_question.html" />
+        <option value="$PROJECT_DIR$/question.html" />
+        <option value="$PROJECT_DIR$/js/initPhotoSwiper.js" />
+        <option value="$PROJECT_DIR$/js/patient_info.js" />
+        <option value="$PROJECT_DIR$/repository_details.html" />
+        <option value="$PROJECT_DIR$/js/repository_details.js" />
+        <option value="$PROJECT_DIR$/css/two_could.css" />
+        <option value="$PROJECT_DIR$/two_could.html" />
+        <option value="$PROJECT_DIR$/case_details.html" />
+        <option value="$PROJECT_DIR$/js/case_science.js" />
+        <option value="$PROJECT_DIR$/css/chat.css" />
+        <option value="$PROJECT_DIR$/chat.html" />
+        <option value="$PROJECT_DIR$/js/patient_quetion_file.js" />
+        <option value="$PROJECT_DIR$/patient_question.html" />
+        <option value="$PROJECT_DIR$/css/patient_question.css" />
+        <option value="$PROJECT_DIR$/js/person_info.js" />
+        <option value="$PROJECT_DIR$/js/question.js" />
+        <option value="$PROJECT_DIR$/case_science.html" />
         <option value="$PROJECT_DIR$/lib/common.js" />
+        <option value="$PROJECT_DIR$/js/concern_doctor.js" />
+        <option value="$PROJECT_DIR$/js/patient_question.js" />
+        <option value="$PROJECT_DIR$/js/chat.js" />
       </list>
     </option>
+  </component>
+  <component name="JsBowerSettings">
+    <exe-path />
+    <config-path />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsBuildToolPackageJson" detection-done="true" />
@@ -145,6 +307,37 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>File Watchers</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="添加" />
     <OptionsSetting value="true" id="移除" />
@@ -152,7 +345,7 @@
     <OptionsSetting value="true" id="更新" />
     <OptionsSetting value="true" id="状态" />
     <OptionsSetting value="true" id="编辑" />
-    <ConfirmationsSetting value="0" id="添加" />
+    <ConfirmationsSetting value="2" id="添加" />
     <ConfirmationsSetting value="0" id="移除" />
   </component>
   <component name="ProjectView">
@@ -170,17 +363,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -199,30 +382,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="old_gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="old_gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/test" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/jcylw" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="disease_details&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/disease_details.html&#10;chat&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/chat.html&#10;cha&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/chat.html&#10;comm&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/lib/common.js&#10;dis&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/disease_details.html&#10;add&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/css/add_case.css&#10;case_&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/case_history_details.html&#10;add_cas&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/css/add_case.css&#10;per&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/person_info.js&#10;case_sc&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/case_science.html&#10;con&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/css/concern_doctor.css&#10;com&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/lib/common.js&#10;reg&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/register.html&#10;addca&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/add_case.html&#10;pers&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/personage.js&#10;dise&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/disease_details.js&#10;addc&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/css/add_case.css&#10;add_case&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/add_case.js" />
+    <property name="SearchEverywhereHistoryKey" value="pa&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/patient_question.html&#10;con&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/concern_doctor.html&#10;case&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/case_science.html&#10;com&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/lib/common.js&#10;per&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/person_info.html&#10;pers&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/personage.html&#10;que&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/question.js&#10;cas&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/case_science.html&#10;two&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/two_could.html&#10;rep&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/repository_details.html&#10;concer&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/concern_doctor.html&#10;pat&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/patient_question.html&#10;chat&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/chat.js&#10;ques&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/question.js&#10;patient_question&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/patient_question.js&#10;patient_info&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/patient_info.js&#10;add_ca&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/add_case.html&#10;person_info&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/person_info.js&#10;pe&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/person_info.html&#10;re&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/repository_details.html&#10;repository_details&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/repository_details.js&#10;case_science&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/case_science.html&#10;patient&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/patient_question.html&#10;patient_list&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/patient_list.js&#10;patien&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/patient_list.js&#10;pub&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/css/public.css&#10;doc&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/doctor_info.html&#10;sc&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/case_science.js&#10;q&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/question.html&#10;case_sc&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/case_science.html&#10;pati&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/patient_info.js&#10;comm&#9;ACTION&#9;CheckinProject&#10;pu&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/css/public.css&#10;quest&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/question.js&#10;p&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/patient_list.html&#10;addc&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/add_case.js&#10;add&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/add_case.html&#10;dis&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/disease_details.html&#10;chat.cs&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/css/chat.css&#10;questi&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/question.js&#10;jic&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/jic.js&#10;disease_details&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/disease_details.html&#10;cha&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/chat.html&#10;case_&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/case_history_details.html&#10;add_cas&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/css/add_case.css&#10;reg&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/register.html&#10;addca&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/add_case.html&#10;dise&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/disease_details.js&#10;add_case&#9;FILE&#9;file://C:/NumberOne/yydy/web/old_gen/js/add_case.js" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="74" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="66" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="74" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="110" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="86" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="79" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="74" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="66" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="131" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="124" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="862" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="856" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="86" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
@@ -236,9 +434,16 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="886" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="js.eslint.nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\NumberOne\yydy\web\old_gen\img" />
+      <recent name="C:\NumberOne\yydy\web\old_gen\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\NumberOne\yydy\web\old_gen\img" />
     </key>
   </component>
@@ -256,7 +461,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="svn" revision="5206">C:\NumberOne\yydy\web\old_gen\css\chat.css</PATH>
+          <PATH vcs="svn" revision="8856">C:\NumberOne\yydy\web\old_gen\js\two_could.js</PATH>
+          <PATH vcs="svn" revision="8856">C:\NumberOne\yydy\web\old_gen\js\person_info.js</PATH>
+          <PATH vcs="svn" revision="8856">C:\NumberOne\yydy\web\old_gen\lib\common.js</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="已创建" />
@@ -432,319 +639,320 @@
       <option name="number" value="Default" />
       <updated>1475255164305</updated>
     </task>
-    <task id="LOCAL-00101" summary="测试音频">
-      <created>1476348542882</created>
-      <option name="number" value="00101" />
+    <task id="LOCAL-00868" summary="调整正式环境和测试环境接口">
+      <created>1483697345308</created>
+      <option name="number" value="00868" />
       <option name="project" value="LOCAL" />
-      <updated>1476348542884</updated>
+      <updated>1483697345308</updated>
     </task>
-    <task id="LOCAL-00102" summary="测试音频12">
-      <created>1476349073046</created>
-      <option name="number" value="00102" />
+    <task id="LOCAL-00869" summary="调整正式环境和测试环境接口">
+      <created>1483698826661</created>
+      <option name="number" value="00869" />
       <option name="project" value="LOCAL" />
-      <updated>1476349073047</updated>
+      <updated>1483698826661</updated>
     </task>
-    <task id="LOCAL-00103" summary="添加音频播放动画">
-      <created>1476352600023</created>
-      <option name="number" value="00103" />
+    <task id="LOCAL-00870" summary="调整正式环境和测试环境接口">
+      <created>1483702235071</created>
+      <option name="number" value="00870" />
       <option name="project" value="LOCAL" />
-      <updated>1476352600023</updated>
+      <updated>1483702235071</updated>
     </task>
-    <task id="LOCAL-00104" summary="优化音频图片样式">
-      <created>1476353425015</created>
-      <option name="number" value="00104" />
+    <task id="LOCAL-00871" summary="调整正式环境和测试环境接口">
+      <created>1483702348678</created>
+      <option name="number" value="00871" />
       <option name="project" value="LOCAL" />
-      <updated>1476353425015</updated>
+      <updated>1483702348678</updated>
     </task>
-    <task id="LOCAL-00105" summary="修复点击多个音频播放问题">
-      <created>1476354344369</created>
-      <option name="number" value="00105" />
+    <task id="LOCAL-00872" summary="调整正式环境和测试环境接口">
+      <created>1483702456822</created>
+      <option name="number" value="00872" />
       <option name="project" value="LOCAL" />
-      <updated>1476354344369</updated>
+      <updated>1483702456822</updated>
     </task>
-    <task id="LOCAL-00106" summary="修复点击多个音频播放问题图片没改变">
-      <created>1476355562366</created>
-      <option name="number" value="00106" />
+    <task id="LOCAL-00873" summary="调整正式环境和测试环境接口">
+      <created>1483702619277</created>
+      <option name="number" value="00873" />
       <option name="project" value="LOCAL" />
-      <updated>1476355562366</updated>
+      <updated>1483702619277</updated>
     </task>
-    <task id="LOCAL-00107" summary="修复音频播放问题！">
-      <created>1476413115236</created>
-      <option name="number" value="00107" />
+    <task id="LOCAL-00874" summary="调整正式环境和测试环境接口">
+      <created>1483703320282</created>
+      <option name="number" value="00874" />
       <option name="project" value="LOCAL" />
-      <updated>1476413115236</updated>
+      <updated>1483703320282</updated>
     </task>
-    <task id="LOCAL-00108" summary="注释掉返回的类型">
-      <created>1476414417442</created>
-      <option name="number" value="00108" />
+    <task id="LOCAL-00875" summary="调整正式环境和测试环境接口">
+      <created>1483705148483</created>
+      <option name="number" value="00875" />
       <option name="project" value="LOCAL" />
-      <updated>1476414417443</updated>
+      <updated>1483705148483</updated>
     </task>
-    <task id="LOCAL-00109" summary="测试音频异步之后地址是否存在">
-      <created>1476415148372</created>
-      <option name="number" value="00109" />
+    <task id="LOCAL-00876" summary="调整正式环境和测试环境接口">
+      <created>1483705264778</created>
+      <option name="number" value="00876" />
       <option name="project" value="LOCAL" />
-      <updated>1476415148372</updated>
+      <updated>1483705264778</updated>
     </task>
-    <task id="LOCAL-00110" summary="将同步请求修改为异步请求！">
-      <created>1476415309899</created>
-      <option name="number" value="00110" />
+    <task id="LOCAL-00877" summary="调整正式环境和测试环境接口">
+      <created>1483705933556</created>
+      <option name="number" value="00877" />
       <option name="project" value="LOCAL" />
-      <updated>1476415309899</updated>
+      <updated>1483705933556</updated>
     </task>
-    <task id="LOCAL-00111" summary="修复音频src为空">
-      <created>1476415467873</created>
-      <option name="number" value="00111" />
+    <task id="LOCAL-00878" summary="调整正式环境和测试环境接口">
+      <created>1483706046613</created>
+      <option name="number" value="00878" />
       <option name="project" value="LOCAL" />
-      <updated>1476415467874</updated>
+      <updated>1483706046613</updated>
     </task>
-    <task id="LOCAL-00112" summary="修复点击已播放音频再次点击时重新播放">
-      <created>1476417120080</created>
-      <option name="number" value="00112" />
+    <task id="LOCAL-00879" summary="调整正式环境和测试环境接口">
+      <created>1483707065874</created>
+      <option name="number" value="00879" />
       <option name="project" value="LOCAL" />
-      <updated>1476417120080</updated>
+      <updated>1483707065874</updated>
     </task>
-    <task id="LOCAL-00113" summary="优化未读消息显示样式">
-      <created>1476418490497</created>
-      <option name="number" value="00113" />
+    <task id="LOCAL-00880" summary="调整正式环境和测试环境接口">
+      <created>1483714127452</created>
+      <option name="number" value="00880" />
       <option name="project" value="LOCAL" />
-      <updated>1476418490497</updated>
+      <updated>1483714127452</updated>
     </task>
-    <task id="LOCAL-00114" summary="优化未读消息显示样式+1">
-      <created>1476418958267</created>
-      <option name="number" value="00114" />
+    <task id="LOCAL-00881" summary="调整正式环境和测试环境接口">
+      <created>1483715006195</created>
+      <option name="number" value="00881" />
       <option name="project" value="LOCAL" />
-      <updated>1476418958267</updated>
+      <updated>1483715006195</updated>
     </task>
-    <task id="LOCAL-00115" summary="优化未读消息显示样式+2">
-      <created>1476419386662</created>
-      <option name="number" value="00115" />
+    <task id="LOCAL-00882" summary="查找ios端发送链接有误的原因">
+      <created>1483943420280</created>
+      <option name="number" value="00882" />
       <option name="project" value="LOCAL" />
-      <updated>1476419386662</updated>
+      <updated>1483943420281</updated>
     </task>
-    <task id="LOCAL-00116" summary="优化未读消息显示样式+3">
-      <created>1476419466549</created>
-      <option name="number" value="00116" />
+    <task id="LOCAL-00883" summary="查找ios端发送链接有误的原因">
+      <created>1483943954404</created>
+      <option name="number" value="00883" />
       <option name="project" value="LOCAL" />
-      <updated>1476419466549</updated>
+      <updated>1483943954404</updated>
     </task>
-    <task id="LOCAL-00117" summary="图片未显示告诉用户此图片已过期！">
-      <created>1476437326117</created>
-      <option name="number" value="00117" />
+    <task id="LOCAL-00884" summary="查找ios端发送链接有误的原因">
+      <created>1483944134088</created>
+      <option name="number" value="00884" />
       <option name="project" value="LOCAL" />
-      <updated>1476437326117</updated>
+      <updated>1483944134088</updated>
     </task>
-    <task id="LOCAL-00118" summary="修复输入框行高不对问题！调整当输入框行数大于1是发送按钮应该在下面的问题">
-      <created>1476687413359</created>
-      <option name="number" value="00118" />
+    <task id="LOCAL-00885" summary="查找ios端发送链接有误的原因">
+      <created>1483944352059</created>
+      <option name="number" value="00885" />
       <option name="project" value="LOCAL" />
-      <updated>1476687413360</updated>
+      <updated>1483944352059</updated>
     </task>
-    <task id="LOCAL-00119" summary="修复输入框行高不对问题！">
-      <created>1476687893106</created>
-      <option name="number" value="00119" />
+    <task id="LOCAL-00886" summary="查找ios端发送链接有误的原因">
+      <created>1483945156164</created>
+      <option name="number" value="00886" />
       <option name="project" value="LOCAL" />
-      <updated>1476687893107</updated>
+      <updated>1483945156164</updated>
     </task>
-    <task id="LOCAL-00120" summary="回复原来的输入框和发送按钮">
-      <created>1476688491066</created>
-      <option name="number" value="00120" />
+    <task id="LOCAL-00887" summary="查找ios端发送链接有误的原因">
+      <created>1483945296347</created>
+      <option name="number" value="00887" />
       <option name="project" value="LOCAL" />
-      <updated>1476688491066</updated>
+      <updated>1483945296347</updated>
     </task>
-    <task id="LOCAL-00121" summary="点击医生头像跳转到医生主页">
-      <created>1476699639234</created>
-      <option name="number" value="00121" />
+    <task id="LOCAL-00888" summary="查找ios端发送链接有误的原因">
+      <created>1483945396116</created>
+      <option name="number" value="00888" />
       <option name="project" value="LOCAL" />
-      <updated>1476699639234</updated>
+      <updated>1483945396116</updated>
     </task>
-    <task id="LOCAL-00122" summary="修复未点击发送按钮还是发送病历问题！">
-      <created>1476761588041</created>
-      <option name="number" value="00122" />
+    <task id="LOCAL-00889" summary="查找ios端发送链接有误的原因">
+      <created>1483945639036</created>
+      <option name="number" value="00889" />
       <option name="project" value="LOCAL" />
-      <updated>1476761588042</updated>
+      <updated>1483945639036</updated>
     </task>
-    <task id="LOCAL-00123" summary="切换为测试版">
-      <created>1476858868534</created>
-      <option name="number" value="00123" />
+    <task id="LOCAL-00890" summary="查找ios端发送链接有误的原因">
+      <created>1483945902764</created>
+      <option name="number" value="00890" />
       <option name="project" value="LOCAL" />
-      <updated>1476858868535</updated>
+      <updated>1483945902764</updated>
     </task>
-    <task id="LOCAL-00124" summary="测试版添加判断！">
-      <created>1476866846475</created>
-      <option name="number" value="00124" />
+    <task id="LOCAL-00891" summary="查找ios端发送链接有误的原因">
+      <created>1483946046169</created>
+      <option name="number" value="00891" />
       <option name="project" value="LOCAL" />
-      <updated>1476866846475</updated>
+      <updated>1483946046169</updated>
     </task>
-    <task id="LOCAL-00125" summary="修复测试版报错！">
-      <created>1476867077894</created>
-      <option name="number" value="00125" />
+    <task id="LOCAL-00892" summary="查找ios端发送链接有误的原因">
+      <created>1483946430398</created>
+      <option name="number" value="00892" />
       <option name="project" value="LOCAL" />
-      <updated>1476867077894</updated>
+      <updated>1483946430398</updated>
     </task>
-    <task id="LOCAL-00126" summary="测试头像和人物是否是最新的！">
-      <created>1476869663794</created>
-      <option name="number" value="00126" />
+    <task id="LOCAL-00893" summary="查找ios端发送链接有误的原因">
+      <created>1483946465928</created>
+      <option name="number" value="00893" />
       <option name="project" value="LOCAL" />
-      <updated>1476869663795</updated>
+      <updated>1483946465928</updated>
     </task>
-    <task id="LOCAL-00127" summary="修复人物姓名和头像不是最新的问题">
-      <created>1476870987662</created>
-      <option name="number" value="00127" />
+    <task id="LOCAL-00894" summary="查找ios端发送链接有误的原因">
+      <created>1483947104338</created>
+      <option name="number" value="00894" />
       <option name="project" value="LOCAL" />
-      <updated>1476870987662</updated>
+      <updated>1483947104338</updated>
     </task>
-    <task id="LOCAL-00128" summary="修复人物姓名和头像不是最新的问题_1">
-      <created>1476872270221</created>
-      <option name="number" value="00128" />
+    <task id="LOCAL-00895" summary="修复ios端发送复制的链接有误的问题">
+      <created>1483947220866</created>
+      <option name="number" value="00895" />
       <option name="project" value="LOCAL" />
-      <updated>1476872270221</updated>
+      <updated>1483947220866</updated>
     </task>
-    <task id="LOCAL-00129" summary="取消固定token、将某些正式接口改为测试接口">
-      <created>1476930734298</created>
-      <option name="number" value="00129" />
+    <task id="LOCAL-00896" summary="修改患者问卷详情页面的备注样式">
+      <created>1483952232333</created>
+      <option name="number" value="00896" />
       <option name="project" value="LOCAL" />
-      <updated>1476930734298</updated>
+      <updated>1483952232333</updated>
     </task>
-    <task id="LOCAL-00130" summary="修复聊天信息是最新的！">
-      <created>1476945645990</created>
-      <option name="number" value="00130" />
+    <task id="LOCAL-00897" summary="修改患者问卷详情页面的备注样式">
+      <created>1483952510174</created>
+      <option name="number" value="00897" />
       <option name="project" value="LOCAL" />
-      <updated>1476945645990</updated>
+      <updated>1483952510174</updated>
     </task>
-    <task id="LOCAL-00131" summary="测试一下！">
-      <created>1476946094743</created>
-      <option name="number" value="00131" />
+    <task id="LOCAL-00898" summary="修改患者问卷详情页面的备注样式">
+      <created>1483952813309</created>
+      <option name="number" value="00898" />
       <option name="project" value="LOCAL" />
-      <updated>1476946094743</updated>
+      <updated>1483952813309</updated>
     </task>
-    <task id="LOCAL-00132" summary="测试头像最新成功！">
-      <created>1476946917457</created>
-      <option name="number" value="00132" />
+    <task id="LOCAL-00899" summary="修改患者问卷详情页面的备注样式">
+      <created>1483953010639</created>
+      <option name="number" value="00899" />
       <option name="project" value="LOCAL" />
-      <updated>1476946917457</updated>
+      <updated>1483953010639</updated>
     </task>
-    <task id="LOCAL-00133" summary="修复能发送空白消息问题!">
-      <created>1476948681376</created>
-      <option name="number" value="00133" />
+    <task id="LOCAL-00900" summary="修改患者问卷详情页面的备注样式">
+      <created>1483953432550</created>
+      <option name="number" value="00900" />
       <option name="project" value="LOCAL" />
-      <updated>1476948681381</updated>
+      <updated>1483953432550</updated>
     </task>
-    <task id="LOCAL-00134" summary="修复能发送空白消息问题!_1">
-      <created>1476949493423</created>
-      <option name="number" value="00134" />
+    <task id="LOCAL-00901" summary="修改患者问卷详情页面的备注样式">
+      <created>1483953667476</created>
+      <option name="number" value="00901" />
       <option name="project" value="LOCAL" />
-      <updated>1476949493423</updated>
+      <updated>1483953667476</updated>
     </task>
-    <task id="LOCAL-00135" summary="修复能发送空白消息问题!_2">
-      <created>1476950222689</created>
-      <option name="number" value="00135" />
+    <task id="LOCAL-00902" summary="修改患者问卷详情页面的备注样式">
+      <created>1483954064030</created>
+      <option name="number" value="00902" />
       <option name="project" value="LOCAL" />
-      <updated>1476950222689</updated>
+      <updated>1483954064030</updated>
     </task>
-    <task id="LOCAL-00136" summary="测试新建病历自己发送病历">
-      <created>1476952192336</created>
-      <option name="number" value="00136" />
+    <task id="LOCAL-00903" summary="修改患者问卷详情页面的备注样式">
+      <created>1483954185571</created>
+      <option name="number" value="00903" />
       <option name="project" value="LOCAL" />
-      <updated>1476952192336</updated>
+      <updated>1483954185571</updated>
     </task>
-    <task id="LOCAL-00137" summary="进入病历详情页面需要token">
-      <created>1476957854930</created>
-      <option name="number" value="00137" />
+    <task id="LOCAL-00904" summary="修改患者问卷详情页面的备注样式">
+      <created>1483954338480</created>
+      <option name="number" value="00904" />
       <option name="project" value="LOCAL" />
-      <updated>1476957854930</updated>
+      <updated>1483954338480</updated>
     </task>
-    <task id="LOCAL-00138" summary="进入病历详情页面需要token_1">
-      <created>1476958029552</created>
-      <option name="number" value="00138" />
+    <task id="LOCAL-00905" summary="修改患者问卷详情页面的备注样式">
+      <created>1483954506349</created>
+      <option name="number" value="00905" />
       <option name="project" value="LOCAL" />
-      <updated>1476958029552</updated>
+      <updated>1483954506350</updated>
     </task>
-    <task id="LOCAL-00139" summary="删除无用代码">
-      <created>1476960142213</created>
-      <option name="number" value="00139" />
+    <task id="LOCAL-00906" summary="修改患者问卷详情页面的备注样式">
+      <created>1483954728334</created>
+      <option name="number" value="00906" />
       <option name="project" value="LOCAL" />
-      <updated>1476960142213</updated>
+      <updated>1483954728334</updated>
     </task>
-    <task id="LOCAL-00140" summary="将病例修改为病历">
-      <created>1477020713449</created>
-      <option name="number" value="00140" />
+    <task id="LOCAL-00907" summary="优化聊天消息显示的代码">
+      <created>1483955787293</created>
+      <option name="number" value="00907" />
       <option name="project" value="LOCAL" />
-      <updated>1477020713450</updated>
+      <updated>1483955787293</updated>
     </task>
-    <task id="LOCAL-00141" summary="修复测试版数据和正式版数据混乱">
-      <created>1477032771045</created>
-      <option name="number" value="00141" />
+    <task id="LOCAL-00908" summary="优化聊天消息显示的代码">
+      <created>1483956059591</created>
+      <option name="number" value="00908" />
       <option name="project" value="LOCAL" />
-      <updated>1477032771045</updated>
+      <updated>1483956059591</updated>
     </task>
-    <task id="LOCAL-00142" summary="修复直接进入聊天界面没有获取用户信息的问题">
-      <created>1477036756917</created>
-      <option name="number" value="00142" />
+    <task id="LOCAL-00909" summary="优化聊天消息显示的代码">
+      <created>1483956553403</created>
+      <option name="number" value="00909" />
       <option name="project" value="LOCAL" />
-      <updated>1477036756917</updated>
+      <updated>1483956553403</updated>
     </task>
-    <task id="LOCAL-00143" summary="测试页面不能显示问题！">
-      <created>1477038334677</created>
-      <option name="number" value="00143" />
+    <task id="LOCAL-00910" summary="超找ios超链接显示有误的问题">
+      <created>1483957886993</created>
+      <option name="number" value="00910" />
       <option name="project" value="LOCAL" />
-      <updated>1477038334677</updated>
+      <updated>1483957886993</updated>
     </task>
-    <task id="LOCAL-00144" summary="测试环境显示微信复制链接选项">
-      <created>1477038697256</created>
-      <option name="number" value="00144" />
+    <task id="LOCAL-00911" summary="超找ios超链接显示有误的问题">
+      <created>1483958082954</created>
+      <option name="number" value="00911" />
       <option name="project" value="LOCAL" />
-      <updated>1477038697256</updated>
+      <updated>1483958082954</updated>
     </task>
-    <task id="LOCAL-00145" summary="测试环境查询不到用户信息检查">
-      <created>1477038944973</created>
-      <option name="number" value="00145" />
+    <task id="LOCAL-00912" summary="超找ios超链接显示有误的问题">
+      <created>1483958202221</created>
+      <option name="number" value="00912" />
       <option name="project" value="LOCAL" />
-      <updated>1477038944973</updated>
+      <updated>1483958202221</updated>
     </task>
-    <task id="LOCAL-00146" summary="测试环境查询不到用户信息检查_1">
-      <created>1477039103681</created>
-      <option name="number" value="00146" />
+    <task id="LOCAL-00913" summary="超找ios超链接显示有误的问题">
+      <created>1484016502293</created>
+      <option name="number" value="00913" />
       <option name="project" value="LOCAL" />
-      <updated>1477039103681</updated>
+      <updated>1484016502294</updated>
     </task>
-    <task id="LOCAL-00147" summary="测试Android不能调用函数的问题">
-      <created>1477039214642</created>
-      <option name="number" value="00147" />
+    <task id="LOCAL-00914" summary="删除无用的代码">
+      <created>1484016715429</created>
+      <option name="number" value="00914" />
       <option name="project" value="LOCAL" />
-      <updated>1477039214642</updated>
+      <updated>1484016715429</updated>
     </task>
-    <task id="LOCAL-00148" summary="删除弹出会话列表结束窗口">
-      <created>1477040240139</created>
-      <option name="number" value="00148" />
+    <task id="LOCAL-00915" summary="优化会话、医生说的代码，修复患者详情页面当题为多选题的时候直接隐藏的问题">
+      <created>1484032255389</created>
+      <option name="number" value="00915" />
       <option name="project" value="LOCAL" />
-      <updated>1477040240139</updated>
+      <updated>1484032255389</updated>
     </task>
-    <task id="LOCAL-00149" summary="切换为正式版!!!!">
-      <created>1477042649623</created>
-      <option name="number" value="00149" />
+    <task id="LOCAL-00916" summary="替换进入医生主页的接口">
+      <created>1484033464039</created>
+      <option name="number" value="00916" />
       <option name="project" value="LOCAL" />
-      <updated>1477042649623</updated>
+      <updated>1484033464039</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <option name="localTasksCounter" value="917" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16071428" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24828768" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35787672" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2688356" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5029762" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35787672" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49702382" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="层次结构" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -753,29 +961,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="层次结构" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14554794" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05308219" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -789,363 +976,524 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="测试头像和人物是否是最新的！" />
-    <MESSAGE value="修复人物姓名和头像不是最新的问题" />
-    <MESSAGE value="修复人物姓名和头像不是最新的问题_1" />
-    <MESSAGE value="取消固定token、将某些正式接口改为测试接口" />
-    <MESSAGE value="修复聊天信息是最新的！" />
-    <MESSAGE value="测试一下！" />
-    <MESSAGE value="测试头像最新成功！" />
-    <MESSAGE value="修复能发送空白消息问题!" />
-    <MESSAGE value="修复能发送空白消息问题!_1" />
-    <MESSAGE value="修复能发送空白消息问题!_2" />
-    <MESSAGE value="测试新建病历自己发送病历" />
-    <MESSAGE value="进入病历详情页面需要token" />
-    <MESSAGE value="进入病历详情页面需要token_1" />
-    <MESSAGE value="删除无用代码" />
-    <MESSAGE value="将病例修改为病历" />
-    <MESSAGE value="修复测试版数据和正式版数据混乱" />
-    <MESSAGE value="修复直接进入聊天界面没有获取用户信息的问题" />
-    <MESSAGE value="测试页面不能显示问题！" />
-    <MESSAGE value="测试环境显示微信复制链接选项" />
-    <MESSAGE value="测试环境查询不到用户信息检查" />
-    <MESSAGE value="测试环境查询不到用户信息检查_1" />
-    <MESSAGE value="测试Android不能调用函数的问题" />
-    <MESSAGE value="测试Android不能调用函数的问题1" />
-    <MESSAGE value="删除弹出会话列表结束窗口" />
-    <MESSAGE value="切换为正式版!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="切换为正式版!!!!" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
+    <MESSAGE value="添加家人发送问卷的时候的显示样式" />
+    <MESSAGE value="阻止第一次拉取旧消息的时候显示的消息条数是20条" />
+    <MESSAGE value="修复群聊的时候填写问卷发送的会话有误" />
+    <MESSAGE value="调整邀请家人与医生聊天的样式" />
+    <MESSAGE value="修复不是当前会话信息的时候显示有误" />
+    <MESSAGE value="修复发送消息的时候没有显示在最底部" />
+    <MESSAGE value="修复发送消息的时候聊天记录没有显示在最底部" />
+    <MESSAGE value="修改快捷回复详情页面title不对的问题" />
+    <MESSAGE value="修复聊天页面的显示不是在最底部" />
+    <MESSAGE value="调整邀请家人与医生聊天文案的大小" />
+    <MESSAGE value="将二维码分享页面底部的文字替换成图片" />
+    <MESSAGE value="进入聊天记录的时候默认显示在最底部" />
+    <MESSAGE value="点击头像不进入个人主页" />
+    <MESSAGE value="修复医生说分享错误的问题" />
+    <MESSAGE value="调整聊天页面邀请家人与医生聊天的样式和添加医生主页按钮" />
+    <MESSAGE value="调整接口" />
+    <MESSAGE value="调整正式环境和测试环境接口" />
+    <MESSAGE value="查找ios端发送链接有误的原因" />
+    <MESSAGE value="修复ios端发送复制的链接有误的问题" />
+    <MESSAGE value="修改患者问卷详情页面的备注样式" />
+    <MESSAGE value="优化聊天消息显示的代码" />
+    <MESSAGE value="超找ios超链接显示有误的问题" />
+    <MESSAGE value="删除无用的代码" />
+    <MESSAGE value="优化会话、医生说的代码，修复患者详情页面当题为多选题的时候直接隐藏的问题" />
+    <MESSAGE value="替换进入医生主页的接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="替换进入医生主页的接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="45" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/img/chenggong_@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/personage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7255639">
-          <caret line="226" column="17" selection-start-line="226" selection-start-column="17" selection-end-line="226" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5645161">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6532258">
-          <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="273" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/register.js">
+    <entry file="file://$PROJECT_DIR$/doctor_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="22" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/transfer_details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48991936">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/tj@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/person_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21774194">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/xx@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/xx12@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concern_doctor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/xx1@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_turnyard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/turn_yard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/public.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5202312">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/consult.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41048035">
-          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/case_science.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37295082">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/concern_doctor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37295082">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/department_list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3319672">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/doctor_info.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37295082">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27663934">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/basic_info.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38729507">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/case_details.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.989754">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/doctor_list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05532787">
-          <caret line="55" column="4" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4856558">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/my_turnyard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9795082">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/personage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33187774">
-          <caret line="104" column="37" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/photoswipe.css">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/turn_yard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66803277">
-          <caret line="317" column="19" selection-start-line="317" selection-start-column="19" selection-end-line="317" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case_history_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.75">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/case_history_details.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49490836">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/yuyin1@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/yuyin@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/play03@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/case_science.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6242775">
-          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/zepto.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/add_case.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05202312">
-          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_case.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05202312">
-          <caret line="109" column="21" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/strophe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36936936">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/websdk-1.1.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="530" column="49" selection-start-line="530" selection-start-column="44" selection-end-line="530" selection-end-column="49" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/webim.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.048648648">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/disease_details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58381504">
-          <caret line="102" column="29" selection-start-line="102" selection-start-column="29" selection-end-line="102" selection-end-column="29" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2716763">
-          <caret line="139" column="29" selection-start-line="139" selection-start-column="29" selection-end-line="139" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/disease_details.js">
+    <entry file="file://$PROJECT_DIR$/case_history_details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/repository_details.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.361111">
+          <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="214" column="43" selection-start-line="214" selection-start-column="43" selection-end-line="214" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ngx-stream-request-module-master/ngx-stream-request-module-master/client/js/stm.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38918918">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/webim.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24324325">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/fx1@2x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/组-327@3x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/组-327@2x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/fail@3x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/fail@2x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="2957" column="40" selection-start-line="2957" selection-start-column="40" selection-end-line="2957" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/websdk-1.1.2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22342342">
+          <caret line="358" column="0" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/two_could.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consult.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_case.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dest/stringview.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="7110" selection-start-line="0" selection-start-column="7110" selection-end-line="0" selection-end-column="7110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/stringview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="651" column="0" selection-start-line="651" selection-start-column="0" selection-end-line="651" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patient_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2716763">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Notification.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4864865">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/zepto.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.656547">
+          <caret line="1" column="954" selection-start-line="1" selection-start-column="954" selection-end-line="1" selection-end-column="954" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/concern_doctor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.222222">
+          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/question.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42774567">
+          <caret line="73" column="23" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/patient_info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="133" column="121" selection-start-line="133" selection-start-column="115" selection-end-line="133" selection-end-column="121" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/initPhotoSwiper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="25" />
+          <folding>
+            <element signature="e#54#5517#0" expanded="false" />
+            <element signature="n#!!block;n#autoRegister#0" expanded="false" />
+            <element signature="n#!!block;n#issue_turnyard#0" expanded="false" />
+            <element signature="n#!!block;n#issue_consult#0" expanded="false" />
+            <element signature="n#!!block;n#update_info#0" expanded="false" />
+            <element signature="n#!!block;n#getDepList#0" expanded="false" />
+            <element signature="n#!!block;n#initSelectData#0" expanded="false" />
+            <element signature="n#!!block;n#getToken#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/geo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/repository_details.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/two_could.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.111111">
+          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/two_could.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.166667">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/chat.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.115606934">
-          <caret line="391" column="22" selection-start-line="391" selection-start-column="17" selection-end-line="391" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="714" column="20" selection-start-line="714" selection-start-column="20" selection-end-line="714" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/wx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/patient_question.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.416667">
+          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.184971">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/person_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70520234">
+          <caret line="117" column="29" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/person_info.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8333335">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="12" />
+        <state vertical-scroll-proportion="17.513514">
+          <caret line="596" column="35" selection-start-line="596" selection-start-column="35" selection-end-line="596" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!block;n#queryUserById#0" expanded="false" />
+            <element signature="n#!!block;n#userInfo#0" expanded="false" />
+            <element signature="n#!!block;n#doctorInfo#0" expanded="false" />
+            <element signature="n#!!block;n#intoHtml#0" expanded="false" />
+            <element signature="n#!!block;n#queryUserCenterHistoryByUserId#0" expanded="false" />
+            <element signature="n#!!block;n#createFocus#0" expanded="false" />
+            <element signature="n#!!block;n#initSelectDataOnly#0" expanded="false" />
+            <marker date="1484029742226" expanded="true" signature="13123:13137" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case_science.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.75">
+          <caret line="114" column="6" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="6" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concern_doctor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57225436">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/add_case.js">
+    <entry file="file://$PROJECT_DIR$/js/patient_quetion_file.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8333335">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="88" selection-start-line="0" selection-start-column="88" selection-end-line="0" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patient_question.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36416185">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding>
-            <element signature="e#9478#10252#0" expanded="false" />
+            <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/patient_question.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="258" column="18" selection-start-line="258" selection-start-column="18" selection-end-line="258" selection-end-column="18" />
+          <folding>
+            <marker date="1484032149295" expanded="true" signature="1804:4576" placeholder="{...}" />
+            <marker date="1484032149295" expanded="true" signature="11422:11435" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="21" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!block;n#win#0" expanded="false" />
+            <marker date="1484031596673" expanded="true" signature="18767:18780" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1087" column="0" selection-start-line="1087" selection-start-column="0" selection-end-line="1087" selection-end-column="0" />
+          <folding>
+            <element signature="e#65#31212#0" expanded="false" />
+            <element signature="e#116#3952#0" expanded="false" />
+            <element signature="e#4003#5605#0" expanded="false" />
+            <element signature="e#5666#8759#0" expanded="false" />
+            <element signature="e#8820#9514#0" expanded="false" />
+            <element signature="e#9576#10493#0" expanded="false" />
+            <element signature="e#10529#11443#0" expanded="false" />
+            <element signature="e#11508#22145#0" expanded="false" />
+            <element signature="e#11760#11808#0" expanded="false" />
+            <element signature="e#11855#12433#0" expanded="false" />
+            <element signature="e#12479#12832#0" expanded="false" />
+            <element signature="e#12879#13502#0" expanded="false" />
+            <element signature="e#13578#13609#0" expanded="false" />
+            <element signature="e#14223#14401#0" expanded="false" />
+            <element signature="e#14446#15965#0" expanded="false" />
+            <element signature="e#22207#23169#0" expanded="false" />
+            <element signature="e#23205#31210#0" expanded="false" />
+            <element signature="e#31240#51855#0" expanded="false" />
+            <element signature="e#51872#54962#0" expanded="false" />
+            <element signature="n#!!block;n#connectFun#0" expanded="false" />
+            <element signature="n#!!block;n#setLocalData#0" expanded="false" />
+            <element signature="n#!!block;n#setLocalChatArr#0" expanded="false" />
+            <element signature="n#!!block;n#register#0" expanded="false" />
+            <element signature="n#!!block;n#hideShare#0" expanded="false" />
+            <element signature="n#!!block;n#wxLicense#0" expanded="false" />
+            <element signature="n#!!block;n#setShare#0" expanded="false" />
+            <element signature="e#63013#63043#0" expanded="false" />
+            <element signature="e#63102#63628#0" expanded="false" />
+            <element signature="e#63681#63853#0" expanded="false" />
+            <element signature="e#63908#64394#0" expanded="false" />
+            <element signature="e#64860#65284#0" expanded="false" />
+            <element signature="e#65327#65395#0" expanded="false" />
+            <element signature="e#65959#66007#0" expanded="false" />
+            <element signature="e#66072#66118#0" expanded="false" />
+            <element signature="e#66186#66234#0" expanded="false" />
+            <element signature="e#66302#66351#0" expanded="false" />
+            <element signature="e#66408#66566#0" expanded="false" />
+            <element signature="e#66611#67377#0" expanded="false" />
+            <element signature="e#67434#68727#0" expanded="false" />
+            <element signature="e#68796#69731#0" expanded="false" />
+            <element signature="e#69785#71195#0" expanded="false" />
+            <element signature="e#71269#71363#0" expanded="false" />
+            <element signature="e#71415#71502#0" expanded="false" />
+            <element signature="e#71553#71785#0" expanded="false" />
+            <element signature="e#71837#72207#0" expanded="false" />
+            <element signature="e#72272#72865#0" expanded="false" />
+            <element signature="e#72917#72973#0" expanded="false" />
+            <element signature="e#73039#73553#0" expanded="false" />
+            <element signature="e#73619#73883#0" expanded="false" />
+            <element signature="e#73950#74188#0" expanded="false" />
+            <element signature="n#!!block;n#goBottom#0" expanded="false" />
+            <element signature="n#!!block;n#resizeSectionHeight#0" expanded="false" />
+            <element signature="n#!!block;n#rightTop#0" expanded="false" />
+            <element signature="n#!!block;n#leftTop#0" expanded="false" />
+            <element signature="n#!!block;n#getImgData#0" expanded="false" />
+            <element signature="n#!!block;n#getUpName#0" expanded="false" />
+            <element signature="n#!!block;n#getUploadAli#0" expanded="false" />
+            <element signature="n#!!block;n#upAli#0" expanded="false" />
+            <element signature="n#!!block;n#uploadImg#0" expanded="false" />
+            <element signature="n#!!block;n#getALi#0" expanded="false" />
+            <element signature="n#!!block;n#sendCase#0" expanded="false" />
+            <element signature="n#!!block;n#getChatIntervalTime#0" expanded="false" />
+            <element signature="n#!!block;n#getTimeInt#0" expanded="false" />
+            <element signature="n#!!block;n#getDoc#0" expanded="false" />
+            <marker date="1484033395945" expanded="true" signature="2784:2822" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="17095:17141" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="17424:17470" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="18096:18142" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="18574:18620" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="19309:19355" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="21187:21233" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="21611:21646" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="26854:26900" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="27151:27197" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="27759:27805" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="28213:28259" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="28868:28914" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="30482:30528" placeholder="..." />
+            <marker date="1484033395945" expanded="true" signature="30874:30909" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/case_science.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#791#993#0" expanded="false" />
+            <element signature="e#1042#1421#0" expanded="false" />
+            <element signature="e#1587#1635#0" expanded="false" />
+            <element signature="e#1694#1742#0" expanded="false" />
+            <element signature="e#1848#1927#0" expanded="false" />
+            <element signature="e#1989#2052#0" expanded="false" />
+            <element signature="e#2098#2386#0" expanded="false" />
+            <element signature="e#2431#2655#0" expanded="false" />
+            <element signature="e#2704#4802#0" expanded="false" />
+            <element signature="n#!!block;n#getData#0" expanded="false" />
+            <element signature="n#!!block;n#getWx#0" expanded="false" />
+            <element signature="n#!!block;n#getLicense#0" expanded="false" />
+            <element signature="n#!!block;n#createFocus#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.5">
+          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1153,34 +1501,26 @@
     <entry file="file://$PROJECT_DIR$/js/concern_doctor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/case_science.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6">
-          <caret line="4" column="55" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77837837">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <caret line="104" column="3" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
           <folding>
-            <marker date="1477040217684" expanded="true" signature="7691:7725" placeholder="..." />
-            <marker date="1477040217684" expanded="true" signature="36258:36315" placeholder="..." />
+            <element signature="e#14#329#0" expanded="false" />
+            <element signature="n#!!block;n#getConcernDoctor#0" expanded="false" />
+            <element signature="e#3063#3360#0" expanded="false" />
+            <element signature="e#3402#3425#0" expanded="false" />
+            <element signature="e#3475#3545#0" expanded="false" />
+            <element signature="e#3604#3653#0" expanded="false" />
+            <element signature="e#3712#3760#0" expanded="false" />
+            <element signature="e#3819#3867#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/question.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63243246">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <marker date="1483706019731" expanded="true" signature="28854:31445" placeholder="{...}" />
           </folding>
         </state>
       </provider>

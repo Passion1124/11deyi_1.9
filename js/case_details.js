@@ -174,12 +174,14 @@ function queryVideoById(id){
                     if (Data.Pics.length <= 1){
                         if (Data.Pics.length == 1){
                             //console.log("only")
-                            image = "<div class='onlyImage'><figure itemscope itemtype='1'><a id='minimg"+0+"' href='"+Data.Pics+"' itemprop='contentUrl' data-size='"+imgwh+"'><img src='"+Data.Pics+"' itemprop='thumbnail' alt='Image description' /></a><figcaption itemprop='caption description'>1</figcaption></figure></div>"
-                            var url = Data.Pics;
+                            image = "<div class='onlyImage'><figure itemscope itemtype='1'><a id='minimg"+0+"' href='"+Data.Pics[0]+"' itemprop='contentUrl' data-size='"+imgwh+"'><img src='"+Data.Pics[0]+"' itemprop='thumbnail' alt='Image description' /></a><figcaption itemprop='caption description'>1</figcaption></figure></div>"
+                            var url = Data.Pics[0];
                             var k2=0;
                             getImageWidth(url,k2,function(w,h,x){
-                                var imgwh2=w+"x"+h;
-                                $("#minimg"+x).attr("data-size",imgwh2);
+                                setTimeout(function () {
+                                    var imgwh2=w+"x"+h;
+                                    $("#minimg"+x).attr("data-size",imgwh2);
+                                },200)
                             });
                         }
                     }else {
@@ -190,8 +192,10 @@ function queryVideoById(id){
                             var url = Data.Pics[j];
                             var k2=j;
                             getImageWidth(url,k2,function(w,h,x){
-                                var imgwh2=w+"x"+h;
-                                $("#minimg"+x).attr("data-size",imgwh2);
+                                setTimeout(function () {
+                                    var imgwh2=w+"x"+h;
+                                    $("#minimg"+x).attr("data-size",imgwh2);
+                                },200)
                             });
                         }
                         image += "</div>";

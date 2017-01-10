@@ -1,0 +1,94 @@
+.invite_family{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #56BC8A;
+    z-index: 9999;
+}
+.invite_family .two_could{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28.9rem;
+    height: 40.7rem;
+    margin: -20.35rem 0 0 -14.45rem;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.invite_family .two_could .top{
+    margin: 2rem 2.65rem 1.5rem 2.65rem;
+    height: 6rem;
+}
+.invite_family .two_could .top .doc_pat{
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+.invite_family .two_could .top .doc_pat img{
+    width: 2.6rem;
+    height: 2.6rem;
+    margin: 1.7rem .2rem;
+}
+.invite_family .two_could .top .dName{
+    display: inline-block;
+    height: 6rem;
+    line-height: 6rem;
+    vertical-align: top;
+    font-size: 1.9rem;
+    color: #222;
+    width:68%;
+    word-break: break-all;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.invite_family .two_could .could{
+    width: 23.6rem;
+    height: 23.6rem;
+    margin: 0 2.65rem;
+    background-size: cover;
+}
+.invite_family .two_could .could #code{
+    width:100%;
+}
+.invite_family .two_could .could #logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin: -2rem 0 0 -2.5rem;
+}
+.invite_family .two_could .bom{
+    height: 7.4rem;
+    margin: 0 2.65rem;
+    text-align: left;
+    font-size: 1.6rem;
+    color: #888;
+}
+.invite_family .two_could .bom img{
+    width: 100%;
+    margin-top: 1.8rem;
+}
+.invite_family .two_could .bom>div{
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 1.8rem;
+}
+.overdue{
+    padding-top: 22rem;
+    text-align: center;
+}
+.overdue img{
+    width: 5.5rem;
+    margin-bottom: 1.5rem;
+}
+.overdue p{
+    font-size: 1.5rem;
+    color: #555;
+}

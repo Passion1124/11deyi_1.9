@@ -35,6 +35,9 @@
 .doctor .address,.hospital .address{
     margin: 1.4rem 0 1.5rem 0;
 }
+.doctor span.hide{
+	display:none;
+}
 .attention{
     width: 8.6rem;
     height: 3.1rem;

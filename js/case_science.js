@@ -1,13 +1,16 @@
 $(function(){
+   setTimeout(function () {
+       var windowHeight = $(window).height();
+       var btmHeight = $(".btm").height();
+       $("section").height(windowHeight - btmHeight);
+   },200);
     if (getUrlParam("userid") && getUrlParam("token")){
         updateLogin();
     }
     getUser(getUrlParam("userid"),getUrlParam("token"),function(){
         getData();
     });
-    if (isWx){
-        getWx();
-    }
+    getWx();
 });
 $("header .back").on("click",function(){
     history.back();
@@ -36,21 +39,14 @@ $("section").on("click",".fullText",function(){
     }
 })
 $(".bottom div:nth-of-type(1)").on("click", function () {
-    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?type=ASK";
+    location.href = nav + "GetCode?type=ASK";
 });
 $(".bottom div:nth-of-type(2)").on("click", function () {
-    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?type=DS";
+    location.href = nav + "GetCode?type=DS";
 });
 $(".bottom div:nth-of-type(3)").on("click", function () {
-    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?type=MD";
+    location.href = nav + "GetCode?type=MD";
 });
-//$(window).on("scroll", function () {
-//    // console.log($("body").height())
-//    //console.log($(this).scrollTop()+$(this).height());
-//    if ($(this).scrollTop()+$(this).height() >= $(document).height() ){
-//        console.log("到达底部");
-//    }
-//});
 $("section").on("click",".case_list .top p:nth-child(1),.case_list .top p:nth-of-type(2)", function () {
     var userid = $(this).parent().attr("userid");
     goToHomePage(userid);
@@ -77,7 +73,6 @@ $("section").on("click","video",function(){
     }else {
         $(this).get(0).pause();
     }
-    //$(this).get(0).play();
 });
 $("section").on("click",".audio", function () {
     var self = this;
@@ -229,14 +224,11 @@ function getData(callback){
                         ele += "</div>";
                     }
                     ele += "<div class='heat'><span>"+Data[i].HotValue+"</span> 条热度</div></div>";
-                    $("section").append(ele)
+                    $(ele).insertBefore("section>footer");
                     if (Data[i].AuthorFaceImgUrl){
-                        //console.log(parseInt((pageindex-1)*pagesize+(i+1)));
                         $("section .case_list:nth-of-type("+parseInt((pageindex-1)*pagesize+(i+2))+") .top p:nth-child(1)").css("background_image","url('"+Data[i].AuthorFaceImgUrl+"')");
                     }
                     var Height = $("section .case_list:nth-of-type("+parseInt((pageindex-1)*pagesize+(i+2))+") .text p:nth-of-type(2)").height();
-                    //var lineHeight = parseInt($("section .case_list:nth-of-type("+parseInt((pageindex-1)*pagesize+(i+1))+") .text p:nth-of-type(2)").css("line-height"));
-                    //console.log("第"+parseInt((pageindex-1)*pagesize+(i+1))+"个:"+ Height/lineHeight);
                     if ( Height <= 120){
                         $("section .case_list:nth-of-type("+parseInt((pageindex-1)*pagesize+(i+2))+") .text p:nth-of-type(3)").addClass("hide")
                     }else {
@@ -245,7 +237,6 @@ function getData(callback){
                     if (Data[i].UserIsFocus === "Y"){
                         $("section .case_list:nth-of-type("+parseInt((pageindex-1)*pagesize+(i+2))+") .top p:nth-of-type(3)").hide();
                     }
-                    //console.log("第"+i+"个的类型:"+Data[i].Type)
                 }
                 initPhotoSwipeFromDOM('.my-simple-gallery');
                 if (pageindex !== 1){
@@ -266,22 +257,19 @@ function getWx(){
     if (getLocalStroagelogin().token){
         token = getLocalStroagelogin().token;
     }
+    var url=location.href.split('#')[0];
     var paraData={"appToken":token,"para":{
-        "device_type":"PC",
-        "device_id":" ",
-        "api_version":"1.0.0.0",
-        "url":location.href
+        "url":url
     }};
     $.ajax({
-        url:ebase+"/api/Sign/GetJsTicket",
+        url: nav + "GetJsSign",
         type:"POST",
         data:paraData,
         dataType:"json",
         success:function(data){
-            console.log(data);
-            var Data = data.Data;
-            if (data.Code === "0000"){
-                getLicense(Data.appId,Data.timestamp,Data.nonceStr,Data.ticket)
+            var Data = data.data;
+            if (data.code === "0000"){
+                getLicense(Data.appId,Data.timestamp,Data.nonceStr,Data.signature)
             }
         },
         error: function (xhr ,errorType ,error) {
@@ -300,29 +288,15 @@ function getLicense(appId,timestamp,nonceStr,signature){
         nonceStr: nonceStr,
         signature: signature,
         jsApiList:['checkJsApi',
-                   'hideMenuItems',
-                   'showMenuItems',
-                   'hideAllNonBaseMenuItem',
-                   'showAllNonBaseMenuItem',
                    'onMenuShareTimeline',
-                   'onMenuShareAppMessage',
-                   'onMenuShareQQ',
-                   'onMenuShareWeibo',
-                   'onMenuShareQZone']
+                   'onMenuShareAppMessage'
+        ]
     });
     wx.ready(function(){
-        //显示所有功能按钮
-        //wx.showAllNonBaseMenuItem();
-        ////隐藏所有非基础按钮接口
-        //wx.hideAllNonBaseMenuItem();
-        //显示需要引用按钮
-        //wx.showMenuItems({
-        //    menuList:['menuItem:share:appMessage','menuItem:share:timeline','menuItem:favorite'] //要显示的菜单项
-        //});
         //分享到朋友圈
         wx.onMenuShareTimeline({
             title:'专注传播医学实用经验，每天更新医学健康知识，是你健康生活的好帮手。',
-            link:location.href,
+            link: nav + "GetCode?type=DS",
             imgUrl:'http://yydy.image.alimmdn.com/source/7F79A0F3-0052-4AD5-AFBB-E5D64B9D4840',
             success:function(){
 
@@ -335,7 +309,7 @@ function getLicense(appId,timestamp,nonceStr,signature){
         wx.onMenuShareAppMessage({
             title: '专注传播医学实用经验。', // 分享标题
             desc: '每天更新医学健康知识，是你健康生活的好帮手。', // 分享描述
-            link: location.href, // 分享链接
+            link: nav + "GetCode?type=DS", // 分享链接
             imgUrl: 'http://yydy.image.alimmdn.com/source/7F79A0F3-0052-4AD5-AFBB-E5D64B9D4840', // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数

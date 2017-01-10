@@ -1,18 +1,12 @@
 $(function () {
-    //getToken(function(){
-    //    if (getLocalStroagelogin().token){
-    //        getConcernDoctor();
-    //    }else {
-    //        $(".popup").removeClass("hide");
-    //        $(".section_load").addClass("hide");
-    //    }
-    //},"","concern")
-    if (getUrlParam("userid") && getUrlParam("token")){
-        updateLogin();
+    if (getUrlParam("userid") != getLocalStroagelogin().userid){
+        if (getUrlParam("userid") && getUrlParam("token")){
+            updateLogin();
+        }
+        getUser(getUrlParam("userid"),getUrlParam("token"),function(){
+            console.log("用户信息加载成功");
+        });
     }
-    getUser(getUrlParam("userid"),getUrlParam("token"),function(){
-        console.log("用户信息加载成功");
-    });
     getConcernDoctor();
 });
 
@@ -43,13 +37,22 @@ function getConcernDoctor(callback){
                 $(".section_load").addClass("hide");
             }
             for (var i = 0; i < Data.length; i++){
+                createChatDoctorInfo(Data[i].UserID,Data[i].UserName,Data[i].FaceImgUrl);
+                createDoctorOrUserInfo(Data[i].UserID,Data[i].UserName,Data[i].FaceImgUrl);
+                var depClass = "",jobClass = "";
+                if (!Data[i].DepartmentName || Data[i].DepartmentName === 'null'){
+                    depClass = "hide";
+                }
+                if (!Data[i].JobLevelName || Data[i].JobLevelName === 'null'){
+                    jobClass = "hide";
+                }
                 var ele = "<div class='doctor' userid='"+Data[i].UserID+"'>" +
                     "<div class='head_portrait'></div>" +
                     "<div class='doctor_info'>" +
                     "<span class='doctor_name'>"+Data[i].UserName+"</span>" +
                     "<p>" +
-                    "<span>"+Data[i].DepartmentName+"</span>" +
-                    "<span>"+Data[i].JobLevelName+"</span>" +
+                    "<span class='"+depClass+"'>"+Data[i].DepartmentName+"</span>" +
+                    "<span class='"+jobClass+"'>"+Data[i].JobLevelName+"</span>" +
                     "</p>" +
                     "</div>" +
                     "<div class='advisory'>" +
@@ -89,15 +92,14 @@ $("header .back").on("click",function(){
 });
 $("section").on("click",".doctor", function () {
     var userid = $(this).attr("userid");
-    //goToHomePage(userid);
-    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?id="+userid+"&type=SHARE";
+    goToHomePage(userid);
 });
 $(".bottom div:nth-of-type(1)").on("click", function () {
-    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?type=ASK";
+    location.href = nav + "GetCode?type=ASK";
 });
 $(".bottom div:nth-of-type(2)").on("click", function () {
-    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?type=DS";
+    location.href = nav + "GetCode?type=DS";
 });
 $(".bottom div:nth-of-type(3)").on("click", function () {
-    location.href = "http://www.11deyi.com/"+Api+"/Weixin/profile?type=MD";
+    location.href = nav + "GetCode?type=MD";
 });

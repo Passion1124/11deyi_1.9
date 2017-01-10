@@ -123,13 +123,19 @@ $(".add_case section .finish").on("click", function () {
 $(".patient_pics span input[type='file']").on("change",function(event){
     //var fileName = event.target.files[0].name;
     if ($(".patient_pics img").length < 9){
-        var file = event.target.files[0];
-        $("<img src='img/loading.gif' alt='loading...' class='load'>").insertBefore("#up-btn");
-        getUploadAli(file);
+        var file = event.target.files;
+        if(file.length!=0){
+            getCompressImage(file, function (newblob) {
+                getUploadAli(newblob);
+            });
+            $("<img src='img/loading.gif' alt='loading...' class='load'>").insertBefore("#up-btn");
+            $("#up-btn>input").attr('disabled','');
+        }
+        else{return;}
     }else {
         setTimeout(function(){
             alert("上传的图片不能超过9张");
-        },400);
+        },200);
     }
 });
 function uuid() {
@@ -148,6 +154,9 @@ function uuid() {
 //获取阿里百川上传鉴权
 function getUploadAli(file){
     var fileName = uuid();
+    if (!token){
+        token = getLocalStroagelogin().token;
+    }
     var postData = {
         "appToken":token,
         "para":{
@@ -177,6 +186,7 @@ function getUploadAli(file){
                         if (percent === 100 && result){
                             $("#up-btn").prev().attr("src",result.url);
                             myPics.push(result.url);
+                            $("#up-btn>input").removeAttr('disabled');
                         }else {
                             alert("上传失败");
                             $("#up-btn").prev().remove();
@@ -247,8 +257,6 @@ function createCase(sex,age,questionpics,doctorid,addr,cureinfo,checkinfo,visiti
         dataType:"json",
         success: function (data) {
             console.log(data);
-            console.log(pics);
-            //alert("成功")
             $(".add_case section .finish").removeAttr("disabled");
             if(data.Code === "0000"){
                 var caseData = {
